@@ -14,14 +14,6 @@ session.query(User).filter_by(name='ed').all()
 
 # join: query with multiple classes, returns tuples
 session.query(User, Address).join('addresses').filter_by(name='ed').all()
-session.query(User).join(Address).\
-        filter(Address.email_address=='jack@google.com').\
-        all()
-# if there are no foreign keys, or several between User and Address:
-query.join(Address, User.id==Address.user_id)    # explicit condition
-query.join(User.addresses)                       # specify relationship from left to right
-query.join(Address, User.addresses)              # same, with explicit target
-query.join('addresses')                          # same, using a string
 
 # query using orm-enabled descriptors
 session.query(User.name, User.fullname).all()
@@ -41,11 +33,30 @@ User.query.filter_by(...).order_by(...).all()
 ```
 
 + `session.query(...)`返回Query对象实例
+
 + `Query.all()`返回Query对象的查询结果(result对象实例)列表
+
 + `Query.first()`查询一条记录，返回一个查询结果(result对象实例)或None
+
 + `Query.one()`查询全部记录，返回一个查询结果(result对象实例)或抛出MultipleResultsFound、NoResultFound异常
+
 + `Query.one_or_none()`返回None，一个查询结果(result对象实例)，或抛出MultipleResultsFound异常
+
 + `Query.scalar()`调用`one()`，返回第一列的数据
+
+```python
+  session.query(User).join(Address).\
+          filter(Address.email_address=='jack@google.com').\
+          all()
+  # if there are no foreign keys, or several between User and Address:
+  query.join(Address, User.id==Address.user_id)    # explicit condition
+  query.join(User.addresses)                       # specify relationship from left to right
+  query.join(Address, User.addresses)              # same, with explicit target
+  query.join('addresses')                          # same, using a string
+  query.outerjoin(User.addresses)   # LEFT OUTER JOIN
+```
+
+  
 
 result实例的方法
 ```python
