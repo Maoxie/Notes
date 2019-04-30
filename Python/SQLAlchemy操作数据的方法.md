@@ -54,9 +54,8 @@ query.join('addresses')                          # same, using a string
 query.outerjoin(User.addresses)   # LEFT OUTER JOIN
 ```
 
-  
+  result实例的方法
 
-result实例的方法
 ```python
 user1.keys()    # 返回查询结果的字段名list（有序）
 user1.id        # 根据字段名获取字段值
