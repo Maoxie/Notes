@@ -17,7 +17,7 @@ session.query(User, Address).join('addresses').filter_by(name='ed').all()
 session.query(User).join(Address).\
         filter(Address.email_address=='jack@google.com').\
         all()
-# if 
+# if If there were no foreign keys, or several
 query.join(Address, User.id==Address.user_id)    # explicit condition
 query.join(User.addresses)                       # specify relationship from left to right
 query.join(Address, User.addresses)              # same, with explicit target
