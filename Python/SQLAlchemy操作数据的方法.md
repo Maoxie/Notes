@@ -12,12 +12,12 @@
 # query from a class
 session.query(User).filter_by(name='ed').all()
 
-# query with multiple classes, returns tuples
+# join: query with multiple classes, returns tuples
 session.query(User, Address).join('addresses').filter_by(name='ed').all()
 session.query(User).join(Address).\
         filter(Address.email_address=='jack@google.com').\
         all()
-# if If there were no foreign keys, or several
+# if there are no foreign keys, or several between User and Address:
 query.join(Address, User.id==Address.user_id)    # explicit condition
 query.join(User.addresses)                       # specify relationship from left to right
 query.join(Address, User.addresses)              # same, with explicit target
