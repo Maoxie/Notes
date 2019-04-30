@@ -34,6 +34,7 @@ User.query.filter_by(...).order_by(...).all()
 + `Query.first()`查询一条记录，返回一个查询结果(result对象实例)或None
 + `Query.one()`查询全部记录，返回一个查询结果(result对象实例)或抛出MultipleResultsFound、NoResultFound异常
 + `Query.one_or_none()`返回None，一个查询结果(result对象实例)，或抛出MultipleResultsFound异常
++ `Query.scalar()`调用`one()`，返回第一列的数据
 
 result实例的方法
 ```python
