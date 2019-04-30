@@ -21,6 +21,12 @@ session.query(User.name, User.fullname).all()
 # query from a mapper
 user_mapper = class_mapper(User)
 session.query(user_mapper)
+
+# join 
+session.query(User).join(Address).\
+        filter(Address.email_address=='jack@google.com').\
+        all()
+
 ```
 
 或者
