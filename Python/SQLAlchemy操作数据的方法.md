@@ -14,6 +14,14 @@ session.query(User).filter_by(name='ed').all()
 
 # query with multiple classes, returns tuples
 session.query(User, Address).join('addresses').filter_by(name='ed').all()
+session.query(User).join(Address).\
+        filter(Address.email_address=='jack@google.com').\
+        all()
+# if 
+query.join(Address, User.id==Address.user_id)    # explicit condition
+query.join(User.addresses)                       # specify relationship from left to right
+query.join(Address, User.addresses)              # same, with explicit target
+query.join('addresses')                          # same, using a string
 
 # query using orm-enabled descriptors
 session.query(User.name, User.fullname).all()
@@ -22,10 +30,7 @@ session.query(User.name, User.fullname).all()
 user_mapper = class_mapper(User)
 session.query(user_mapper)
 
-# join 
-session.query(User).join(Address).\
-        filter(Address.email_address=='jack@google.com').\
-        all()
+
 
 ```
 
