@@ -39,7 +39,7 @@ User.query.filter_by(...).order_by(...).all()
 + `Query.one_or_none()`返回None，一个查询结果(result对象实例)，或抛出MultipleResultsFound异常
 + `Query.scalar()`调用`one()`，返回第一列的数据
 
-JOIN查询：
+[JOIN查询](https://docs.sqlalchemy.org/en/13/orm/tutorial.html#querying-with-joins)：
 
 ```python
 session.query(User).join(Address).\
