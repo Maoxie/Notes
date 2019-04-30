@@ -31,9 +31,9 @@ User.query.filter_by(...).order_by(...).all()
 
 + `session.query(...)`返回Query对象实例
 + `Query.all()`返回Query对象的查询结果(result对象实例)列表
-+ `Query.first()`返回一个查询结果(result对象实例)或None
-+ `Query.one()`返回一个查询结果(result对象实例)或引发MultipleResultsFound、NoResultFound异常
-+ `Query.one_or_none()`返回None，一个查询结果(result对象实例)，或引发MultipleResultsFound异常
++ `Query.first()`查询一条记录，返回一个查询结果(result对象实例)或None
++ `Query.one()`查询全部记录，返回一个查询结果(result对象实例)或抛出MultipleResultsFound、NoResultFound异常
++ `Query.one_or_none()`返回None，一个查询结果(result对象实例)，或抛出MultipleResultsFound异常
 
 result实例的方法
 ```python
