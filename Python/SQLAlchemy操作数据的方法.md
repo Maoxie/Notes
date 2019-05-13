@@ -120,14 +120,23 @@ session.rollback()
 
 ### 1. 基本操作
 
-通过`Engine`生成的[Connection](http://docs.sqlalchemy.org/en/latest/core/connections.html)对象的`execute()`方法，执行原生的sql语句：
+方式一：通过`Engine`生成的[Connection](http://docs.sqlalchemy.org/en/latest/core/connections.html)对象的`execute()`方法，执行原生的sql语句：
 
 ```python
 with db.engine.connect() as conn:
     conn.execute(sql)
     conn.execute(sqlalchemy.sql.text(sql), **param_dict)
 ```
-（另一种方式：直接用`db.engine.execute()`方法）
+方式二：直接用`db.engine.execute()`方法
+
+方式三：用`db.session.execute()`方法
+
+```python
+session.execute(sql)
+session.execute(sqlalchemy.sql.text(sql), param_dict)  # <-所有参数放在一个dict中
+```
+
+
 
 返回ResultProxy对象实例，为对DB-API cursor的封装
 
