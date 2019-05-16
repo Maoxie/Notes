@@ -9,7 +9,7 @@ passwd 账号
 # 赋予用户sudo权限列表
 Linux默认是没有将用户添加到sudoers列表中的，需要root手动将账户添加到sudoers列表中，才能让普通账户执行sudo命令。
 
-root 账户下输入'vim /etc/sudoers'，找到如下语句： 
+root 账户下输入`visudo`或`vim /etc/sudoers`，找到如下语句： 
 ```
 root    ALL=(ALL)       ALL
 ```
