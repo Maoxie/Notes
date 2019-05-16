@@ -1,12 +1,12 @@
-# 新增用户
+## 新增用户
 ```bash
 useradd -m 用户账号名
 ```
-# 创建密码
+## 创建密码
 ```bash
 passwd 账号
 ```
-# 赋予用户sudo权限列表
+## 赋予用户sudo权限列表
 Linux默认是没有将用户添加到sudoers列表中的，需要root手动将账户添加到sudoers列表中，才能让普通账户执行sudo命令。
 
 root 账户下输入`visudo`或`vim /etc/sudoers`，找到如下语句： 
@@ -24,7 +24,7 @@ huddy  ALL=(ALL)       ALL
 root    ALL=(ALL)       ALL 
 huddy  ALL=(ALL)       NOPASSWD:ALL
 ```
-# 赋予用户SSH连接的权限
+## 赋予用户SSH连接的权限
 linux系统安装好，建立普通用户后，普通用户不一定能通过ssh连接到服务器 
  
 可以在/etc/ssh/sshd_config中增加`AllowUsers:username`(可以多个,空格分开)给普通用户增加ssh权限 
