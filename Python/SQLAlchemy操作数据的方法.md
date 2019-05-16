@@ -12,7 +12,7 @@
 # query from a class
 session.query(User).filter_by(name='ed').all()
 
-# join: query with multiple classes, returns tuples
+# query with multiple classes, returns tuples
 session.query(User, Address).join('addresses').filter_by(name='ed').all()
 
 # query using orm-enabled descriptors
@@ -21,9 +21,6 @@ session.query(User.name, User.fullname).all()
 # query from a mapper
 user_mapper = class_mapper(User)
 session.query(user_mapper)
-
-
-
 ```
 
 或者
@@ -34,28 +31,11 @@ User.query.filter_by(...).order_by(...).all()
 
 + `session.query(...)`返回Query对象实例
 + `Query.all()`返回Query对象的查询结果(result对象实例)列表
-+ `Query.first()`查询一条记录，返回一个查询结果(result对象实例)或None
-+ `Query.one()`查询全部记录，返回一个查询结果(result对象实例)或抛出MultipleResultsFound、NoResultFound异常
-+ `Query.one_or_none()`返回None，一个查询结果(result对象实例)，或抛出MultipleResultsFound异常
-+ `Query.scalar()`调用`one()`，返回第一列的数据
++ `Query.first()`返回一个查询结果(result对象实例)或None
++ `Query.one()`返回一个查询结果(result对象实例)或引发NoResultFound异常
++ `Query.one_or_none()`返回None，一个查询结果(result对象实例)，或引发MultipleResultsFound异常
 
-[JOIN查询](https://docs.sqlalchemy.org/en/13/orm/tutorial.html#querying-with-joins)：
-
-```python
-session.query(User).join(Address).\
-        filter(Address.email_address=='jack@google.com').\
-        all()
-# if there are no foreign keys, or several between User and Address:
-query.join(Address, User.id==Address.user_id)    # explicit condition
-query.join(User.addresses)                       # specify relationship from left to right
-query.join(Address, User.addresses)              # same, with explicit target
-query.join('addresses')                          # same, using a string
-
-query.outerjoin(User.addresses)   # LEFT OUTER JOIN
-```
-
-  result实例的方法
-
+result实例的方法
 ```python
 user1.keys()    # 返回查询结果的字段名list（有序）
 user1.id        # 根据字段名获取字段值
@@ -120,23 +100,14 @@ session.rollback()
 
 ### 1. 基本操作
 
-方式一：通过`Engine`生成的[Connection](http://docs.sqlalchemy.org/en/latest/core/connections.html)对象的`execute()`方法，执行原生的sql语句：
+通过`Engine`生成的[Connection](http://docs.sqlalchemy.org/en/latest/core/connections.html)对象的`execute()`方法，执行原生的sql语句：
 
 ```python
 with db.engine.connect() as conn:
     conn.execute(sql)
     conn.execute(sqlalchemy.sql.text(sql), **param_dict)
 ```
-方式二：直接用`db.engine.execute()`方法
-
-方式三：用`db.session.execute()`方法
-
-```python
-session.execute(sql)
-session.execute(sqlalchemy.sql.text(sql), param_dict)  # <-所有参数放在一个dict中
-```
-
-
+（另一种方式：直接用`db.engine.execute()`方法）
 
 返回ResultProxy对象实例，为对DB-API cursor的封装
 
