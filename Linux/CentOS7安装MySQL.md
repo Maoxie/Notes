@@ -130,23 +130,23 @@ shell> sudo systemctl status mysqld.service
 | `1` or `MEDIUM` | Length; numeric, lowercase/uppercase, and special characters |
 | `2` or `STRONG` | Length; numeric, lowercase/uppercase, and special characters; dictionary file |
 
-默认为1，即MEDIUM。
+默认为1，即MEDIUM，所以刚开始设置的密码必须符合长度，且必须含有数字，小写或大写字母，特殊字符。
 
-有时只是为了自己测试，想使用简单密码，为此必须修改两个全局参数：
+有时只是为了自己测试，想使用简单密码，为此必须修改两个全局参数。
 
 首先，修改validate_password_policy参数的值：
 
  ```bash
-mysql> set global validate_password_policy=0;
+mysql> set global validate_password.policy=0;
 Query OK, 0 rows affected (0.00 sec)
  ```
 
-这样，判断密码的标准就基于密码的长度了。这个由`validate_password_length`参数来决定，默认为8。
+这样，判断密码的标准就基于密码的长度了。这个由`validate_password.length`参数来决定，默认为8。
 
 ```sql
-mysql> select @@validate_password_length;
+mysql> select @@validate_password.length;
 +----------------------------+
-| @@validate_password_length |
+| @@validate_password.length |
 +----------------------------+
 |                          8 |
 +----------------------------+
@@ -156,12 +156,29 @@ mysql> select @@validate_password_length;
 这个值有最小值限制，最小值由三个值相加计算得到的。
 
 ```
-validate_password_number_count
-+ validate_password_special_char_count
-+ (2 * validate_password_mixed_case_count)
+validate_password.number_count
++ validate_password.special_char_count
++ (2 * validate_password.mixed_case_count)
 ```
 
-`validate_password_number_count`指定了密码中数据的长度，`validate_password_special_char_count`指定了密码中特殊字符的长度、`validate_password_mixed_case_count`指定了密码中大小写字母的长度。这些参数的默认值均为1，所以最小值为4。
+`validate_password.number_count`指定了密码中数据的长度，`validate_password.special_char_count`指定了密码中特殊字符的长度、`validate_password.mixed_case_count`指定了密码中大小写字母的长度。这些参数的默认值均为1，所以最小值为4。
 
-如果修改了上述三个值的任意一个，则`validate_password_length`将进行动态修改。
+如果修改了上述三个值的任意一个，则`validate_password.length`将进行动态修改。
 
+以上的前提是validate_password插件必须已经安装。可通过查看以下参数严重插件是否已安装，如果没有安装，则输出将为空。
+
+```mysql
+mysql> SHOW VARIABLES LIKE 'validate_password%';
++--------------------------------------+--------+
+| Variable_name                        | Value  |
++--------------------------------------+--------+
+| validate_password.check_user_name    | ON     |
+| validate_password.dictionary_file    |        |
+| validate_password.length             | 8      |
+| validate_password.mixed_case_count   | 1      |
+| validate_password.number_count       | 1      |
+| validate_password.policy             | MEDIUM |
+| validate_password.special_char_count | 1      |
++--------------------------------------+--------+
+7 rows in set (0.10 sec)
+```
