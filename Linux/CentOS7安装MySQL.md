@@ -120,9 +120,9 @@ shell> sudo systemctl status mysqld.service
   
 ### 密码强度
 
-密码的强度与`validate_password_policy`的值有关：
+密码的强度与`validate_password.policy`的值有关：
 
-`validate_password_policy`有以下取值：
+`validate_password.policy`有以下取值：
 
 | Policy          | Tests Performed                                              |
 | --------------- | ------------------------------------------------------------ |
@@ -134,16 +134,16 @@ shell> sudo systemctl status mysqld.service
 
 有时只是为了自己测试，想使用简单密码，为此必须修改两个全局参数。
 
-首先，修改validate_password_policy参数的值：
+首先，修改validate_password.policy参数的值：
 
- ```bash
+ ```mysql
 mysql> set global validate_password.policy=0;
 Query OK, 0 rows affected (0.00 sec)
  ```
 
 这样，判断密码的标准就基于密码的长度了。这个由`validate_password.length`参数来决定，默认为8。
 
-```sql
+```mysql
 mysql> select @@validate_password.length;
 +----------------------------+
 | @@validate_password.length |
@@ -155,7 +155,7 @@ mysql> select @@validate_password.length;
 
 这个值有最小值限制，最小值由三个值相加计算得到的。
 
-```
+```mysql
 validate_password.number_count
 + validate_password.special_char_count
 + (2 * validate_password.mixed_case_count)
