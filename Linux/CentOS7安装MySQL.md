@@ -1,8 +1,10 @@
 # CentOS 7 安装MySQL
 
-翻译自官方安装指南
+参考资料：
 
-> A Quick Guide to Using the MySQL Yum Repository[https://dev.mysql.com/doc/mysql-yum-repo-quick-guide/en/](https://dev.mysql.com/doc/mysql-yum-repo-quick-guide/en/)
+> 1. [A Quick Guide to Using the MySQL Yum Repository](https://dev.mysql.com/doc/mysql-yum-repo-quick-guide/en/)
+>
+> 2. [ERROR 1819 (HY000): Your password does not satisfy the current policy requirements](https://www.cnblogs.com/ivictor/p/5142809.html)
 
 ## 1. 添加MySQL Yum Repository
 
@@ -61,7 +63,7 @@ shell> yum repolist enabled | grep mysql
 输入以下命令，将会安装MySQL及其依赖包。
 
 ```bash
-shell> sudo yum install mysql-community-server
+sudo yum install mysql-community-server
 ```
 
 ## 4. 启动MySQL服务
@@ -116,6 +118,50 @@ shell> sudo systemctl status mysqld.service
   mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass4!';
   ```
   
-  
-  
-  
+### 密码强度
+
+密码的强度与`validate_password_policy`的值有关：
+
+`validate_password_policy`有以下取值：
+
+| Policy          | Tests Performed                                              |
+| --------------- | ------------------------------------------------------------ |
+| `0` or `LOW`    | Length                                                       |
+| `1` or `MEDIUM` | Length; numeric, lowercase/uppercase, and special characters |
+| `2` or `STRONG` | Length; numeric, lowercase/uppercase, and special characters; dictionary file |
+
+默认为1，即MEDIUM。
+
+有时只是为了自己测试，想使用简单密码，为此必须修改两个全局参数：
+
+首先，修改validate_password_policy参数的值：
+
+ ```bash
+mysql> set global validate_password_policy=0;
+Query OK, 0 rows affected (0.00 sec)
+ ```
+
+这样，判断密码的标准就基于密码的长度了。这个由`validate_password_length`参数来决定，默认为8。
+
+```sql
+mysql> select @@validate_password_length;
++----------------------------+
+| @@validate_password_length |
++----------------------------+
+|                          8 |
++----------------------------+
+1 row in set (0.00 sec)
+```
+
+这个值有最小值限制，最小值由三个值相加计算得到的。
+
+```
+validate_password_number_count
++ validate_password_special_char_count
++ (2 * validate_password_mixed_case_count)
+```
+
+`validate_password_number_count`指定了密码中数据的长度，`validate_password_special_char_count`指定了密码中特殊字符的长度、`validate_password_mixed_case_count`指定了密码中大小写字母的长度。这些参数的默认值均为1，所以最小值为4。
+
+如果修改了上述三个值的任意一个，则`validate_password_length`将进行动态修改。
+
