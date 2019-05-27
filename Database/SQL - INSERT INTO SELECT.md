@@ -5,3 +5,4 @@ SELECT aaa, bbb
 FROM table1;
 ```
 
+当select的结果有多行时，插入的数据也有多行。
