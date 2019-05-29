@@ -4,12 +4,15 @@
 
 ```python
 # 转换的为时间戳数据时，提供时间戳的精度
-datetime_column = pd.to_datetime(df['timestamp_column'], unit='ms')
+datetime_df = pd.to_datetime(df['timestamp_column'], unit='ms')
 ```
 
 `tz_localize`用于设定时区，`tz_convert`用于转换时区
 
+`DataFrame.tz_localize`和`DataFrame.tz_convert`用于转换时间类型的index的时区，如果需要转换数据列的时区，用`DataFrame.dt.tz_localize`和`DataFrame.dt.tz_convert`
+
 ```python
-datetime_column.
+datetime_df.tz_localize('UTC')\
+                .dt.tz_convert('Asia/Shanghai')
 ```
 
