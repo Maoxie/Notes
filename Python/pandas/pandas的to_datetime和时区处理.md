@@ -7,4 +7,9 @@
 datetime_column = pd.to_datetime(df['timestamp_column'], unit='ms')
 ```
 
-`tz_localize`用于设定时区，
+`tz_localize`用于设定时区，`tz_convert`用于转换时区
+
+```python
+datetime_column.
+```
+
