@@ -7,7 +7,10 @@
 转换为period再转换成timestamp
 
 ```python
+# 以下三种方法等价
 df.index = df.index.to_period('M').to_timestamp('M')
+df.index = df.index.to_period('M').to_timestamp(how='e')
+df.index = df.index.to_period('M').to_timestamp(how='end')
 ```
 
 ## 方法二：
