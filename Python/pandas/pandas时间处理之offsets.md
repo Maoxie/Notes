@@ -9,7 +9,7 @@ df['now'] - Day(1)
 
 
 ```python
-from pandas.offsets import MonthBegin, MonthEnd
+from pandas.tseries.offsets import MonthBegin, MonthEnd
 MonthBegin(0) # 表示 目标时间到最近的一个月初日期的偏移量
 
 # 求下个月1日的相同时刻
