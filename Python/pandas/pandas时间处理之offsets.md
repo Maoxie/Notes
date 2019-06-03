@@ -10,12 +10,12 @@ df['now'] - Day(1)
 
 ```python
 from pandas.tseries.offsets import MonthBegin, MonthEnd
-# 求本月1日的相同时刻
+# 求下个月1日的相同时刻
+df['now'] + MonthBegin(1)
+# # 求从该日期及之后日期的第一个月初，如果该日期就是1日，则得到的就是该日期
+df['now'] + MonthBegin(0)
+# 求从该日期起的第一个本月1日的相同时刻，
 df['now'] - MonthBegin(1)
 # 求上月1日的相同时刻
 df['now'] - MonthBegin(2)
-# 求下个月1日的相同时刻
-df['now'] + MonthBegin(1)
-# 求从该日期起的第一个月初，如果该日期就是1日，则得到的就是该日期
-df['now'] + MonthBegin(0)
 ```
