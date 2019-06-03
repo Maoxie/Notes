@@ -15,5 +15,6 @@ df['now'] - MonthBegin(1)
 # 求上月1日的相同时刻
 df['now'] - MonthBegin(2)
 # 求下个月1日的相同时刻
-df['now'] + Month
+df['now'] + MonthBegin(0)
+df['now'] + MonthBegin(1)  # 等价
 ```
