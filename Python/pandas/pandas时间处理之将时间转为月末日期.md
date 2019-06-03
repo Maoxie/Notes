@@ -12,3 +12,9 @@ df.index = df.index.to_period('M').to_timestamp('M')
 
 方法二：
 
+利用`pd.tseries.offsets`中的`MonthEnd`对象
+
+```python
+
+```
+
