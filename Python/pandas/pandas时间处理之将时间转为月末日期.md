@@ -23,3 +23,4 @@ df.index = df.index + pd.offsets.MonthEnd(0)
 ```python
 df.index + df.index - pd.offsets.MonthBegin(1)
 ```
+
