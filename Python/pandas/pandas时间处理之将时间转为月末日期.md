@@ -18,9 +18,7 @@ df.index = df.index.to_period('M').to_timestamp('M')
 df.index = df.index + pd.offsets.MonthEnd(0) 
 ```
 
-## 补充：
-
-如果需要转为月初时间，可以再用`MonthBegin`对象
+## 补充：转为月初日期
 
 ```python
 df.index = df.index - pd.offsets.MonthBegin(1)
