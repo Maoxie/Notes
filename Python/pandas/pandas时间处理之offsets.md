@@ -1,4 +1,6 @@
-利用`pandas.tseries.offsets`中的对象可以对时间进行运算，例如求某个时间的上一天，可以减去`Day(1)`
+利用`pandas.tseries.offsets`中的对象可以对时间进行运算。
+
+例如求某个时间的上一天，可以减去`Day(1)`
 
 ```python
 from pandas.tseries.offsets import Day
