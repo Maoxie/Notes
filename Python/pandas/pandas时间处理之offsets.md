@@ -1,4 +1,4 @@
-利用pandas.tseries.offsets
+利用pandas.tseries.offsets对象可以对时间进行运算
 
 
 ```python
