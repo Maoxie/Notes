@@ -5,11 +5,13 @@ from pandas.tseries.offsets import Day
 df['now'] - Day(1)
 ```
 
-`MonthBegin`对象可以求出某月月初的日期（时间不变），而`MonthEnd`对象则用来求月末日期
+`MonthBegin`对象可以求出某月月初的日期（时间不变），而`MonthEnd`对象则用来求月末日期。
 
 
 ```python
 from pandas.tseries.offsets import MonthBegin, MonthEnd
+MonthBegin(0) # 表示 月初到
+
 # 求下个月1日的相同时刻
 df['now'] + MonthBegin(1)
 # # 求从该日期及之后日期的第一个月初（如果该日期就是1日，则得到的就是该日期）
