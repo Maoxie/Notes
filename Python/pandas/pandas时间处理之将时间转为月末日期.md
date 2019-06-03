@@ -21,6 +21,6 @@ df.index = df.index + pd.offsets.MonthEnd(0)
 如果需要转为月初时间，可以再用`MonthBegin`对象
 
 ```python
-df.index + df.index - pd.offsets.MonthBegin(1)
+df.index = df.index - pd.offsets.MonthBegin(1)
 ```
 
