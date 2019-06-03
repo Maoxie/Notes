@@ -5,6 +5,9 @@
 ```python
 from pandas.tseries.offsets import Day
 df['now'] - Day(1)
+# 另一种导入方式：
+import pandas as pd
+df['now'] - pd.offsets.Day(1)
 ```
 
 `MonthBegin`对象可以求出某月月初的日期（时间不变），而`MonthEnd`对象则用来求月末日期。
