@@ -6,3 +6,9 @@
 
 转换为period再转换成timestamp
 
+```python
+df.index = df.index.to_period('M').to_timestamp('M')
+```
+
+方法二：
+
