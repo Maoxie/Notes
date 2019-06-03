@@ -7,7 +7,7 @@
 ```python
 slicer = lead_snapshots_df.groupby(
     [pd.Grouper(key='snapshot_time', freq='M'), 'lead_code']
-)['snapshot_time'].idxmax()
+)['snapshot_time'].idxmax()	# 获取每月数据的索引
 lead_monthly_snapshots_df = lead_snapshots_df.loc[slicer]
 ```
 
