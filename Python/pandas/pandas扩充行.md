@@ -12,8 +12,14 @@
 
 ```python
 # 原有索引列
-In  []:   df.index.names
-Ount[]: FrozenList(['employee_id', 'chinese_name', 'lead_code', 'lead_name', 'start_time'])
+In [1]: df.index.names
+Out[1]: FrozenList(['employee_id', 'chinese_name', 'lead_code', 'lead_name', 'start_time'])
+# 
+In [1]: df.index.names
+Out[1]: FrozenList(['employee_id', 'chinese_name', 'lead_code', 'lead_name', 'start_time'])
+# 需要扩充start_time这一列的索引，使时间满足某一序列，如下
+time_range = ['2019-01', '2019-02', '2019-03', '2019-04']
+
 ```
 
 
