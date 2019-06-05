@@ -13,12 +13,17 @@
 ```python
 # 原有索引列
 In [1]: df.index.names
-Out[1]: FrozenList(['employee_id', 'chinese_name', 'lead_code', 'lead_name', 'start_time'])
+Out[1]:
+FrozenList(['employee_id', 'lead_code', 'start_time'])
 # 
-In [1]: df.index.names
-Out[1]: FrozenList(['employee_id', 'chinese_name', 'lead_code', 'lead_name', 'start_time'])
-# 需要扩充start_time这一列的索引，使时间满足某一序列，如下
-time_range = ['2019-01', '2019-02', '2019-03', '2019-04']
+In [1]: df.index.names.unique()
+Out[1]: 
+DatetimeIndex(['2019-01-31', '2019-02-28', '2019-03-31', '2019-04-30',
+               '2019-05-31'],
+              dtype='datetime64[ns]', name='start_time', freq=None)
+# 需要扩充start_time这一列的索引，使对于所有的'employee_id'和'lead_code'，都有如下时间的行，如下
+time_range = ['2019-01-31', '2019-02-28', '2019-03-31', '2019-04-30',
+               '2019-05-31']
 
 ```
 
