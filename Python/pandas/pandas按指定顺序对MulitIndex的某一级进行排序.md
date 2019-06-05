@@ -1,7 +1,3 @@
-## reindex用法
-
-扩充行
-
 当需要对某一级索引进行自定义顺序的排序时，可以用`pandas.DataFrame.reindex`方法
 
 例如：
