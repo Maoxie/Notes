@@ -12,8 +12,8 @@
 
 ```python
 # 原有索引列
-df.index.names
-> 
+In  []:   df.index.names
+Ount[]: FrozenList(['employee_id', 'chinese_name', 'lead_code', 'lead_name', 'start_time'])
 ```
 
 
