@@ -6,25 +6,24 @@
 
 对于MultiIndex，只在某个level上应用reindex不会使行扩充，只会对存在的行进行排序。因此需要生成完整的MultiIndex索引。
 
-为此，可以使用`pd.MultiIndex.levels`方法取出已有的各级索引，然后用`pd.MultiIndex.from_product`生成新索引，新索引是旧索引的笛卡尔积
+为此，可以结合`pandas.pivot_table`将需要扩充列索引变为某个轴上的简单索引，再用`reindex`方法扩充，最后用`stack`方法恢复原先的结构。
+
+这种做法会丢失一些列，因此最后还需要用`merge`方法将丢失的列信息补充回来
 
 例如:
 
 ```python
-# 原有索引列
-df.index.names
-Out[1]:
-FrozenList(['employee_id', 'lead_code', 'start_time'])
-# 
-df.index.names.unique()
-Out[2]: 
-DatetimeIndex(['2019-01-31', '2019-02-28', '2019-03-31', '2019-04-30',
-               '2019-05-31'],
-              dtype='datetime64[ns]', name='start_time', freq=None)
-# 需要扩充start_time这一列的索引，使对于所有的'employee_id'和'lead_code'，都有如下时间的行：
-time_range = ['2019-01-31', '2019-02-28', '2019-03-31', '2019-04-30',
-               '2019-05-31', '2019-06-30']
-new_index = 
+# 扩充 monthly_data_df 的 start_time 列
+# 用于扩充的新索引数据为 month_end_date_index
+# 扩充后的结果为 time_expanded_df
+time_expanded_df = pd.pivot_table(monthly_data_df, index=['start_time'],
+                                  columns=['employee_id', 'lead_code'],
+                                  values=['visit_times']
+                                  ).reindex(month_end_date_index)
+time_expanded_df = time_expanded_df.stack(['employee_id', 'lead_code'], dropna=False
+                                          ).reset_index().rename({'level_0': 'start_time'}, axis=1)
+time_expanded_df['visit_times'] = time_expanded_df['visit_times'].fillna(0)
+time_expanded_df = time_expanded_df.merge(leads_info, on=['employee_id', 'lead_code'])
 
 ```
 
