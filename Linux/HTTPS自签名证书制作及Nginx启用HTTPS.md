@@ -25,3 +25,11 @@ openssl x509 -req -days 36500 -in server.csr -signkey server.key -out server.crt
 ```
 
 运行此命令最终生成server.crt证书文件
+
+## Nginx配置HTTPS
+
+主要做三件事情：放置Nginx HTTPS证书及证书秘钥，配置服务为HTTPS协议，HTTP协议自动重定向到HTTPS
+
+### 1. 放置Nginx HTTPS证书及证书秘钥
+
+将`server.crt`和``拷贝到/etc/pki/nginx/目录下
