@@ -12,5 +12,8 @@ openssl genrsa -out server.key 2048
 
 ### 2. 生成证书签名请求（CSR）
 
+```bash
+openssl req -new -key server.key -out server.csr
+```
 
-
+此命令会要求用户输入一些信息
