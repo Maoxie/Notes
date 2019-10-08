@@ -38,7 +38,7 @@ openssl x509 -req -days 36500 -in server.csr -signkey server.key -out server.crt
 
 ### 2. 配置服务为HTTPS协议
 
-```config
+```nginx
     listen       443 ssl http2 default_server;
     listen       [::]:443 ssl http2 default_server;
     server_name  _;
@@ -53,4 +53,12 @@ openssl x509 -req -days 36500 -in server.csr -signkey server.key -out server.crt
 ```
 
 ### 3. 配置HTTP重定向到HTTPS
+
+```nginx
+server {
+    listen      80;
+    server_name   _;
+    return 301 https://$host$request_uri;
+}
+```
 
