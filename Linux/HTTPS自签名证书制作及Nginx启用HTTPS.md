@@ -38,3 +38,27 @@ openssl x509 -req -days 36500 -in server.csr -signkey server.key -out server.crt
 
 ### 2. 配置服务为HTTPS协议
 
+```config
+server {
+    listen       443 ssl http2 default_server;
+    listen       [::]:443 ssl http2 default_server;
+    server_name  _;
+    #root         /usr/share/nginx/html;
+
+    ssl_certificate "/etc/pki/nginx/server.crt";                # 证书
+    ssl_certificate_key "/etc/pki/nginx/private/server.key";     # 秘钥
+    ssl_session_cache shared:SSL:1m;
+    ssl_session_timeout  10m;
+    ssl_ciphers HIGH:!aNULL:!MD5;
+    ssl_prefer_server_ciphers on;
+
+    # Load configuration files for the default server block.
+    include /etc/nginx/default.d/*.conf;
+
+    location ~^/(auth|product|shop|core|other|analysis)/ {
+    include uwsgi_params;
+    uwsgi_read_timeout 3600;
+    uwsgi_pass 127.0.0.1:8000;
+    }
+```
+
