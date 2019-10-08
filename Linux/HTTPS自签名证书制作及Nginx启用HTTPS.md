@@ -32,4 +32,9 @@ openssl x509 -req -days 36500 -in server.csr -signkey server.key -out server.crt
 
 ### 1. 放置Nginx HTTPS证书及证书秘钥
 
-将`server.crt`和``拷贝到/etc/pki/nginx/目录下
+将`server.crt`拷贝到`/etc/pki/nginx/`目录
+
+将`server.key`文件拷贝到 `/etc/pki/nginx/private`目录
+
+### 2. 配置服务为HTTPS协议
+
