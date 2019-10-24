@@ -2,18 +2,18 @@
 yum install convmv
 ```
 
-���
+命令：
 ```bash
-convmv -f GBK -t UTF-8 -r --nosmart --notest <Ŀ��Ŀ¼>
+convmv -f GBK -t UTF-8 -r --nosmart --notest <目标目录>
 
-��f from
+－f from
 
-��t to
+－t to
 
---nosmart ����Ѿ���utf��8 ����
+--nosmart 如果已经是utf－8 忽略
 
--r ����������Ŀ¼
+-r 包含所有子目录
 
---notest ���ӱ�ʾֻ�г���ʲô��Ҫת���ģ�����ʵ��ת��
+--notest 不加表示只列出有什么需要转换的，不做实际转换
 ```
 
