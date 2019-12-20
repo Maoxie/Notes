@@ -53,12 +53,14 @@ from collections import
 # @lc code=start
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
-        # 第一步：整数的出现次数
+        # 第一步：遍历数组，统计整数的出现次数
+        # 时间复杂度：O(n)
         counts = {}
         for n in nums:
             counts[n] = counts.get(n, 0) + 1
 
         # 第二步：构建大根堆
+        # 时间复杂度：O(nlogn)
         heap = BigRootHeap()
         for n, count in counts.items():
             node = Node(count, n)
