@@ -56,5 +56,13 @@ class Solution:
         for n in nums:
             counts[n] = counts.get(n, 0) + 1
 
+        heap = BigRootHeap()
+        for n, count in counts.items():
+            node = Node(count, n)
+            heap.push(node)
+
+        for i in range(k):
+            heap.pop()
+
 # @lc code=end
 
