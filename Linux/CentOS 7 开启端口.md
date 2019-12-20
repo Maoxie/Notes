@@ -59,7 +59,7 @@ lsof -i :8080
 删除端口配置
 
 ```bash
-firewall-cmd --zone= public--remove-port=80/tcp --permanent
+firewall-cmd --zone=public --remove-port=80/tcp --permanent
 ```
 
 测试端口（DOS中）
