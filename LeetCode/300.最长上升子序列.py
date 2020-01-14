@@ -74,6 +74,10 @@ class Solution:
         seq_x 中的后一个值一定比前一个值大，即seq_x是有序的。
         在遍历nums的过程中，用二分查找法找到当前值x在seq_x中的位置i。
         x接在位置i表示的的序列（长度为i+1）后面可以构成长度为i+2的序列，而且这个序列比原来的长度为i+2的序列的最后一个值小。
+
+        24/24 cases passed (48 ms)
+        Your runtime beats 91.8 % of python3 submissions
+        Your memory usage beats 99.54 % of python3 submissions (12.7 MB)
         """
         size = len(nums)
         seq_x = []      # 列表第i位表示长度为i+1的上升子序列中，末尾值最小的那一个值
