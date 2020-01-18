@@ -44,6 +44,41 @@
 # @lc code=start
 class Solution:
     def findPeakElement(self, nums: List[int]) -> int:
-        
+        return self.solution_2(nums)
+    
+    def solution_1(self, nums: List[int]) -> int:
+        """
+        59/59 cases passed (32 ms)
+        Your runtime beats 98.4 % of python3 submissions
+        Your memory usage beats 57.91 % of python3 submissions (13.1 MB)
+        """
+        n = len(nums)
+        res = 0
+        for i in range(1, n):
+            a = nums[i - 1]
+            b = nums[i]
+            if a < b:
+                if i + 1 >= n or nums[i+1] < b:
+                    res = i
+                    break
+        return res
+    
+    def solution_2(self, nums: List[int]) -> int:
+        """
+        59/59 cases passed (28 ms)
+        Your runtime beats 99.4 % of python3 submissions
+        Your memory usage beats 57.34 % of python3 submissions (13.3 MB)
+        """
+        a = 0
+        b = len(nums) - 1
+        while True:
+            if (b - a) <= 1:
+                return a if nums[a] > nums[b] else b
+            mid = (b + a) // 2
+            if nums[mid - 1] > nums[mid]:
+                b = mid
+            else:
+                a = mid
+
 # @lc code=end
 
