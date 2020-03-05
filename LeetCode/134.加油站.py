@@ -65,6 +65,32 @@
 # @lc code=start
 class Solution:
     def canCompleteCircuit(self, gas: List[int], cost: List[int]) -> int:
-        
+        return self.solution_1(gas, cost)
+    
+    def solution_1(self, gas: List[int], cost: List[int]) -> int:
+        """
+        31/31 cases passed (2280 ms)
+        Your runtime beats 5.1 % of python3 submissions
+        Your memory usage beats 65.59 % of python3 submissions (14.2 MB)
+        """
+        n = len(gas)
+        for i in range(n):
+            if self.try_run(gas, cost, i):
+                return i
+        return -1
+
+    def try_run(self, gas, cost, i_start) -> bool:
+        gases = gas[i_start:] + gas[:i_start]
+        costs = cost[i_start:] + cost[:i_start]
+        iter = zip(gases, costs)
+        balance = 0
+
+        for x, y in iter:
+            balance += (x - y)
+            if balance < 0:
+                return False
+
+        return True
+
 # @lc code=end
 
