@@ -1,6 +1,6 @@
 **创建配置文件，定义pip安装源**
 
-## Linux方法：
+## Linux 方法
 
 ```$HOME/.config/pip/pip.conf ```
 
@@ -37,5 +37,16 @@ trusted-host =pypi.douban.com
 [easy_install]
 timeout = 60
 index_url = https://pypi.douban.com/simple
+```
+
+## Windows 10 方法
+
+新建 %HOME%\pip\pip.ini 文件，内容如下：
+
+```ini
+[global] 
+timeout = 6000
+index-url = http://pypi.douban.com/simple
+trusted-host =http://pypi.douban.com
 ```
 
