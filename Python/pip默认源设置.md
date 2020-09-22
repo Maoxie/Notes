@@ -15,18 +15,18 @@
 timeout =6000
 index-url =http://pypi.douban.com/simple/
 [install]
-use-mirrors =true 
-mirrors =http://pypi.douban.com/simple/ 
-trusted-host =pypi.douban.com
+use-mirrors = true
+mirrors = http://pypi.douban.com/simple/
+trusted-host = pypi.douban.com
 ```
 
 也可以简写为：
 
 ```ini
 [global]
-index-url =http://pypi.douban.com/simple/
+index-url = http://pypi.douban.com/simple/
 [install]
-trusted-host =pypi.douban.com
+trusted-host = pypi.douban.com
 ```
 
 另外, 使用setup.py安装依赖库, 还是会从默认的http://pypi.python.org下载, 解决方案如下:
@@ -41,12 +41,5 @@ index_url = https://pypi.douban.com/simple
 
 ## Windows 10 方法
 
-新建 %HOME%\pip\pip.ini 文件，内容如下：
-
-```ini
-[global] 
-timeout = 6000
-index-url = http://pypi.douban.com/simple
-trusted-host =http://pypi.douban.com
-```
+新建 %HOME%\pip\pip.ini 文件，内容同上
 
