@@ -91,7 +91,7 @@ z -x 不要的路径
 
 内置插件。当你往 zsh 粘贴脚本时，它不会被立刻运行。
 
-### colored-man
+### colored-man-pages
 
 内置插件。给man添加色彩。
 
