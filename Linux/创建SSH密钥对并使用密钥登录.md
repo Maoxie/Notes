@@ -1,6 +1,6 @@
 ## 使用ssh-keygen命令生成密钥对
 
-执行ssh-keygen命令，获取私钥证书`id_rsa`和公钥证书`id_rsa.pub`
+执行 `ssh-keygen` 命令，获取私钥证书`id_rsa`和公钥证书`id_rsa.pub`
 
 ```bash
 ssh-keygen -t rsa -C "example@qq.com"
@@ -13,7 +13,7 @@ Your identification has been saved in /root/.ssh/id_rsa.
 Your public key has been saved in /root/.ssh/id_rsa.pub.
 ```
 
-ssh-keygen参数说明
+`ssh-keygen` 参数说明
 
 > -t 指定密钥类型,默认是 rsa,可以省略.
 >
@@ -25,14 +25,14 @@ ssh-keygen参数说明
 
 ## 配置使用密钥登录
 
-用 ssh-copy-拆把公钥复制到远程主机上
+用 `ssh-copy-id` 把公钥复制到远程主机上
 
 ```bash
 ssh-copy-id -i ~/.ssh/id_rsa.pub root@192.168.0.3
 # 输入密码
 ```
 
-注：ssh-copy-id 把公钥追加到远程主机的 .ssh/authorized_key 上
+注：`ssh-copy-id` 会把公钥追加到远程主机的 `.ssh/authorized_key` 上
 
 > 也可以手动把公钥内容添加到远程主机的 `~/.ssh/authorized_key` 文件
 
