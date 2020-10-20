@@ -12,8 +12,8 @@
 
 ```ini
 [global]
-timeout =6000
-index-url =http://pypi.douban.com/simple/
+timeout = 6000
+index-url = http://pypi.douban.com/simple/
 [install]
 use-mirrors = true
 mirrors = http://pypi.douban.com/simple/
