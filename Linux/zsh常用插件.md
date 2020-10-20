@@ -67,6 +67,12 @@ plugins=(git conda-zsh-completion)
 autoload -U compinit && compinit
 ```
 
+> 附注：在zsh上初始化conda的配置
+>
+> ```bash
+> conda init zsh
+> ```
+
 ### z
 
 内置插件`z`
