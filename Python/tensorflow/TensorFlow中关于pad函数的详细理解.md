@@ -1,8 +1,18 @@
+> https://blog.csdn.net/u011012422/article/details/77948084
+
 # `tensorflow.pad`
 
 ## 文档的内容：
 
 ```python
+"""
+  `paddings` is an integer tensor with shape `[n, 2]`, where n is the rank of
+  `tensor`.
+  For each dimension D of `input`, `paddings[D, 0]` indicates how
+  many values to add before the contents of `tensor` in that dimension, and
+  `paddings[D, 1]` indicates how many values to add after the contents of
+  `tensor` in that dimension.
+"""
 # 't' is [[1, 2, 3], [4, 5, 6]].
 # 'paddings' is [[1, 1,], [2, 2]].
 # 'constant_values' is 0.
@@ -28,7 +38,7 @@ pad(t, paddings, "SYMMETRIC") ==>
  [5, 4, 4, 5, 6, 6, 5]]
 ```
 
-## 思路理解：
+## 理解思路：
 tf.pad的使用，第一个是填充0，后面两个是复制前几行或者列
 
 `[1,1],[2,2]`
