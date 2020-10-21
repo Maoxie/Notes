@@ -94,9 +94,30 @@ python ./install.py
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
 ```
 
+命令：`autojump` 或 `j`
+
+```bash
+j 目录名
+```
+
+对于权重数据库的访问
+
+```bash
+# 在数据库中添加一个目录
+j -a [dir]
+# 提升当前目录value数目的权重
+j -i [value]
+# 降低当前目录的权重
+j -d [value]
+# 显示数据库中的统计数据
+j -s
+# 清除不再需要的目录
+j --purge
+```
+
 ### z
 
-内置插件。类似autojump。提供一个`z`命令，在常用目录之间跳转。
+内置插件。类似 autojump 。提供一个`z`命令，在常用目录之间跳转。
 
 ```bash
 z 目录名
