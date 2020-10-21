@@ -73,11 +73,30 @@ autoload -U compinit && compinit
 > conda init zsh
 > ```
 
+### autojump
+
+实现目录间快速跳转，想去哪个目录直接 j + 目录名，不用再频繁的 cd 了！
+
+安装：
+
+```bash
+git clone git://github.com/joelthelion/autojump.git
+cd autojump
+python ./install.py
+# 卸载
+# python ./uninstall.py
+```
+
+把以下代码加到 `~/.zshrc` 尾部
+
+```bash
+# 使用git安装的
+[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
+```
+
 ### z
 
-内置插件`z`
-
-提供一个z命令，在常用目录之间跳转。
+内置插件。类似autojump。提供一个`z`命令，在常用目录之间跳转。
 
 ```bash
 z 目录名
@@ -104,3 +123,4 @@ z -x 不要的路径
 ### sudo
 
 内置插件。连按两下 Esc 键在命令的开头加上或去掉 sudo 关键字。
+
