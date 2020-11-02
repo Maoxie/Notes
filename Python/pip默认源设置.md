@@ -36,7 +36,6 @@ trusted-host = pypi.douban.com
 
 ```ini
 [easy_install]
-timeout = 60
 index_url = https://pypi.douban.com/simple
 ```
 
