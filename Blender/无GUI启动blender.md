@@ -24,3 +24,27 @@ blender -b -P my_script.py -- --number 5 --save '/Users/Jenny/Desktop/cube.obj'
 blender -b --python-console
 ```
 
+## -noaudio 选项
+
+启动时可能会出现以下报错
+
+```bash
+ALSA lib confmisc.c:768:(parse_card) cannot find card '0'
+ALSA lib conf.c:4248:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:4248:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1251:(snd_func_refer) error evaluating name
+ALSA lib conf.c:4248:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:4727:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2239:(snd_pcm_open_noupdate) Unknown PCM default
+AL lib: (EE) ALCplaybackAlsa_open: Could not open playback device 'default': No such file or directory
+found bundled python: /home/ubuntu/blender-2.74-linux-glibc211-x86_64/2.74/python
+
+Blender quit
+```
+
+由于一般不需要声音，可以通过添加`-noaudio`选项来关掉这个错误。
+
+```bash
+blender -b -noaudio
+```
