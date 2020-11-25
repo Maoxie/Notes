@@ -30,6 +30,8 @@ sudo apt-get install build-essential git subversion cmake libx11-dev libxxf86vm-
 mkdir ~/blender-git
 cd ~/blender-git
 git clone https://git.blender.org/blender.git
+# 选择一个版本
+# git checkout blender-v2.83-release
 ```
 
 ### Download Libraries
