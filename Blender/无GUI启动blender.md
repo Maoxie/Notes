@@ -24,6 +24,14 @@ blender -b -P my_script.py -- --number 5 --save '/Users/Jenny/Desktop/cube.obj'
 blender -b --python-console
 ```
 
+blender包含了一个python解释器，位于blender安装目录的`bin/<版本号>/python/bin/`路径内。
+
+该python未包含pip，如果需要往这个python环境安装第三方依赖，可以先用如下命令安装pip：
+
+```bash
+<路径>/python -m ensurepip
+```
+
 ## -noaudio 选项
 
 启动时可能会出现以下报错

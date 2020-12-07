@@ -31,6 +31,7 @@ mkdir ~/blender-git
 cd ~/blender-git
 git clone https://git.blender.org/blender.git
 # 选择一个版本
+# cd blender
 # git checkout blender-v2.83-release
 ```
 
@@ -70,4 +71,20 @@ make
 After the build finished, you will find blender ready to run in `~/blender-git/build_linux/bin`.
 
 If building fails after an update, it sometimes helps to remove the `~/blender-git/build_linux` folder to get a completely clean build.
+
+**启用CUDA**
+
+需要安装`nvidia-cuda-dev`
+
+```bash
+sudo apt install nvidia-cuda-dev
+```
+
+修改`CMakeLists.txt`，设置`WITH_CYCLES_CUDA_BINARIES=ON`
+
+**指定编译过程中的gcc**
+
+```bash
+CC=gcc-9 CPP=g++-9 CXX=g++-9 LD=g++-9
+```
 
