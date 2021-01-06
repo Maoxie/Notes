@@ -12,7 +12,7 @@
 
 为了将坐标从一个坐标系变换到另一个坐标系，我们需要用到几个变换矩阵，最重要的几个分别是模型矩阵(Model Matrix)、观察矩阵(View Matrix)、投影矩阵(Projection Matrix)。
 
-![coordinate_systems](.assets/coordinate_systems.png)
+![coordinate_systems](assets/coordinate_systems.png)
 
 1. 局部坐标是对象相对于局部原点的坐标，也是物体起始的坐标。
 2. 下一步是将局部坐标变换为世界空间坐标，世界空间坐标是处于一个更大的空间范围的。这些坐标相对于世界的全局原点，它们会和其它物体一起相对于世界的原点进行摆放。
@@ -53,13 +53,13 @@
 
 正射投影矩阵定义了一个类似立方体的平截头箱。
 
-![orthographic_frustum](.assets/orthographic_frustum.png)
+![orthographic_frustum](assets/orthographic_frustum.png)
 
 上面的平截头体定义了可见的坐标，它由由宽、高、近(Near)平面和远(Far)平面所指定。
 
 ### 透视投影
 
-![perspective](.assets/perspective.png)
+![perspective](assets/perspective.png)
 
 投影矩阵将给定的平截头体范围映射到裁剪空间，除此之外还修改了每个顶点坐标的w值，从而使得离观察者越远的顶点坐标w分量越大。被变换到裁剪空间的坐标都会在-w到w的范围之间（任何大于这个范围的坐标都会被裁剪掉）。一旦坐标在裁剪空间内之后，透视除法就会被应用到裁剪空间坐标上：
 $$
@@ -75,7 +75,7 @@ $$
 glm::mat4 proj = glm::perspective(glm::radians(45.0f), (float)width/(float)height, 0.1f, 100.0f);
 ```
 
-![perspective_frustum](.assets/perspective_frustum.png)
+![perspective_frustum](assets/perspective_frustum.png)
 
 它的第一个参数定义了fov的值，它表示的是视野(Field of View)，并且设置了观察空间的大小。如果想要一个真实的观察效果，它的值通常设置为45.0f，但想要一个末日风格的结果你可以将其设置一个更大的值。第二个参数设置了宽高比，由视口的宽除以高所得。第三和第四个参数设置了平截头体的**近**和**远**平面。我们通常设置近距离为0.1f，而远距离设为100.0f。所有在近平面和远平面内且处于平截头体内的顶点都会被渲染。
 
