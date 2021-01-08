@@ -1,3 +1,9 @@
+## snap安装
+
+```bash
+sudo snap install blender --channel=2.83lts/stable --classic
+```
+
 ## 添加 apt 源安装
 
 ```bash
