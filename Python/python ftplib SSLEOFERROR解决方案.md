@@ -1,6 +1,6 @@
 ## 问题原因：
 
-FTP服务端配置上要求客户段复用session，即控制session和数据传输session必须相同。
+FTP服务端配置上要求客户端复用session，即控制session和数据传输session必须相同。
 
 ## 解决方案：
 
