@@ -5,17 +5,14 @@
 ```bash
 sudo apt install supervisor
 
+# 启动`supervisor`服务：
+# -c: 指定配置文件路径
+supervisor -c /etc/supervisor/supervisor.conf
+
 # 为了让非root权限用户也能执行 supervisord/supervisorctl 等命令，需要修改以下路径权限
 sudo chmod 777 /var/run				# supervisor.sock 文件路径
 sudo chmod 777 /etc/supervisor		# 配置文件路径
 sudo chmod 777 /var/log/supervisor	# 日志路径
-```
-
-启动`supervisor`服务：
-
-```bash
-# 指定配置文件路径
-supervisor -c /etc/supervisor/supervisor.conf
 ```
 
 ## 2. 管理命令
