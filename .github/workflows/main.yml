@@ -17,4 +17,4 @@ jobs:
         with:
           url: 'http://121.40.181.23/api/rebuild/'
           method: 'POST'
-          data: '{token: ${{ secrets.TOKEN }}}'
+          data: '{"token": "${{ secrets.TOKEN }}"}'
