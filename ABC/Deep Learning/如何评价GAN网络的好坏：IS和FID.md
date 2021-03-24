@@ -35,7 +35,7 @@ G(z) 是生成器用噪声z得到的输出图像
 
 为了综合两个指标，使用 KL-divergence 并用以下公式得到：
 $$
-IS(G)=e^{E_{x\in p}D_{KL}(p(y|x)||p(u))}
+IS(G)=exp({E_{x\in p}D_{KL}(p(y|x)||p(u))})
 $$
 （KL散度衡量两个分布之间的距离）
 
