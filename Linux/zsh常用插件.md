@@ -1,8 +1,8 @@
-> 推荐使用的主题：bureau
+# ZSH 常用插件
 
-## 启用插件
+## 1. 启用插件的方法
 
-打开`~/.zshrc`文件找到`plugins`数组，然后把插件名加入数组即算开启。
+打开`~/.zshrc`文件找到`plugins`，然后加入要开启的插件名称。
 
 ```bash
 plugins = (
@@ -13,7 +13,9 @@ plugins = (
 )
 ```
 
-## 推荐插件
+执行`source ~/.zshrc`使其生效。
+
+## 2. 推荐插件
 
 ### zsh-autosuggestions
 
@@ -52,11 +54,13 @@ theme 主题名
 
 conda命令补全。
 
-安装：
+**安装**：
 
 ```bash
 git clone https://github.com/esc/conda-zsh-completion ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/conda-zsh-completion
 ```
+
+**启用**：
 
 修改`.zshrc`，启动插件，并重新加载`compinit`
 
@@ -77,7 +81,7 @@ autoload -U compinit && compinit
 
 实现目录间快速跳转，想去哪个目录直接 j + 目录名，不用再频繁的 cd 了！
 
-安装：
+**安装**：
 
 ```bash
 git clone git://github.com/joelthelion/autojump.git
@@ -87,12 +91,16 @@ python ./install.py
 # python ./uninstall.py
 ```
 
+**启用**：
+
 把以下代码加到 `~/.zshrc` 尾部
 
 ```bash
 # 使用git安装的
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
 ```
+
+**使用方法**：
 
 命令：`autojump` 或 `j`
 
@@ -144,4 +152,40 @@ z -x 不要的路径
 ### sudo
 
 内置插件。连按两下 Esc 键在命令的开头加上或去掉 sudo 关键字。
+
+## 3. 推荐主题
+
+**Powerlevel10k**
+
+### (1) 安装
+
+> https://github.com/romkatv/powerlevel10k
+
+```bash
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+# 墙内可用gitee镜像代替
+# git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+```
+
+在 `~/.zshrc`中启用主题
+
+```bash
+ZSH_THEME="powerlevel10k/powerlevel10k"
+```
+
+### (2) 推荐字体
+
+MesloLGS NF
+
+> [meslo-nerd-font-patched-for-powerlevel10k](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k)
+
+### (3) 配置
+
+配置向导（configuration wizard）
+
+```bash
+p10k configure
+```
+
+配置储存在`~/.p10k.zsh`
 
