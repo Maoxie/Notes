@@ -22,7 +22,7 @@ $$
 {\#\ of\ pairs\ of\ C's\ friends\ who\ are\ friends}
 {\#\ of\ pairs\ of\ C's\ friends}
 $$
-\# of pairs of C's friends = C_4^2
+\# of pairs of C's friends = $C_4^2$
 
 > Assume that the local clustering coefficient of a node of degree less than 2 to be 0.
 

@@ -121,7 +121,7 @@ $$
 \end{align}
 $$
 
-**Endpoints**: we can either include or exclude node v as node s and t in the computation of C_btw.
+**Endpoints**: we can either include or exclude node v as node s and t in the computation of $C_{btw}$.
 
 - include node v
 - exclude node v
@@ -139,7 +139,6 @@ To control for this, we divide centrality values by the number of pairs of nodes
   \frac{1}{2}(|N|-1)(|N|-2)
   $$
   
-
 - in directed graphs
 
   Between two nodes, them can probably have two differently directed path.
@@ -154,7 +153,7 @@ nx.betweenness_centrality(G, normalized=True, endpoints=False)
 
 ## Approximation
 
-**Complexity**: Depending on the algorithm, this computation can take up to O(|N|^3) time.
+**Complexity**: Depending on the algorithm, this computation can take up to $O(|N|^3)$ time.
 
 **Approximation**: rather than computing betweenness centrality based on all pairs of nodes s, t, we can approximate it based on a sample of nodes.
 

@@ -31,7 +31,7 @@ $$
 
 - Choose the node to connect to at random with probability proportional to each node's degree.
 
-- The probability of connecting to a node u of degree k_u is
+- The probability of connecting to a node u of degree $k_u$ is
   $$
   k_u/\sum_{j}k_j
   $$
@@ -52,7 +52,7 @@ The preferential attachment model produces networks with **small shortest paths*
 ## Small World Model
 
 - Start with a ring of n nodes, where each node is connected to its k nearest neighbors.
-- Fix a parameter p in [0, 1]
+- Fix a parameter $p \in [0, 1]$
 - Consider each edge (u, v). With probability p, select a node w at random and rewire the edge (u, v) so it becomes (u, w).
 
 **Regular Lattice** (p=0): no edge is rewired.
