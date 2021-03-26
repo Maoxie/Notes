@@ -15,7 +15,7 @@ asdf是一个可用于管理多种运行时(runtime)版本的命令行工具，�
 (1) 安装
 
 ```bash
-sudo apt install curl git
+sudo apt install curl git unzip automake autoconf
 # Install v0.8.0
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
 ```
@@ -27,28 +27,39 @@ git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
 . $HOME/.asdf/completions/asdf.bash
 ```
 
-(3) 添加erlang与elixir插件
+(3) 安装 Elixir
+
+```bash
+asdf plugin add elixir
+asdf install elixir 1.11
+asdf global elixir 1.11
+```
+
+(4) 安装 Erlang
 
 ```bash
 asdf plugin add erlang
-asdf plugin add elixir
+asdf install erlang 23.3
+asdf global erlang 23.3
 ```
 
-(4) 安装最新版本的erlang与elixir
+(5) 验证安装
 
 ```bash
-asdf install erlang latest
-asdf install elixir latest
+asdf list erlang
+erl
+asdf list elixir
+elixir -v
 ```
 
 ## 1. 安装
 
 > [Manage asdf - Install (asdf-vm.com)](https://asdf-vm.com/#/core-manage-asdf?id=install)
 
-### 1.1 安装依赖：curl、git
+### 1.1 安装依赖：curl、git、unzip
 
 ```bash
-sudo apt install curl git
+sudo apt install curl git unzip
 ```
 
 ### 1.2 安装
