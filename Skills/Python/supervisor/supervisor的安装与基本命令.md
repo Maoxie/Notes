@@ -19,6 +19,24 @@ supervisor -c /etc/supervisor/supervisor.conf
 
 启动后在`/var/run`路径下生成`supervisor.sock`
 
+配置demo
+
+```ini
+[program:simple-task-server]
+directory = /home/mocap/repos/simple-task-server   ; 程序启动时的工作目录
+command = /home/mocap/miniconda3/envs/simple-task-server/bin/gunicorn -c deploy/gunicorn_conf.py manage:app   ; 启动命令
+autostart = true     ; 在 supervisord 启动的时候也自动启动
+startsecs = 5        ; 启动 5 秒后没有异常退出，就当作已经正常启动了
+autorestart = true   ; 程序异常退出后自动重启
+startretries = 3     ; 启动失败自动重试次数，默认是 3
+user = mocap          ; 用哪个用户启动
+redirect_stderr = true  ; 把 stderr 重定向到 stdout，默认 false
+stdout_logfile_maxbytes = 20MB  ; stdout 日志文件大小，默认 50MB
+stdout_logfile_backups = 20     ; stdout 日志文件备份数
+; stdout 日志文件，需要注意当指定目录不存在时无法正常启动，所以需要手动创建目录（supervisord 会自动创建日志文件）
+stdout_logfile = /home/mocap/repos/simple-task-server/logs/supervisord_stdout.log
+```
+
 ### 常见错误
 
 1. 
