@@ -49,10 +49,10 @@ Ok，我们现在再存一个值 “tencent”，如果哈希函数返回 3、4�
 
 如何选择适合业务的 k 和 m 值呢，这里直接贴一个公式：
 $$
-\begin{align}
+\begin{aligned}
 m&=-\frac{n\ln{p}}{(\ln2)^2} \\
 k&=\frac{m}{n}\ln2
-\end{align}
+\end{aligned}
 $$
 k 为哈希函数个数，m 为布隆过滤器长度，n 为插入的元素个数，p 为误报率。
 
@@ -62,10 +62,10 @@ $$
 $$
 插入n个元素后依旧为 0 的概率和为 1 的概率分别是：
 $$
-\begin{align}
+\begin{aligned}
 & (1-\frac{1}{m})^{nk}
 & 1-(1-\frac{1}{m})^{nk}
-\end{align}
+\end{aligned}
 $$
 标明某个元素是否在集合中所需的 k 个位置都按照如上的方法设置为 1，但是该方法可能会使算法错误的认为某一原本不在集合中的元素却被检测为在该集合中（False Positives），该概率由以下公式确定
 $$

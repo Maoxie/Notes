@@ -194,16 +194,16 @@ Number of common neighbors with bonus for neighbors in same community.
 
 The common Neighbor Soundarajan-Hopcroft score of nodes X and Y is:
 $$
-\begin{align}
+\begin{aligned}
  & \text{cn_soundarajan_hopcroft}(X, Y) = |N(X)\cap N(Y)| + \sum\nolimits_{u\in N(X)\cap N(Y)}f(u) \\
- & \text{where} f(u) = 
+ & \text{where} f(u) =
      \left\{
-         \begin{array}{lr} 
+         \begin{array}{lr}
              1,\ u\ \text{in same comm. as X and Y} \\
              0,\ \text{otherwise}
          \end{array}
      \right.
-\end{align}
+\end{aligned}
 $$
 
 ```python
@@ -214,7 +214,7 @@ G.node['B']['community'] = 0
 G.node['E']['community'] = 1
 G.node['F']['community'] = 1
 ...
-# 
+#
 nx.cn_soundarajan_hopcroft(G)
 ```
 
@@ -230,4 +230,3 @@ $$
 ```python
 nx.ra_index_soundarajan_hopcroft(G)
 ```
-

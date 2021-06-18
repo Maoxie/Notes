@@ -31,11 +31,11 @@ The most basic measure of centrality: number of neighbors.
 ### Undirected Networks
 
 $$
-\begin{align}
+\begin{aligned}
 & C_{deg}(v)=\frac{d_v}{|N|-1} \\
 & N = \text{the set of nodes in the network} \\
 & d_v = \text{the degree of node}\ v
-\end{align}
+\end{aligned}
 $$
 
 , where N is the set of nodes in the network and dv is the degree of node v.
@@ -47,11 +47,11 @@ nx.degree_centrality(G)
 ### Directed Networks
 
 $$
-\begin{align}
+\begin{aligned}
 & C_{indeg}(v)=\frac{d_v^{in}}{|N|-1} \\
 & N = \text{the set of nodes in the network} \\
 & d_v^{in} = \text{the in-degree of node}\ v
-\end{align}
+\end{aligned}
 $$
 
 ```pyhton
@@ -59,11 +59,11 @@ nx.in_degree_centrality(G)
 ```
 
 $$
-\begin{align}
+\begin{aligned}
 & C_{outdeg}(v)=\frac{d_v^{out}}{|N|-1} \\
 & N = \text{the set of nodes in the network} \\
 & d_v^{out} = \text{the out-degree of node}\ v
-\end{align}
+\end{aligned}
 $$
 
 ```python
@@ -74,11 +74,11 @@ nx.out_degree_centrality(G)
 
 **Assumption**: important nodes are close to other nodes.
 $$
-\begin{align}
+\begin{aligned}
 & C_{close}(v)=\frac{|N|-1}{\sum_{u\in N\backslash\{v\}}d(v,u)} \\
 & N = \text{the set of nodes in the network} \\
 & d(v,u) = \text{length of shortest path from}\ v\ \text{to}\ u
-\end{align}
+\end{aligned}
 $$
 
 ```python
@@ -91,16 +91,16 @@ If a node can't reach all other nodes:
 
 **Option 1**: Consider only nodes that L can reach
 $$
-\begin{align}
+\begin{aligned}
 & C_{close}(L)=\frac{|R(L)|}{\sum_{u\in R(L)}d(L,u)} \\
 & R(L) = \text{the set fo nodes L can reach}
-\end{align}
+\end{aligned}
 $$
 **Option 2**: Consider only nodes that L can reach and normalize by the fraction of nodes L can reach:
 $$
-\begin{align}
+\begin{aligned}
 & C_{close}(L)= \left[\frac{|R(L)|}{|N-1|}\right]\frac{|R(L)|}{\sum_{u\in R(L)}d(L,u)} \\
-\end{align}
+\end{aligned}
 $$
 
 ```python
@@ -114,11 +114,11 @@ nx.closeness_centrality(G, normalized=True)	# default: normalized=True
 
 Important nodes connect other nodes.
 $$
-\begin{align}
+\begin{aligned}
 & C_{btw}(v)=\sum\nolimits_{s,t\in N} \frac{\sigma_{s,t}(v)}{\sigma_{s,t}} \\
 & \sigma_{s,t} = \text{the number of shortest paths between nodes s and t} \\
 & \sigma_{s,t}(v) = \text{the number of shortest paths between nodes s and t that pass through node v}
-\end{align}
+\end{aligned}
 $$
 
 **Endpoints**: we can either include or exclude node v as node s and t in the computation of $C_{btw}$.
@@ -138,7 +138,7 @@ To control for this, we divide centrality values by the number of pairs of nodes
   $$
   \frac{1}{2}(|N|-1)(|N|-2)
   $$
-  
+
 - in directed graphs
 
   Between two nodes, them can probably have two differently directed path.
@@ -173,11 +173,11 @@ nx.betweenness_centrality_subset(G, [34, 33, 21], [1, 4, 13, 11])
 
 To find important edges instead of nodes:
 $$
-\begin{align}
+\begin{aligned}
 & C_{btw}(e)=\sum\nolimits_{s,t\in N} \frac{\sigma_{s,t}(e)}{\sigma_{s,t}} \\
 & \sigma_{s,t} = \text{the number of shortest paths between nodes s and t} \\
 & \sigma_{s,t}(e) = \text{the number of shortest paths between nodes s and t that pass through edge e}
-\end{align}
+\end{aligned}
 $$
 
 
@@ -252,4 +252,3 @@ Damping factor works better in very large networks like the web or large social 
 ```python
 nx.pagerank(G, alpha=0.8)
 ```
-
