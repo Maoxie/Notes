@@ -12,11 +12,11 @@
 
 ```ini
 [global]
-index-url = http://pypi.douban.com/simple/
+index-url = https://pypi.douban.com/simple/
 trusted-host = pypi.douban.com
 [install]
 use-mirrors = true
-mirrors = http://pypi.douban.com/simple/
+mirrors = https://pypi.douban.com/simple/
 trusted-host = pypi.douban.com
 ```
 
@@ -24,7 +24,7 @@ trusted-host = pypi.douban.com
 
 ```ini
 [global]
-index-url = http://pypi.douban.com/simple/
+index-url = https://pypi.douban.com/simple/
 [install]
 trusted-host = pypi.douban.com
 ```
@@ -42,3 +42,8 @@ index_url = https://pypi.douban.com/simple
 
 新建 %HOME%\pip\pip.ini 文件，内容同上
 
+## Q&A
+
+Q: WARNING: The repository located at pypi.douban.com is not a trusted or secure host and is being ignored
+
+A: pip不能使用**http**类型的连接，必须使用**https**的安全连接。将源路径改为 https
