@@ -94,6 +94,7 @@
 
     - Git
         - [git prune, git remote prune, git fetch](Skills/Git/git%20prune%2C%20git%20remote%20prune%2C%20git%20fetch.md)
+        - [git subtree](Skills/Git/git%20subtree.md)
         - [Git 多个账号用不同私钥登录](Skills/Git/Git%20%E5%A4%9A%E4%B8%AA%E8%B4%A6%E5%8F%B7%E7%94%A8%E4%B8%8D%E5%90%8C%E7%A7%81%E9%92%A5%E7%99%BB%E5%BD%95.md)
 
     - Go
