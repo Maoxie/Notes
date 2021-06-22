@@ -12,7 +12,7 @@
   <!-- folder style --><!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar-folder.min.css" /> -->
   <!-- <link rel="stylesheet" href="https://unpkg.com/docsify-toc@1.0.0/dist/toc.css"> -->
   <!-- Theme: Simple -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"> -->
 </head>
 <body>
   <div id="app"></div>
@@ -29,7 +29,7 @@
       pagination: {
         previousText: '上一章节',
         nextText: '下一章节',
-        crossChapter: true,
+        crossChapter: false,
         crossChapterText: true,
       },
       copyCode: {
@@ -38,7 +38,11 @@
         successText: 'Copied'
       },
       plugins: [
-        EditOnGithubPlugin.create('https://github.com/Maoxie/Notes/blob/master/docs/', null, 'edit on github')
+        EditOnGithubPlugin.create(
+          'https://github.com/Maoxie/Notes/blob/master/docs/',
+          null,
+          function(file) {return 'edit on git'}
+        )
       ]
     }
   </script>
@@ -49,7 +53,7 @@
   <script src="//unpkg.com/docsify-plugin-toc"></script>
   <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
   <script src="https://unpkg.com/docsify-copy-code@2"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script> -->
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script> -->
 </body>
 </html>
