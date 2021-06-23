@@ -25,6 +25,7 @@
             - [01-深度学习简介](ABC/Deep%20Learning/%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-pytorch%E7%89%88/01-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AE%80%E4%BB%8B.md)
             - [03-深度学习基础](ABC/Deep%20Learning/%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-pytorch%E7%89%88/03-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80.md)
             - [04-深度学习计算](ABC/Deep%20Learning/%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-pytorch%E7%89%88/04-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E8%AE%A1%E7%AE%97.md)
+            - [05-卷积神经网络](ABC/Deep%20Learning/%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-pytorch%E7%89%88/05-%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C.md)
 
     - Linear Algebra
         - [Linear Algebra](ABC/Linear%20Algebra/Linear%20Algebra.md)
