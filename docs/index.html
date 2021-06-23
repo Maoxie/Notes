@@ -12,7 +12,7 @@
   <!-- folder style -->
   <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar-folder.min.css" /> -->
   <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css">
-  <link href="//cdn.jsdelivr.net/npm/prismjs@1/themes/prism.css" rel="stylesheet" />
+  <link href="//cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css" rel="stylesheet" />
   <style>
     .sidebar>h1 a {
       font-size: 20px;
@@ -80,6 +80,19 @@
         },
         depth: 6
       },
+      scrollToTop: {
+        auto: true,
+        text: 'Top',
+        right: 15,
+        bottom: 15,
+        offset: 500
+      },
+      count:{
+        countable:true,
+        fontsize:'0.9em',
+        color:'rgb(90,90,90)',
+        language:'chinese'
+      },
       formatUpdated: '{YYYY}-{MM}-{DD}',
       plugins: [
         function (hook, vm) {
@@ -95,31 +108,26 @@
       ]
     }
   </script>
-  <script>
-    addBackToTop({
-      diameter: 56,
-      backgroundColor: 'rgb(23,147,209)',
-      textColor: '#fff',
-    });
-  </script>
 
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-plugin-toc@1.2.0/dist/docsify-plugin-toc.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-plugin-toc@1.23.0.2.0/dist/docsify-plugin-toc.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
   <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
   <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
+  <script src="//unpkg.com/docsify-scroll-to-top/dist/docsify-scroll-to-top.min.js"></script>
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
 
   <!-- code highlight -->
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-core.min.js"></script>
-	<script src="//cdn.jsdelivr.net/npm/prismjs@1/plugins/autoloader/prism-autoloader.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-markdown.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-nginx.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-sql.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-core.min.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-json.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-markdown.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-nginx.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-sql.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-python.min.js"></script>
 </body>
 </html>
