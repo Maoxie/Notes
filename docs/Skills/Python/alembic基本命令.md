@@ -1,4 +1,4 @@
-
+# alembic 基本命令
 
 ```bash
  alembic revision --autogenerate -m 'init'
@@ -16,6 +16,3 @@ alembic upgrade 版本号 --sql > migration.sql
 # 从特定起始版本生成sql
 alembic upgrade 版本一:版本二 --sql > migration.sql
 ```
-
-
-
