@@ -1,28 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Maoxie's Notes</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"/>
-  <!-- arrow style --><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
-  <!-- folder style --><!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar-folder.min.css" /> -->
-  <!-- <link rel="stylesheet" href="https://unpkg.com/docsify-toc@1.0.0/dist/toc.css"> -->
-  <!-- Theme: Simple -->
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"> -->
+  <!-- arrow style -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
+  <!-- folder style -->
+  <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar-folder.min.css" /> -->
+  <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css">
+  <link href="//cdn.jsdelivr.net/npm/prismjs@1/themes/prism.css" rel="stylesheet" />
+  <style>
+    .sidebar>h1 a {
+      font-size: 20px;
+      color: black;
+    }
+    .content {
+      padding-top: 5px;
+    }
+    .markdown-section {
+      padding-top: 10px;
+    }
+  </style>
 </head>
 <body>
-  <div id="app"></div>
-  <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
+  <div id="app">加载中...</div>
   <script>
     window.$docsify = {
-      name: '',
-      repo: '',
-      loadSidebar: true,
+      name: 'Maoxie\'s Notes',
+      repo: 'https://github.com/Maoxie/Notes',
+      loadSidebar: '_sidebar.md',
+      loadNavbar: true,
+      mergeNavbar: true,
+      themeColor: 'rgb(23,147,209)',
       sidebarDisplayLevel: 1, // set sidebar display level
+      auto2top: true,
       toc: {
           tocMaxLevel: 5,
           target: 'h2, h3, h4, h5, h6'
@@ -30,30 +45,81 @@
       pagination: {
         previousText: '上一章节',
         nextText: '下一章节',
-        crossChapter: false,
+        crossChapter: true,
         crossChapterText: true,
       },
+      // click to copy.
       copyCode: {
-        buttonText : 'Copy to clipboard',
-        errorText  : 'Error',
-        successText: 'Copied'
+        buttonText: {
+          '/zh/': '点击复制',
+          '/en/': 'Copy to clipboard',
+          '/': 'Copy to clipboard',
+        },
+        errorText: {
+          '/zh/': '错误',
+          '/en/': 'Error',
+          '/': 'Error',
+        },
+        successText: {
+          '/zh/': '复制成功',
+          '/en': 'Copied',
+          '/': 'Copied',
+        },
       },
+      search: {
+        noData: {
+          '/zh/': '没有结果!',
+          '/en/': 'No results!',
+          '/': 'No results!',
+        },
+        paths: 'auto',
+        placeholder: {
+          '/zh/': '搜索...',
+          '/en/': 'Search',
+          '/': 'Search',
+        },
+        depth: 6
+      },
+      formatUpdated: '{YYYY}-{MM}-{DD}',
       plugins: [
-        EditOnGithubPlugin.create(
-          'https://github.com/Maoxie/Notes/blob/master/docs/',
-          null,
-          function(file) {return 'edit on git'}
-        )
+        function (hook, vm) {
+          hook.beforeEach(function (html) {
+            var url =
+              'https://github.com/Maoxie/Notes/blob/master/docs/' +
+              vm.route.file;
+            var editHtml = '[📝 编辑本文](' + url + ')\n\n' +
+              '*更新日期： {docsify-updated}*\n\n';
+            return editHtml + html;
+          });
+        },
       ]
     }
   </script>
+  <script>
+    addBackToTop({
+      diameter: 56,
+      backgroundColor: 'rgb(23,147,209)',
+      textColor: '#fff',
+    });
+  </script>
+
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
-  <!-- <script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script> -->
-  <script src="//unpkg.com/docsify-plugin-toc"></script>
-  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
-  <script src="https://unpkg.com/docsify-copy-code@2"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script> -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-plugin-toc@1.2.0/dist/docsify-plugin-toc.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
+
+  <!-- code highlight -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-core.min.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/prismjs@1/plugins/autoloader/prism-autoloader.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-markdown.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-nginx.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-sql.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
 </body>
 </html>
