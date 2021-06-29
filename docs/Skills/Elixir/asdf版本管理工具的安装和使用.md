@@ -31,8 +31,8 @@ git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.1
 
 ```bash
 asdf plugin add elixir
-asdf install elixir 1.11
-asdf global elixir 1.11
+asdf install elixir 1.12
+asdf global elixir 1.12
 ```
 
 (4) 安装 Erlang
