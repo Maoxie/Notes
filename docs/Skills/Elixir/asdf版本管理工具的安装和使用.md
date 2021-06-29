@@ -16,8 +16,8 @@ asdf是一个可用于管理多种运行时(runtime)版本的命令行工具，�
 
 ```bash
 sudo apt install curl git unzip automake autoconf
-# Install v0.8.0
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
+# Install v0.8.1
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.1
 ```
 
 (2) 配置`~/.bashrc`
@@ -64,10 +64,10 @@ sudo apt install curl git unzip
 
 ### 1.2 安装
 
-本文编写时的最新版本：v0.8.0
+本文编写时的最新版本：v0.8.1
 
 ```bash
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.1
 ```
 
 或者下载整个仓库并checkout到最新版本
@@ -332,4 +332,3 @@ asdf的配置文件，包括以下配置选项：
 ## 4. 其他命令
 
 通过`asdf` 或 `asdf help`查看
-
