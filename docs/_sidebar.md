@@ -26,6 +26,7 @@
             - [03-深度学习基础](ABC/Deep%20Learning/%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-pytorch%E7%89%88/03-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80.md)
             - [04-深度学习计算](ABC/Deep%20Learning/%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-pytorch%E7%89%88/04-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E8%AE%A1%E7%AE%97.md)
             - [05-卷积神经网络](ABC/Deep%20Learning/%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-pytorch%E7%89%88/05-%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C.md)
+            - [06-循环神经网络](ABC/Deep%20Learning/%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-pytorch%E7%89%88/06-%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C.md)
 
     - Linear Algebra
         - [Linear Algebra](ABC/Linear%20Algebra/Linear%20Algebra.md)
@@ -130,6 +131,7 @@
         - [zsh常用插件](Skills/Linux/zsh%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6.md)
         - [下载Google Drive共享的文件](Skills/Linux/%E4%B8%8B%E8%BD%BDGoogle%20Drive%E5%85%B1%E4%BA%AB%E7%9A%84%E6%96%87%E4%BB%B6.md)
         - [创建SSH密钥对并使用密钥登录](Skills/Linux/%E5%88%9B%E5%BB%BASSH%E5%AF%86%E9%92%A5%E5%AF%B9%E5%B9%B6%E4%BD%BF%E7%94%A8%E5%AF%86%E9%92%A5%E7%99%BB%E5%BD%95.md)
+        - [安装chromedriver](Skills/Linux/%E5%AE%89%E8%A3%85chromedriver.md)
         - [打造舒适的Linux终端](Skills/Linux/%E6%89%93%E9%80%A0%E8%88%92%E9%80%82%E7%9A%84Linux%E7%BB%88%E7%AB%AF.md)
         - [指定gcc版本](Skills/Linux/%E6%8C%87%E5%AE%9Agcc%E7%89%88%E6%9C%AC.md)
         - [自签名SSL证书](Skills/Linux/%E8%87%AA%E7%AD%BE%E5%90%8DSSL%E8%AF%81%E4%B9%A6.md)
