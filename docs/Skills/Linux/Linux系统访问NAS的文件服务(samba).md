@@ -76,12 +76,12 @@ smbclient //10.4.5.66/share -U username_1
 sudo mount -t cifs -o username=username_1,password=password_1 //10.4.5.27/share /home/yangzhitao/mnt/nas
 ```
 
-当 SMB version 高于 SMB1 时，需要指定vers（见Q2）
+**当 SMB version 高于 SMB1 时，需要指定vers（见Q2）**
 
 ### 5. 开机自动挂载
 
-```
-//10.4.5.27/Software /mnt/Myshare cifs user=username_1,password=password_1 0 0
+```bash
+//10.4.5.66/share /path/of/mnt/point cifs user=username_1,password=password_1 0 0
 ```
 
 ## Q&A
