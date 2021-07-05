@@ -53,7 +53,7 @@ wget http://chromedriver.storage.googleapis.com/$LATEST/chromedriver_linux64.zip
 之后解压，赋予它执行权限
 
 ```bash
-unzip chromedriver_linux64.zip
+unzip chromedriver_linux64.zip && cd chromedriver_linux64
 chmod +x chromedriver
 ```
 
@@ -62,4 +62,3 @@ chmod +x chromedriver
 ```bash
 sudo mv chromedriver /usr/bin/
 ```
-

@@ -122,6 +122,7 @@
         - [Linux批量杀死进程](Skills/Linux/Linux%E6%89%B9%E9%87%8F%E6%9D%80%E6%AD%BB%E8%BF%9B%E7%A8%8B.md)
         - [Linux搜索所有文件中的内容](Skills/Linux/Linux%E6%90%9C%E7%B4%A2%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6%E4%B8%AD%E7%9A%84%E5%86%85%E5%AE%B9.md)
         - [linux新建用户](Skills/Linux/linux%E6%96%B0%E5%BB%BA%E7%94%A8%E6%88%B7.md)
+        - [Linux系统访问NAS的文件服务(samba)](Skills/Linux/Linux%E7%B3%BB%E7%BB%9F%E8%AE%BF%E9%97%AENAS%E7%9A%84%E6%96%87%E4%BB%B6%E6%9C%8D%E5%8A%A1%28samba%29.md)
         - [MF2谷歌两步验证自动获取验证码](Skills/Linux/MF2%E8%B0%B7%E6%AD%8C%E4%B8%A4%E6%AD%A5%E9%AA%8C%E8%AF%81%E8%87%AA%E5%8A%A8%E8%8E%B7%E5%8F%96%E9%AA%8C%E8%AF%81%E7%A0%81.md)
         - [nginx代理静态页面](Skills/Linux/nginx%E4%BB%A3%E7%90%86%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2.md)
         - [nginx隐藏响应头的版本信息(header的server字段)](Skills/Linux/nginx%E9%9A%90%E8%97%8F%E5%93%8D%E5%BA%94%E5%A4%B4%E7%9A%84%E7%89%88%E6%9C%AC%E4%BF%A1%E6%81%AF%28header%E7%9A%84server%E5%AD%97%E6%AE%B5%29.md)

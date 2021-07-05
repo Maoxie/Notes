@@ -1,0 +1,86 @@
+# Linux系统访问NAS的文件服务(samba)
+
+适用于 samba 文件服务。
+
+> 假设文件服务的IP地址为 `10.4.5.66`，帐号为`username_1`，密码为`password_1`。
+>
+> - 在 windows 系统下，直接在`win+r`或文件管理器地址栏输入 `\\10.4.5.66` 即可访问。
+>
+> - 在 mac 系统下，直接输入 `smb://10.4.5.66`。
+
+## 安装 smbclient
+
+```bash
+sudo apt-get install smbclient
+```
+
+## 常用命令
+
+### 1. 查看所有共享目录
+
+```bash
+smbclient -L 10.4.5.66 -U username_1
+```
+
+```
+Domain=[ELSE_WORLDS] OS=[] Server=[]
+
+        Sharename       Type      Comment
+        ---------       ----      -------
+        music           Disk      System default shared folder
+        ReadOnly        Disk      
+        share           Disk      
+        web             Disk      System default shared folder
+        IPC$            IPC       IPC Service ()
+Domain=[ELSE_WORLDS] OS=[] Server=[]
+
+        Server               Comment
+        ---------            -------
+
+        Workgroup            Master
+        ---------            -------
+```
+
+### 2. 连接共享目录
+
+```bash
+smbclient //10.4.5.66/share -U username_1
+```
+
+成功后出现提示符`smb:\>`，下面就可以开始操作。
+
+### 3. 文件操作
+
+```
+? 或 help [command]		提供关于帮助或某个命令的帮助
+![shell command]		执行所用的SHELL命令，或让用户进入 SHELL提示符
+cd [目录]			切换到服务器端的指定目录，如未指定，则 smbclient 返回当前本地目录
+lcd [目录]			切换到客户端指定的目录；
+dir 或 ls			列出当前目录下的文件；
+exit 或 quit			退出smbclient     
+get file1 file2			从服务器上下载file1，并以文件名file2存在本地机上；如果不想改名，可以把file2省略
+mget file1 file2 file3 filen	从服务器上下载多个文件；
+md 或 mkdir [目录]			在服务器上创建目录
+rd 或 rmdir [目录]			删除服务器上的目录
+put file1 [file2]		向服务器上传一个文件file1, 传到服务器上改名为file2
+mput file1 file2 filen	向服务器上传多个文件
+```
+
+## Q&A
+
+Q: 出现错误``
+
+```bash
+protocol negotiation failed: NT_STATUS_INVALID_NETWORK_RESPONSE
+```
+
+A: 
+
+The current Samba version in **Ubuntu 16.04** defaults to making NT1 (SMB1) connections even though it supports SMB2 and SMB3 - hence it works when you specify the client version from the command line. 
+
+```bash
+smbclient -m smb3 -L //10.4.5.66 -U username_1
+```
+
+> [[solved\] [8.1.1] Samba access from Linux: protocol negotiation failed - General Support - LibreELEC Forum](https://forum.libreelec.tv/thread/9920-solved-8-1-1-samba-access-from-linux-protocol-negotiation-failed/)
+
