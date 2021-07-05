@@ -20,6 +20,8 @@ sudo apt-get install smbclient
 
 ```bash
 smbclient -L 10.4.5.66 -U username_1
+# Explicit password:
+# smbclient -L 10.4.5.66 -U username_1%password_1
 ```
 
 ```
@@ -45,42 +47,77 @@ Domain=[ELSE_WORLDS] OS=[] Server=[]
 
 ```bash
 smbclient //10.4.5.66/share -U username_1
+# Explicit password:
+# smbclient //10.4.5.66/share -U username_1%password_1
 ```
 
 成功后出现提示符`smb:\>`，下面就可以开始操作。
 
 ### 3. 文件操作
 
+| 命令                     | 说明                                                         |
+| ------------------------ | ------------------------------------------------------------ |
+| `?` or `help [command]`  | 提供关于帮助或某个命令的帮助                                 |
+| `![shell command]`       | 执行所用的SHELL命令，或让用户进入 SHELL提示符                |
+| `cd [目录]`              | 切换到服务器端的指定目录，如未指定，则 smbclient 返回当前本地目录 |
+| `lcd [目录]`             | 切换到客户端指定的目录                                       |
+| `dir` or `ls`            | 列出当前目录下的文件                                         |
+| `exit` or `quit`         | 退出smbclient                                                |
+| `get file1 [file2]`      | 从服务器上下载file1，并以文件名file2存在本地机上；如果不想改名，可以把file2省略 |
+| `mget file1 file2 filen` | 从服务器上下载多个文件                                       |
+| `md` or `mkdir [目录]`   | 在服务器上创建目录                                           |
+| `rd` OR `rmdir [目录]`   | 删除服务器上的目录                                           |
+| `put file1 [file2]`      | 向服务器上传一个文件file1，传到服务器上改名为file2           |
+| `mput file1 file2 filen` | 向服务器上传多个文件                                         |
+
+### 4. 临时挂载
+
+```bash
+sudo mount -t cifs -o username=username_1,password=password_1 //10.4.5.27/share /home/yangzhitao/mnt/nas
 ```
-? 或 help [command]		提供关于帮助或某个命令的帮助
-![shell command]		执行所用的SHELL命令，或让用户进入 SHELL提示符
-cd [目录]			切换到服务器端的指定目录，如未指定，则 smbclient 返回当前本地目录
-lcd [目录]			切换到客户端指定的目录；
-dir 或 ls			列出当前目录下的文件；
-exit 或 quit			退出smbclient     
-get file1 file2			从服务器上下载file1，并以文件名file2存在本地机上；如果不想改名，可以把file2省略
-mget file1 file2 file3 filen	从服务器上下载多个文件；
-md 或 mkdir [目录]			在服务器上创建目录
-rd 或 rmdir [目录]			删除服务器上的目录
-put file1 [file2]		向服务器上传一个文件file1, 传到服务器上改名为file2
-mput file1 file2 filen	向服务器上传多个文件
+
+当 SMB version 高于 SMB1 时，需要指定vers（见Q2）
+
+### 5. 开机自动挂载
+
+```
+//10.4.5.27/Software /mnt/Myshare cifs user=username_1,password=password_1 0 0
 ```
 
 ## Q&A
 
-Q: 出现错误``
+Q1: `smbclient` 命令出现错误 `NT_STATUS_INVALID_NETWORK_RESPONSE`：
 
 ```bash
 protocol negotiation failed: NT_STATUS_INVALID_NETWORK_RESPONSE
 ```
 
-A: 
-
-The current Samba version in **Ubuntu 16.04** defaults to making NT1 (SMB1) connections even though it supports SMB2 and SMB3 - hence it works when you specify the client version from the command line. 
+A1: 用`-m smb3` 指定 highest SME protocol level：
 
 ```bash
 smbclient -m smb3 -L //10.4.5.66 -U username_1
 ```
 
+The current Samba version in **Ubuntu 16.04** defaults to making NT1 (SMB1) connections even though it supports SMB2 and SMB3 - hence it works when you specify the client version from the command line. 
+
 > [[solved\] [8.1.1] Samba access from Linux: protocol negotiation failed - General Support - LibreELEC Forum](https://forum.libreelec.tv/thread/9920-solved-8-1-1-samba-access-from-linux-protocol-negotiation-failed/)
+
+Q2: `mount` 命令出现错误 `Operation not supported`：
+
+```
+mount: mount //10.4.5.66/share on /path/of/mnt/point failed: Operation not supported
+```
+
+A2: 需要指定 SMB 版本：
+
+The SMB version needs to be specified when higher than v1
+
+```bash
+mount -t cifs \
+  -o username=USERNAME,vers=3.0 \
+  //10.4.5.66/share \
+  /path/of/mnt/point
+```
+
+> [linux - Mounting cifs: "Operation not supported" - Unix & Linux Stack Exchange](https://unix.stackexchange.com/questions/144522/mounting-cifs-operation-not-supported)
 
