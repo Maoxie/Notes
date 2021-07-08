@@ -73,10 +73,14 @@ smbclient //10.4.5.66/share -U username_1
 ### 4. 临时挂载
 
 ```bash
-sudo mount -t cifs -o username=username_1,password=password_1 //10.4.5.27/share /home/yangzhitao/mnt/nas
+sudo mount -t cifs -o username=username_1,password=password_1,umask=<filePermissions>,gid=<ownerGroupID>,uid=<ownerID> //10.4.5.27/share /home/yangzhitao/mnt/nas
 ```
 
-**当 SMB version 高于 SMB1 时，需要指定vers（见Q2）**
+**当 SMB version 高于 SMB1 时，需要指定vers（见Q2）**。
+
+umask可指定挂载后的目录和文件权限。
+
+gid/uid可指定挂载后的目录所属的组/用户。
 
 ### 5. 开机自动挂载
 
