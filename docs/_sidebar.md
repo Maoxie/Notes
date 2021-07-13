@@ -138,7 +138,6 @@
         - [自签名SSL证书](Skills/Linux/%E8%87%AA%E7%AD%BE%E5%90%8DSSL%E8%AF%81%E4%B9%A6.md)
 
     - Python
-        - [alembic](Skills/Python/alembic.md)
         - [alembic基本命令](Skills/Python/alembic%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4.md)
         - [conda源设置](Skills/Python/conda%E6%BA%90%E8%AE%BE%E7%BD%AE.md)
         - [Cython中使用C++](Skills/Python/Cython%E4%B8%AD%E4%BD%BF%E7%94%A8C%2B%2B.md)
