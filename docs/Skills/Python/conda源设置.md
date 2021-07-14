@@ -2,7 +2,7 @@
 
 添加清华源
 
-```
+```bash
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge 
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/
@@ -10,19 +10,19 @@ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/
 
 搜索时显示通道地址
 
-```
+```bash
 conda config --set show_channel_urls yes
 ```
 
 注意如果需要pytorch, 还需要添加pytorch的镜像：
 
-```text
+```bash
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/
 ```
 
 如果需要换回conda的默认源，直接删除channels即可，命令如下：
 
-```text
+```bash
 conda config --remove-key channels
 ```
 
