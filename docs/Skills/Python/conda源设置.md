@@ -30,7 +30,7 @@ conda config --remove-key channels
 
 可将以上配置写在`~/.condarc`中
 
-```text
+```yaml
 channels:
   - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
   - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
