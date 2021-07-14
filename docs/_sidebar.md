@@ -68,6 +68,7 @@
     - Database
         - [MySQL备份与恢复](Skills/Database/MySQL%E5%A4%87%E4%BB%BD%E4%B8%8E%E6%81%A2%E5%A4%8D.md)
         - [MySQL开启远程访问权限](Skills/Database/MySQL%E5%BC%80%E5%90%AF%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90.md)
+        - [PG - INSERT ON CONFLICT 语法(upsert)](Skills/Database/PG%20-%20INSERT%20ON%20CONFLICT%20%E8%AF%AD%E6%B3%95%28upsert%29.md)
         - [PG Null值排序顺序](Skills/Database/PG%20Null%E5%80%BC%E6%8E%92%E5%BA%8F%E9%A1%BA%E5%BA%8F.md)
         - [PG利用索引实现partial unique约束](Skills/Database/PG%E5%88%A9%E7%94%A8%E7%B4%A2%E5%BC%95%E5%AE%9E%E7%8E%B0partial%20unique%E7%BA%A6%E6%9D%9F.md)
         - [pg把多行拼接为字符串](Skills/Database/pg%E6%8A%8A%E5%A4%9A%E8%A1%8C%E6%8B%BC%E6%8E%A5%E4%B8%BA%E5%AD%97%E7%AC%A6%E4%B8%B2.md)
