@@ -18,6 +18,8 @@
 
 ## 2. 脚本
 
+[Maoxie/mintotp (github.com)](https://github.com/Maoxie/mintotp)
+
 ```python
 #!/usr/bin/python3
 """
@@ -45,7 +47,7 @@ import struct
 import time
 
 
-KEY = 'TzUyVzQ1VEpHNVZHNk1ET1BGVVRTWkJZ\n'
+KEY = 'PUT_YOUR_BASE64_ENCODED_TOKEN_HERE\n'    # include a tailing '\n'
 
 def hotp(key, counter, digits=6, digest='sha1'):
     key = base64.b32decode(key.upper() + '=' * ((8 - len(key)) % 8))
