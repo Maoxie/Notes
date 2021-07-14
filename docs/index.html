@@ -9,8 +9,11 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"/>
   <!-- arrow style -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
-  <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css" />
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css" />
+  <link rel="stylesheet" href="https://unpkg.com/docsify/themes/vue.css" />
+  <!-- prism theme -->
+  <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/prismjs@1.24.1/themes/prism-coldark-cold.css" /> -->
+  <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/prismjs@1.24.1/themes/prism-material-light.css" /> -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/prismjs@1.24.1/themes/prism-hopscotch.css" />
   <style>
     .sidebar>h1 a {
       font-size: 20px;
@@ -102,6 +105,10 @@
               '*更新日期： {docsify-updated}*\n\n';
             return editHtml + html;
           });
+          hook.doneEach(function (html) {
+            Prism.highlightAll();
+            console.log('mounted,', Prism, Prism.languages.flow);
+          });
         },
       ]
     }
@@ -110,22 +117,22 @@
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-plugin-toc@1.23.0.2.0/dist/docsify-plugin-toc.min.js"></script>
+  <script src="https://unpkg.com/docsify-plugin-toc"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
-  <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
-  <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
-  <script src="//unpkg.com/docsify-scroll-to-top/dist/docsify-scroll-to-top.min.js"></script>
-  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code@2.1.1/dist/docsify-copy-code.min.js"></script>
+  <script src="https://unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
+  <script src="https://unpkg.com/docsify/lib/plugins/search.js"></script>
+  <script src="https://unpkg.com/docsify-scroll-to-top/dist/docsify-scroll-to-top.min.js"></script>
+  <script src="https://unpkg.com/docsify-count/dist/countable.js"></script>
 
   <!-- code highlight -->
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-core.min.js"></script>
-  <!-- <script src="//cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js"></script> -->
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.24.1/prism.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/autoloader/prism-autoloader.min.js"></script>
+  <!-- <script src="//cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-bash.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-json.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-markdown.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-nginx.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-sql.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-python.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-python.min.js"></script> -->
 </body>
 </html>
