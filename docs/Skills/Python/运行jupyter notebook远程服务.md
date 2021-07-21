@@ -77,3 +77,7 @@ c.NotebookApp.open_browser = False
 c.NotebookApp.port = 9999
 ```
 
+## 5. 添加 kernel
+
+> [Installing the IPython kernel — IPython 7.25.0 documentation](https://ipython.readthedocs.io/en/stable/install/kernel_install.html#kernels-for-different-environments)
+
