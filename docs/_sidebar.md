@@ -185,6 +185,7 @@
     - Software-Specific
         - Blender
             - [blender安装python packages](Skills/Software-Specific/Blender/blender%E5%AE%89%E8%A3%85python%20packages.md)
+            - [blender常用操作](Skills/Software-Specific/Blender/blender%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C.md)
             - [CUDA cuInit Unknown error](Skills/Software-Specific/Blender/CUDA%20cuInit%20Unknown%20error.md)
             - [Ubuntu安装blender](Skills/Software-Specific/Blender/Ubuntu%E5%AE%89%E8%A3%85blender.md)
             - [无GUI启动blender](Skills/Software-Specific/Blender/%E6%97%A0GUI%E5%90%AF%E5%8A%A8blender.md)
