@@ -1,5 +1,11 @@
 # ZSH 常用插件
 
+安装 Oh-My-ZSH
+```bash
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+> https://ohmyz.sh/#install
+
 ## 1. 启用插件的方法
 
 打开`~/.zshrc`文件找到`plugins`，然后加入要开启的插件名称。
