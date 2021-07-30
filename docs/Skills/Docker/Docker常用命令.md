@@ -341,3 +341,95 @@ docker commit -a "runoob.com" -m "my apache" a404c6c174a2  mymysql:v1
 # -m: 提交时的文字说明
 ```
 
+## 3. 清理
+
+### 移除镜像
+
+`docker image prune`：
+
+```bash
+# examples:
+# 移除没有标签并且没有被容器引用的镜像（dangling镜像）
+docker image prune
+# 移除所有没有容器使用的镜像
+docker image prune -a
+# 跳过警告提示
+docker image prune -f
+# 过滤删除：超过24小时创建的镜像
+docker image prune -a --filter "until=24h"
+```
+
+### 移除容器
+
+一个停止的容器可写层仍然会占用磁盘空间。
+
+`docker container prune`：
+
+```bash
+# examples
+# ARGS: --filter, --force/-f
+docker container prune
+```
+
+也可以用`docker rm $(docker ps -a -q)`删除所有已停止的容器。
+
+### 移除卷
+
+卷会被一个或多个容器使用，并且占用主机空间。卷不会自动移除，因为自动移除，会破坏数据。
+
+`docker volume prune`：
+
+```bash
+# examples
+# ARGS: --filter, --force/-f
+docker volume prune
+```
+
+### 移除网络
+
+Docker 网络不会占用磁盘空间，但是他们创建了 `iptables`规则，桥接网络服务，路由entries。
+
+`docker network prune`：
+
+```bash
+# examples
+# ARGS: --force/-f
+docker network prune
+```
+
+### 移除 Everytghing
+
+`docker system prune`：用于移除镜像，容器，网络。
+
+在 Docker 17.06.0 和更早，卷也是可以移除的。在Docker 17.06.1或更高版本，需要指定参数`--volumes`。
+
+```bash
+# examples
+# ARGS: --all/-a, --filter, --force/-f, --volumes
+
+docker system prune
+# WARNING! This will remove:
+#         - all stopped containers
+#         - all networks not used by at least one container
+#         - all dangling images
+#         - all build cache
+# Are you sure you want to continue? [y/N]
+
+docker system prune --volumes
+# WARNING! This will remove:
+#         - all stopped containers
+#         - all networks not used by at least one container
+#         - all volumes not used by at least one container
+#         - all dangling images
+#         - all build cache
+# Are you sure you want to continue? [y/N] y
+```
+
+### rm、rmi、prune 的差异
+
+- `docker rm`：删除一个或多个 **容器**
+
+- `docker rmi`：删除一个或多个 **镜像**
+
+- `docker prune`：用来删除不再使用的 **docker 对象**
+
