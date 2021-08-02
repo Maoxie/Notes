@@ -359,6 +359,9 @@ docker image prune -f
 docker image prune -a --filter "until=24h"
 ```
 
+也可以用`docker rmi $(docker images --filter "dangling=true" -q --no-trunc)`删除所有dangling镜像
+
+
 ### 移除容器
 
 一个停止的容器可写层仍然会占用磁盘空间。
