@@ -4,7 +4,7 @@
 
 > [02、Docker常用命令 - 华为云 (huaweicloud.com)](https://www.huaweicloud.com/articles/1995d352dd7228cac90cd8737f1f5c97.html)
 
-### 1.1 拉取或者更新镜像
+### 1.1 `pull` - 拉取或者更新镜像
 
 ```bash
 docker pull [OPTIONS] NAME[:TAG|@DIGEST]
@@ -16,7 +16,7 @@ docker pull python:3
 docker pull registry.sensetime.com/zoetrope/python@sha256:c934af72b8bd03b9804d5bde2569c320926e70392d708d113a2e71bcf98c8a20
 ```
 
-### 1.2 列出镜像
+### 1.2 `images` - 列出镜像
 
 ```bash
 docker images [OPTIONS] [REPOSITORY[:TAG]]
@@ -32,7 +32,7 @@ docker images ubuntu	# 列出REPOSITORY为ubuntu的镜像
 # ubuntu              15.10               4e3b13c8a266        3 months ago        136.3 MB
 ```
 
-### 1.3 构建镜像
+### 1.3 `build` - 构建镜像
 
 使用 `Dockerfile` 创建镜像
 
@@ -53,7 +53,7 @@ docker build -f /path/to/a/Dockerfile .
 # -f: 指定 Dockerfile 文件的路径
 ```
 
-### 1.4 删除镜像
+### 1.4 `rmi` - 删除镜像
 
 ```bash
 docker rmi [OPTIONS] IMAGE [IMAGE...]
@@ -71,7 +71,7 @@ docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
 
 ### 1.5 镜像发布流程
 
-#### (1) 标记镜像
+#### (1) `tag` - 标记镜像
 
 增加镜像的repository和tag标记
 
@@ -89,7 +89,7 @@ docker tag ubuntu:15.10 runoob/ubuntu:v3
 docker tag 95a6101eab8f registry.sensetime.com/zoetrope/python:3.8.10
 ```
 
-#### (2) 登录/登出镜像仓库
+#### (2) `login`/`logout` - 登录/登出镜像仓库
 
 ```bash
 docker login [OPTIONS] [SERVER]
@@ -105,7 +105,7 @@ docker logout
 docker logout registry.sensetime.com
 ```
 
-#### (3) 上传镜像
+#### (3) `push` - 上传镜像
 
 需要登录到镜像仓库
 
@@ -118,7 +118,7 @@ docker push [OPTIONS] NAME[:TAG]
 docker push registry.sensetime.com/zoetrope/python:3.8.10
 ```
 
-### 1.6 保存/加载镜像
+### 1.6 `save`/`load` - 保存/加载镜像
 
 保存：
 
@@ -148,7 +148,7 @@ docker load -i busybox.tar.gz
 
 ## 2. 容器
 
-### 2.1 列出容器
+### 2.1 `ps` - 列出容器
 
 ```bash
 docker ps [OPTIONS]
@@ -170,7 +170,7 @@ docker ps -a -q # 列出所有创建的容器ID
 # f46fb1dec520
 ```
 
-### 2.2 创建并运行容器
+### 2.2 `run` - 创建并运行容器
 
 ```bash
 docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
@@ -193,7 +193,7 @@ docker run -it nginx:latest /bin/bash
 
 用`COMMAND`可以创建一个容器并用容器执行命令，命令完成后容器自动退出。
 
-### 2.3 用容器执行命令
+### 2.3 `exec` - 用容器执行命令
 
 ```bash
 docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
@@ -205,7 +205,7 @@ docker exec -it mynginx /bin/sh /root/runoob.sh
 # -it 以交互模式在容器内执行 /bin/sh /root/runoob.sh
 ```
 
-### 2.4 容器启动、停止、重启
+### 2.4 `start`/`stop`/`restart` - 容器启动/停止/重启
 
 ```bash
 docker start|stop|restart [OPTIONS] CONTAINER [CONTAINER...]
@@ -221,7 +221,7 @@ docker stop 09b93464c2f7
 docker restart myrunoob
 ```
 
-### 2.5 进入容器
+### 2.5 `attach` - 进入容器
 
 在`docker run`时使用`-d`参数，容器创建后会进入后台。此时想要进入容器，除了上面提到的 `docker exec -it xxxx /bin/bash` 外，还可以用`docker attach`（**不推荐**，退出时会导致容器停止）
 
@@ -234,7 +234,7 @@ docker attach [OPTIONS] CONTAINER
 docker attach 09b93464c2f7
 ```
 
-### 2.6 删除容器
+### 2.6 `rm` - 删除容器
 
 ```bash
 docker rm [OPTIONS] CONTAINER [CONTAINER...]
@@ -251,7 +251,7 @@ docker rm -v nginx01
 docker rm $(docker ps -a -q)	# 删除所有已停止的容器
 ```
 
-### 2.7 导入/导出容器快照
+### 2.7 `export`/`import` - 导出/导入容器快照
 
 导出：
 
@@ -284,6 +284,11 @@ docker import http://example.com/exampleimage.tgz example/imagerepo
 
 ### 2.8 其他查询功能
 
+- `port`
+- `logs`
+- `top`
+- `inspect`
+
 ```bash
 # examples
 # 查看容器的端口映射
@@ -308,7 +313,7 @@ docker top wizardly_chandrasekhar
 docker inspect wizardly_chandrasekhar
 ```
 
-### 2.9 kill容器
+### 2.9 `kill` - kill容器
 
 ```bash
 docker kill [OPTIONS] CONTAINER [CONTAINER...]
@@ -328,7 +333,7 @@ docker kill -s KILL mynginx
 docker kill $(docker ps -a -q)	# 杀死所有正在运行的容器
 ```
 
-### 2.10 从容器创建镜像
+### 2.10 `commit` - 从容器创建镜像
 
 ```bash
 docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]
@@ -400,7 +405,7 @@ Docker 网络不会占用磁盘空间，但是他们创建了 `iptables`规则�
 docker network prune
 ```
 
-### 移除 Everytghing
+### 移除Everytghing
 
 `docker system prune`：用于移除镜像，容器，网络。
 
@@ -428,7 +433,7 @@ docker system prune --volumes
 # Are you sure you want to continue? [y/N] y
 ```
 
-### rm、rmi、prune 的差异
+### `rm`, `rmi`, `prune` 的差异
 
 - `docker rm`：删除一个或多个 **容器**
 
