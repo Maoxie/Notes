@@ -24,6 +24,8 @@ smbclient -L 10.4.5.66 -U username_1
 # smbclient -L 10.4.5.66 -U username_1%password_1
 ```
 
+**当 SMB version 高于 SMB1 时，需要指定`-m smb3`（见Q1）**。
+
 ```
 Domain=[ELSE_WORLDS] OS=[] Server=[]
 
@@ -53,6 +55,8 @@ smbclient //10.4.5.66/share -U username_1
 
 成功后出现提示符`smb:\>`，下面就可以开始操作。
 
+**当 SMB version 高于 SMB1 时，需要指定`-m smb3`（见Q1）**。
+
 ### 3. 文件操作
 
 | 命令                     | 说明                                                         |
@@ -73,14 +77,14 @@ smbclient //10.4.5.66/share -U username_1
 ### 4. 临时挂载
 
 ```bash
-sudo mount -t cifs -o username=username_1,password=password_1,umask=<filePermissions>,gid=<ownerGroupID>,uid=<ownerID> //10.4.5.27/share /home/yangzhitao/mnt/nas
+sudo mount -t cifs -o username=username_1,password=password_1,file_mode=<filemode>,dir_mode=<dirmode>,gid=<ownerGroupID>,uid=<ownerID> //10.4.5.27/share /home/yangzhitao/mnt/nas
 ```
 
 **当 SMB version 高于 SMB1 时，需要指定vers（见Q2）**。
 
-umask可指定挂载后的目录和文件权限。
+filemode, dirmode可指定挂载后的目录和文件权限（默认: 0755）。
 
-gid/uid可指定挂载后的目录所属的组/用户。
+gid/uid可指定挂载后的目录所属的组/用户（默认：当前用户(sudo时为root用户)和组）。
 
 ### 5. 开机自动挂载
 

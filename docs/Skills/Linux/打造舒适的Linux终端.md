@@ -5,5 +5,5 @@
 2. 开发者工具包
 
 3. 命令行工具
-   - neofetch: 获取并打印系统信息
-   - thefuck: 纠正输错的命令
+   - [neofetch](https://github.com/dylanaraps/neofetch): 获取并打印系统信息
+   - [thefuck](https://github.com/nvbn/thefuck): 纠正输错的命令
