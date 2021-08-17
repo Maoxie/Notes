@@ -333,7 +333,28 @@ docker kill -s KILL mynginx
 docker kill $(docker ps -a -q)	# 杀死所有正在运行的容器
 ```
 
-### 2.10 `commit` - 从容器创建镜像
+### 2.10 `cp` - 容器与宿主机之间的数据拷贝
+
+```shell
+docker cp [OPTIONS] CONTAINER:SRC_PATH DEST_PATH|-
+docker cp [OPTIONS] SRC_PATH|- CONTAINER:DEST_PATH
+```
+
+无论容器是否正在运行都可以拷贝。容器内的路径可以省略开头的`/`。
+
+```shell
+# examples
+# 宿主机向容器
+docker cp foo.txt mycontainer:/foo.txt
+# 容器向宿主机
+docker cp mycontainer:/foo.txt foo.txt
+# 目录拷贝
+docker cp src/. mycontainer:/target
+docker cp src/ mycontainer:/target
+# ps: 旧版本docker进行目录拷贝时需要用`tar`和`-`
+```
+
+### 2.11 `commit` - 从容器创建镜像
 
 ```bash
 docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]

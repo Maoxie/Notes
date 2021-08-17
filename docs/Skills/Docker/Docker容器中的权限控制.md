@@ -4,14 +4,17 @@
 
 ## 2. 限制 Docker 容器启动时的用户
 
-使用`--user`参数
+在Dockerfile中，如果指定了`USER`参数，或者使用`--user`参数启动容器：
 
 ```bash
 docker run --user user_name_or_uid xxxxxxx
 ```
 
-会发现容器中的uid号和实际主机中的uid号一样，也验证了docker容器使用宿主机的内核。
+
+
+会发现容器中的uid号和宿主机中的uid号一样，也验证了docker容器使用宿主机的内核。
 
 ## 3. 使用 namespace 隔离技术
 
 TODO:
+
