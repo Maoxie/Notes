@@ -102,3 +102,4 @@ ENV/
 
 # pylint
 .pylintrc
+.history

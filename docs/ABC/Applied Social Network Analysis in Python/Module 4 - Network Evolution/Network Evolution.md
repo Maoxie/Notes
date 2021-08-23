@@ -116,7 +116,7 @@ Use these measures as features to train a classifier in order to make the predic
 
 The number of common neighbors of nodes X and Y is
 $$
-\text{comm_neigh}(X, Y) = |N(X)\cap N(Y)|
+\text{comm\_neigh}(X, Y) = |N(X)\cap N(Y)|
 $$
 where N(X) is the set of neighbors of node X.
 
@@ -134,7 +134,7 @@ Number of common neighbors normalized by the total number of neighbors.
 
 The Jaccard coefficient of nodes X and Y is
 $$
-\text{jacc_coeff}(X, Y)=\frac{|N(X)\cap N(Y)|}{|N(X)\cup N(Y)|}
+\text{jacc\_coeff}(X, Y)=\frac{|N(X)\cap N(Y)|}{|N(X)\cup N(Y)|}
 $$
 
 ```python
@@ -147,7 +147,7 @@ Fraction of a "resource" that a node can send to another through their common ne
 
 The Resource Allocation index of nodes X and Y is
 $$
-\text{res_allot}(X, Y)=\sum\nolimits_{u\in N(X)\cap N(Y)}\frac{1}{|N(u)|}
+\text{res\_allot}(X, Y)=\sum\nolimits_{u\in N(X)\cap N(Y)}\frac{1}{|N(u)|}
 $$
 
 ```python
@@ -160,7 +160,7 @@ Similar to resource allocation index, but with log in the denominator.
 
 The Adamic-Adar index of nodes X and Y is
 $$
-\text{adamic_adar}(X, Y)=\sum\nolimits_{u\in N(X)\cap N(Y)}\frac{1}{\log(|N(u)|)}
+\text{adamic\_adar}(X, Y)=\sum\nolimits_{u\in N(X)\cap N(Y)}\frac{1}{\log(|N(u)|)}
 $$
 
 ```python
@@ -175,7 +175,7 @@ Product of the nodes' degree
 
 The preferential attachment score of nodes X and Y is
 $$
-\text{pref_attach}(X, Y)=|N(X)||N(Y)|
+\text{pref\_attach}(X, Y)=|N(X)||N(Y)|
 $$
 
 ```python
@@ -195,7 +195,7 @@ Number of common neighbors with bonus for neighbors in same community.
 The common Neighbor Soundarajan-Hopcroft score of nodes X and Y is:
 $$
 \begin{aligned}
- & \text{cn_soundarajan_hopcroft}(X, Y) = |N(X)\cap N(Y)| + \sum\nolimits_{u\in N(X)\cap N(Y)}f(u) \\
+ & \text{cn\_soundarajan\_hopcroft}(X, Y) = |N(X)\cap N(Y)| + \sum\nolimits_{u\in N(X)\cap N(Y)}f(u) \\
  & \text{where} f(u) =
      \left\{
          \begin{array}{lr}
@@ -224,7 +224,7 @@ Similar to resource allocation index, but only considering nodes in the same com
 
 The Resource Allocation Soundarajan-Hopcroft score of nodes X and Y is:
 $$
-\text{ra_soundarajan_hopcroft}(X, Y) = \sum\nolimits_{u\in N(X)\cap N(Y)}\frac{f(u)}{|N(u)|'}
+\text{ra\_soundarajan\_hopcroft}(X, Y) = \sum\nolimits_{u\in N(X)\cap N(Y)}\frac{f(u)}{|N(u)|'}
 $$
 
 ```python
