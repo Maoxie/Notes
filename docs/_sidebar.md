@@ -79,6 +79,7 @@
         - [PG用户管理](Skills/Database/PG%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86.md)
         - [pg编写触发器](Skills/Database/pg%E7%BC%96%E5%86%99%E8%A7%A6%E5%8F%91%E5%99%A8.md)
         - [pg设置自增序列值](Skills/Database/pg%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%A2%9E%E5%BA%8F%E5%88%97%E5%80%BC.md)
+        - [psql常用命令](Skills/Database/psql%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.md)
         - [Redis基本操作](Skills/Database/Redis%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C.md)
         - [Redis缓存雪崩、缓存穿透、缓存击穿](Skills/Database/Redis%E7%BC%93%E5%AD%98%E9%9B%AA%E5%B4%A9%E3%80%81%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F%E3%80%81%E7%BC%93%E5%AD%98%E5%87%BB%E7%A9%BF.md)
         - [SQL - INSERT INTO SELECT](Skills/Database/SQL%20-%20INSERT%20INTO%20SELECT.md)
