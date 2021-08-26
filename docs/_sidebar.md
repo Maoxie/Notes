@@ -76,6 +76,7 @@
         - [PG数据库创建USER、DATABASE、SCHEMA、TABLE](Skills/Database/PG%E6%95%B0%E6%8D%AE%E5%BA%93%E5%88%9B%E5%BB%BAUSER%E3%80%81DATABASE%E3%80%81SCHEMA%E3%80%81TABLE.md)
         - [PG数据库创建只读权限的用户](Skills/Database/PG%E6%95%B0%E6%8D%AE%E5%BA%93%E5%88%9B%E5%BB%BA%E5%8F%AA%E8%AF%BB%E6%9D%83%E9%99%90%E7%9A%84%E7%94%A8%E6%88%B7.md)
         - [PG数据库路径迁移](Skills/Database/PG%E6%95%B0%E6%8D%AE%E5%BA%93%E8%B7%AF%E5%BE%84%E8%BF%81%E7%A7%BB.md)
+        - [PG用户管理](Skills/Database/PG%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86.md)
         - [pg编写触发器](Skills/Database/pg%E7%BC%96%E5%86%99%E8%A7%A6%E5%8F%91%E5%99%A8.md)
         - [pg设置自增序列值](Skills/Database/pg%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%A2%9E%E5%BA%8F%E5%88%97%E5%80%BC.md)
         - [Redis基本操作](Skills/Database/Redis%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C.md)
