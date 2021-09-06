@@ -6,15 +6,15 @@ on:
     branches:
       - master
 
-# 任务
-jobs:
-  build-and-deploy:
-    # 服务器环境：最新版 Ubuntu
-    runs-on: ubuntu-latest
-    steps:
-      - name: HTTP Request Action
-        uses: fjogeleit/http-request-action@v1.8.0
-        with:
-          url: 'http://121.40.181.23/api/rebuild/'
-          method: 'POST'
-          data: '{"token": "${{ secrets.TOKEN }}"}'
+# # 任务
+# jobs:
+#   build-and-deploy:
+#     # 服务器环境：最新版 Ubuntu
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: HTTP Request Action
+#         uses: fjogeleit/http-request-action@v1.8.0
+#         with:
+#           url: 'http://121.40.181.23/api/rebuild/'
+#           method: 'POST'
+#           data: '{"token": "${{ secrets.TOKEN }}"}'
