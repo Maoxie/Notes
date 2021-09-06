@@ -196,6 +196,3 @@
 
         - Maya
             - [maya插件安装方法](Skills/Software-Specific/Maya/maya%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95.md)
-
-- Thoughts
-    - [构思](Thoughts/%E6%9E%84%E6%80%9D.md)
