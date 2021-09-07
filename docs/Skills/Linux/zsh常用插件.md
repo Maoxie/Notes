@@ -159,6 +159,12 @@ z -x 不要的路径
 
 内置插件。连按两下 Esc 键在命令的开头加上或去掉 sudo 关键字。
 
+
+### docker / docker-compose
+
+内置插件。`docker` 和 `docker-compose` 命令的自动补全
+
+
 ## 3. 推荐主题
 
 **Powerlevel10k**
@@ -194,4 +200,3 @@ p10k configure
 ```
 
 配置储存在`~/.p10k.zsh`
-
