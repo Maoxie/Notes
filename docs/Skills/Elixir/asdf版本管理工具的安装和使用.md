@@ -20,11 +20,23 @@ sudo apt install curl git unzip automake autoconf
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.1
 ```
 
-(2) 配置`~/.bashrc`
+(2) 配置`~/.bashrc` 或 `~/.zshrc`
+
+`~/.bashrc`:
 
 ```bash
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
+```
+
+`~/.zshrc`:
+
+```bash
+. $HOME/.asdf/asdf.sh
+# append completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
+# initialise completions with ZSH's compinit
+autoload -Uz compinit && compinit
 ```
 
 (3) 安装 Elixir
