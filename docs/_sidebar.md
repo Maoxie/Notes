@@ -187,6 +187,7 @@
 
     - Software-Specific
         - Blender
+            - [blender中各种Matrix之间的关系](Skills/Software-Specific/Blender/blender%E4%B8%AD%E5%90%84%E7%A7%8DMatrix%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB.md)
             - [blender安装python packages](Skills/Software-Specific/Blender/blender%E5%AE%89%E8%A3%85python%20packages.md)
             - [blender常用操作](Skills/Software-Specific/Blender/blender%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C.md)
             - [CUDA cuInit Unknown error](Skills/Software-Specific/Blender/CUDA%20cuInit%20Unknown%20error.md)
