@@ -49,6 +49,8 @@
 
 > [How can I manually calculate bpy.types.PoseBone.matrix using Blender's Python API? - Blender Stack Exchange](https://blender.stackexchange.com/questions/44637/how-can-i-manually-calculate-bpy-types-posebone-matrix-using-blenders-python-ap)
 
+> [scripting - bpy.types.Bone.matrix vs matrix_local - Blender Stack Exchange](https://blender.stackexchange.com/questions/229927/bpy-types-bone-matrix-vs-matrix-local)
+
 > [Blender Manual - Space types](https://docs.blender.org/manual/en/latest/animation/constraints/interface/common.html#space-types)
 
 均为4×4矩阵。
@@ -58,6 +60,17 @@
 ```python
 >>> bpy.data.objects['Armature'].data.bones["Bone"].matrix_local \
 ... == bpy.data.objects['Armature'].pose.bones["Bone"].matrix
+True
+```
+
+- `Bone.matrix`: 在Rest Position下，从bone的**BONE SPACE**变换到父骨骼的**BONE SPACE**的变换矩阵(3x3)，但不包含translation。
+
+  矩阵的各个列分别等于 `Bone.x_axis`, `Bone.y_axis`, `Bone.z_axis`，表示骨骼的 x/y/z 轴在父骨骼的BONE SPACE中的位置。
+
+```python
+>>> bone = bpy.data.objects['Armature'].data.bones["Bone"]
+>>> bone.matrix \
+... == (bone.parent.matrix_local.inverted() @ bone.matrix_local).to_3x3()
 True
 ```
 
@@ -104,4 +117,5 @@ def matrix_world(armature_ob, bone_name):
 - local * basis：当所有祖先骨骼都在rest position状态下时，当前骨骼在armature space中的变换矩阵。
 - (parent_local.inverted() * local) * basis：父骨骼在rest position状态下时，当前骨骼在父骨骼的bone space中的变换矩阵。
 - parent_basis * (parent_local.inverted() * local) * basis：当前骨骼在父骨骼的bone space中的变换矩阵。
+- parent_local * parent_basis * (parent_local.inverted() * local) * basis：考虑了父骨骼的pose后，父骨骼以上骨骼都在rest position状态下时，在当前骨骼在armature space中的变换矩阵。
 
