@@ -97,8 +97,8 @@ True
 
 ```python
 >>> posebone = bpy.data.objects['Armature'].pose.bones["Bone"]
->>> posebone.matrix @ posebone.children[0].matrix_basis \
-... == posebone.children[0].matrix
+>>> posebone.parent.matrix @ posebone.matrix_basis \
+... == posebone.matrix
 ```
 
 - `Object.matrix_world`：object在**WORLD SPACE**中的变换矩阵。
@@ -106,7 +106,7 @@ True
 ### 矩阵间的变换关系
 
 ```python
-def matrix_world(armature_ob, bone_name):
+def matrix_armature(armature_ob, bone_name):
     local = armature_ob.data.bones[bone_name].matrix_local
     basis = armature_ob.pose.bones[bone_name].matrix_basis
 
