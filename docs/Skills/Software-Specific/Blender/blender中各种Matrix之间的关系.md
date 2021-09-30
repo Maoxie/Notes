@@ -92,11 +92,18 @@ True
 ```
 
 - `PoseBone.matrix`：bone在**ARMATURE SPACE**中的pose矩阵。
+
+  子骨骼的matrix_basis在与父骨骼的matrix复合可得到子骨骼在在**POSE SPACE** (ARMATURE SPACE带上pose参数) 中的变换矩阵。
+
+```python
+>>> posebone = bpy.data.objects['Armature'].pose.bones["Bone"]
+>>> posebone.matrix @ posebone.children[0].matrix_basis \
+... == posebone.children[0].matrix
+```
+
 - `Object.matrix_world`：object在**WORLD SPACE**中的变换矩阵。
 
 ### 矩阵间的变换关系
-
-从 `Bone.matrix_local` 和 `PoseBone.matrix_basis` 出发计算 `PoseBone.matrix`：
 
 ```python
 def matrix_world(armature_ob, bone_name):
@@ -114,8 +121,10 @@ def matrix_world(armature_ob, bone_name):
 思路：从 BONE SPACE 逐级变换到父骨骼的 BONE SPACE，最终到达根骨骼的 BONE SPACE 即为 ARMATURE SPACE。
 
 - basis：当前骨骼在自己的bone space中的变换矩阵。
-- local * basis：当所有祖先骨骼都在rest position状态下时，当前骨骼在armature space中的变换矩阵。
+- local * basis：当所有祖先骨骼都在rest position状态下时，当前骨骼在armature space中的变换矩阵。 
 - (parent_local.inverted() * local) * basis：父骨骼在rest position状态下时，当前骨骼在父骨骼的bone space中的变换矩阵。
 - parent_basis * (parent_local.inverted() * local) * basis：当前骨骼在父骨骼的bone space中的变换矩阵。
 - parent_local * parent_basis * (parent_local.inverted() * local) * basis：考虑了父骨骼的pose后，父骨骼以上骨骼都在rest position状态下时，在当前骨骼在armature space中的变换矩阵。
+
+
 
