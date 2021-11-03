@@ -112,19 +112,30 @@ def matrix_armature(armature_ob, bone_name):
 
     parent = armature_ob.pose.bones[bone_name].parent
     if parent is None:
-        return local * basis
+        return local @ basis
     else:
         parent_local = armature_ob.data.bones[parent.name].matrix_local
-        return matrix_world(armature_ob, parent.name) * (parent_local.inverted() * local) * basis
+        return matrix_armature(armature_ob, parent.name) @ (parent_local.inverted() @ local) @ basis
 ```
 
 思路：从 BONE SPACE 逐级变换到父骨骼的 BONE SPACE，最终到达根骨骼的 BONE SPACE 即为 ARMATURE SPACE。
 
 - basis：当前骨骼在自己的bone space中的变换矩阵。
-- local * basis：当所有祖先骨骼都在rest position状态下时，当前骨骼在armature space中的变换矩阵。 
-- (parent_local.inverted() * local) * basis：父骨骼在rest position状态下时，当前骨骼在父骨骼的bone space中的变换矩阵。
-- parent_basis * (parent_local.inverted() * local) * basis：当前骨骼在父骨骼的bone space中的变换矩阵。
-- parent_local * parent_basis * (parent_local.inverted() * local) * basis：考虑了父骨骼的pose后，父骨骼以上骨骼都在rest position状态下时，在当前骨骼在armature space中的变换矩阵。
+- local @ basis：当所有祖先骨骼都在rest position状态下时，当前骨骼在armature space中的变换矩阵。
+- (parent_local.inverted() @ local) W basis：父骨骼在rest position状态下时，当前骨骼在父骨骼的bone space中的变换矩阵。
+- parent_basis @ (parent_local.inverted() @ local) @ basis：当前骨骼在父骨骼的bone space中的变换矩阵。
+- parent_local @ parent_basis @ (parent_local.inverted() @ local) @ basis：考虑了父骨骼的pose后，父骨骼以上骨骼都在rest position状态下时，在当前骨骼在armature space中的变换矩阵。
 
+只考虑旋转的话，可以用另一种变换方式：利用`Bone.matrix`和`PoseBone.matrix_basis`
 
+```python
+def rotation_armature(armature_ob, bone_name):
+    bone_mat = armature_ob.data.bones[bone_name].matrix
+    rot_mat = armature_ob.pose.bones[bone_name].rotation_quaternion.to_matrix()
 
+    parent = armature_ob.pose.bones[bone_name].parent
+    if parent is None:
+        return bone_mat @ rot_mat
+    else:
+        return rotation_armature(armature_ob, parent.name) @ bone_mat @ rot_mat
+```
