@@ -103,3 +103,5 @@ ENV/
 # pylint
 .pylintrc
 .history
+
+.DS_STORE
