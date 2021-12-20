@@ -77,7 +77,23 @@ c.NotebookApp.open_browser = False
 c.NotebookApp.port = 9999
 ```
 
-## 5. 添加 kernel
+## 5. 管理 kernel
+
+添加kernel：
 
 > [Installing the IPython kernel — IPython 7.25.0 documentation](https://ipython.readthedocs.io/en/stable/install/kernel_install.html#kernels-for-different-environments)
+
+```python
+pip install ipykernel
+python -m ipykernel install --user --name fbxpy38 --display-name "Python3.8 (fbx)"
+```
+
+删除kernel：
+
+> [remove kernel on jupyter notebook - Stack Overflow](https://stackoverflow.com/questions/42635310/remove-kernel-on-jupyter-notebook)
+
+```bash
+jupyter kernelspec list
+jupyter kernelspec uninstall unwanted-kernel
+```
 
