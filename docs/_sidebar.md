@@ -2,6 +2,22 @@
 
 - [ABOUT](/)
 
+- .history
+    - Skills
+        - Software-Specific
+            - Blender
+                - [blender&mathutils中的欧拉角_20211210155420](.history/Skills/Software-Specific/Blender/blender%26mathutils%E4%B8%AD%E7%9A%84%E6%AC%A7%E6%8B%89%E8%A7%92_20211210155420.md)
+                - [blender&mathutils中的欧拉角_20211210155735](.history/Skills/Software-Specific/Blender/blender%26mathutils%E4%B8%AD%E7%9A%84%E6%AC%A7%E6%8B%89%E8%A7%92_20211210155735.md)
+                - [blender&mathutils中的欧拉角_20211210155817](.history/Skills/Software-Specific/Blender/blender%26mathutils%E4%B8%AD%E7%9A%84%E6%AC%A7%E6%8B%89%E8%A7%92_20211210155817.md)
+                - [blender&mathutils中的欧拉角_20211210160015](.history/Skills/Software-Specific/Blender/blender%26mathutils%E4%B8%AD%E7%9A%84%E6%AC%A7%E6%8B%89%E8%A7%92_20211210160015.md)
+                - [blender&mathutils中的欧拉角_20211210160458](.history/Skills/Software-Specific/Blender/blender%26mathutils%E4%B8%AD%E7%9A%84%E6%AC%A7%E6%8B%89%E8%A7%92_20211210160458.md)
+                - [blender&mathutils中的欧拉角_20211210160726](.history/Skills/Software-Specific/Blender/blender%26mathutils%E4%B8%AD%E7%9A%84%E6%AC%A7%E6%8B%89%E8%A7%92_20211210160726.md)
+                - [blender中各种Matrix之间的关系_20210930182417](.history/Skills/Software-Specific/Blender/blender%E4%B8%AD%E5%90%84%E7%A7%8DMatrix%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB_20210930182417.md)
+                - [blender中各种Matrix之间的关系_20211103194154](.history/Skills/Software-Specific/Blender/blender%E4%B8%AD%E5%90%84%E7%A7%8DMatrix%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB_20211103194154.md)
+                - [blender中各种Matrix之间的关系_20211103194242](.history/Skills/Software-Specific/Blender/blender%E4%B8%AD%E5%90%84%E7%A7%8DMatrix%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB_20211103194242.md)
+                - [blender中各种Matrix之间的关系_20211103195641](.history/Skills/Software-Specific/Blender/blender%E4%B8%AD%E5%90%84%E7%A7%8DMatrix%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB_20211103195641.md)
+                - [blender中各种Matrix之间的关系_20211103195719](.history/Skills/Software-Specific/Blender/blender%E4%B8%AD%E5%90%84%E7%A7%8DMatrix%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB_20211103195719.md)
+
 - ABC
     - Applied Social Network Analysis in Python
         - [Syllabus](ABC/Applied%20Social%20Network%20Analysis%20in%20Python/Syllabus.md)
@@ -187,6 +203,7 @@
 
     - Software-Specific
         - Blender
+            - [blender&mathutils中的欧拉角](Skills/Software-Specific/Blender/blender%26mathutils%E4%B8%AD%E7%9A%84%E6%AC%A7%E6%8B%89%E8%A7%92.md)
             - [blender中各种Matrix之间的关系](Skills/Software-Specific/Blender/blender%E4%B8%AD%E5%90%84%E7%A7%8DMatrix%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB.md)
             - [blender安装python packages](Skills/Software-Specific/Blender/blender%E5%AE%89%E8%A3%85python%20packages.md)
             - [blender常用操作](Skills/Software-Specific/Blender/blender%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C.md)
@@ -194,6 +211,9 @@
             - [Ubuntu安装blender](Skills/Software-Specific/Blender/Ubuntu%E5%AE%89%E8%A3%85blender.md)
             - [无GUI启动blender](Skills/Software-Specific/Blender/%E6%97%A0GUI%E5%90%AF%E5%8A%A8blender.md)
             - [通过脚本安装和启用插件(add-on)](Skills/Software-Specific/Blender/%E9%80%9A%E8%BF%87%E8%84%9A%E6%9C%AC%E5%AE%89%E8%A3%85%E5%92%8C%E5%90%AF%E7%94%A8%E6%8F%92%E4%BB%B6%28add-on%29.md)
+
+        - FBX
+            - [安装FBX Python SDK](Skills/Software-Specific/FBX/%E5%AE%89%E8%A3%85FBX%20Python%20SDK.md)
 
         - Maya
             - [maya插件安装方法](Skills/Software-Specific/Maya/maya%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95.md)
