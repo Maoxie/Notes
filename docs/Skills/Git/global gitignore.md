@@ -26,13 +26,13 @@ git config --global core.excludesfile "%USERPROFILE%\.gitignore"
 PowerShell 用户：
 
 ```bash
-git config --global core.excludesFile "$Env:USERPROFILE\.gitignore"
+git config --global core.excludesfile "$Env:USERPROFILE\.gitignore"
 ```
 
-对于windows用户，应确认文件名被正确解析：
+对于windows用户，应确认路径被正确解析：
 
 ```bash
-git config --global core.excludesFile
+git config --global core.excludesfile
 ```
 
 
