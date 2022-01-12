@@ -19,6 +19,10 @@ git config --global core.excludesfile ~/.gitignore
 
 ### Windows
 
+```bash
+git config --global core.excludesfile "%USERPROFILE%\.gitignore"
+```
+
 PowerShell 用户：
 
 ```bash
