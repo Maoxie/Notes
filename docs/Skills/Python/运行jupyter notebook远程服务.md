@@ -96,4 +96,3 @@ python -m ipykernel install --user --name fbxpy38 --display-name "Python3.8 (fbx
 jupyter kernelspec list
 jupyter kernelspec uninstall unwanted-kernel
 ```
-

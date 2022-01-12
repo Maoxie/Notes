@@ -11,11 +11,12 @@ ROOT = Path(__file__).resolve().parent / "docs"
 
 
 def find_markdowns(root):
-    file_paths = [
-        p.relative_to(root)
-        for p in Path(root).rglob("*.md")
-        if not p.stem.startswith("_") and p.is_file()   # ignore "_sidebar.md"
-    ]
+    file_paths = []
+    for p in Path(root).rglob("*.md"):
+        if p.is_file() and not p.stem.startswith('_'):
+            rel_p = p.relative_to(root)
+            if '.history' not in [d.name for d in p.parents]:
+                file_paths.append(rel_p)
     return file_paths
 
 

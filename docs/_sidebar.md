@@ -2,22 +2,6 @@
 
 - [ABOUT](/)
 
-- .history
-    - Skills
-        - Software-Specific
-            - Blender
-                - [blender&mathutils中的欧拉角_20211210155420](.history/Skills/Software-Specific/Blender/blender%26mathutils%E4%B8%AD%E7%9A%84%E6%AC%A7%E6%8B%89%E8%A7%92_20211210155420.md)
-                - [blender&mathutils中的欧拉角_20211210155735](.history/Skills/Software-Specific/Blender/blender%26mathutils%E4%B8%AD%E7%9A%84%E6%AC%A7%E6%8B%89%E8%A7%92_20211210155735.md)
-                - [blender&mathutils中的欧拉角_20211210155817](.history/Skills/Software-Specific/Blender/blender%26mathutils%E4%B8%AD%E7%9A%84%E6%AC%A7%E6%8B%89%E8%A7%92_20211210155817.md)
-                - [blender&mathutils中的欧拉角_20211210160015](.history/Skills/Software-Specific/Blender/blender%26mathutils%E4%B8%AD%E7%9A%84%E6%AC%A7%E6%8B%89%E8%A7%92_20211210160015.md)
-                - [blender&mathutils中的欧拉角_20211210160458](.history/Skills/Software-Specific/Blender/blender%26mathutils%E4%B8%AD%E7%9A%84%E6%AC%A7%E6%8B%89%E8%A7%92_20211210160458.md)
-                - [blender&mathutils中的欧拉角_20211210160726](.history/Skills/Software-Specific/Blender/blender%26mathutils%E4%B8%AD%E7%9A%84%E6%AC%A7%E6%8B%89%E8%A7%92_20211210160726.md)
-                - [blender中各种Matrix之间的关系_20210930182417](.history/Skills/Software-Specific/Blender/blender%E4%B8%AD%E5%90%84%E7%A7%8DMatrix%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB_20210930182417.md)
-                - [blender中各种Matrix之间的关系_20211103194154](.history/Skills/Software-Specific/Blender/blender%E4%B8%AD%E5%90%84%E7%A7%8DMatrix%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB_20211103194154.md)
-                - [blender中各种Matrix之间的关系_20211103194242](.history/Skills/Software-Specific/Blender/blender%E4%B8%AD%E5%90%84%E7%A7%8DMatrix%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB_20211103194242.md)
-                - [blender中各种Matrix之间的关系_20211103195641](.history/Skills/Software-Specific/Blender/blender%E4%B8%AD%E5%90%84%E7%A7%8DMatrix%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB_20211103195641.md)
-                - [blender中各种Matrix之间的关系_20211103195719](.history/Skills/Software-Specific/Blender/blender%E4%B8%AD%E5%90%84%E7%A7%8DMatrix%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB_20211103195719.md)
-
 - ABC
     - Applied Social Network Analysis in Python
         - [Syllabus](ABC/Applied%20Social%20Network%20Analysis%20in%20Python/Syllabus.md)
@@ -118,6 +102,7 @@
         - [git prune, git remote prune, git fetch](Skills/Git/git%20prune%2C%20git%20remote%20prune%2C%20git%20fetch.md)
         - [git subtree](Skills/Git/git%20subtree.md)
         - [Git 多个账号用不同私钥登录](Skills/Git/Git%20%E5%A4%9A%E4%B8%AA%E8%B4%A6%E5%8F%B7%E7%94%A8%E4%B8%8D%E5%90%8C%E7%A7%81%E9%92%A5%E7%99%BB%E5%BD%95.md)
+        - [global gitignore](Skills/Git/global%20gitignore.md)
 
     - Go
         - [Go基本命令](Skills/Go/Go%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4.md)

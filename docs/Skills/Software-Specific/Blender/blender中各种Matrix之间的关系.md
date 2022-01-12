@@ -99,6 +99,9 @@ True
 >>> posebone = bpy.data.objects['Armature'].pose.bones["Bone"]
 >>> posebone.parent.matrix @ posebone.matrix_basis \
 ... == posebone.matrix
+# bone无parent时
+>>> posebone.bone.matrix_local @ posebone.matrix_basis \
+... == posebone.matrix
 ```
 
 - `Object.matrix_world`：object在**WORLD SPACE**中的变换矩阵。
