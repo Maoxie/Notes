@@ -113,7 +113,7 @@ ls
 测试
 
 ```python
-import FbxComom
+import FbxCommon
 (lSdkManager, lScene) = FbxCommon.InitializeSdkObjects()
 ```
 
