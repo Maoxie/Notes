@@ -1,14 +1,38 @@
-# 创建配置文件，定义pip安装源
+# pip 默认源设置
 
-## Linux 方法
+## 0. 临时使用
 
-```$HOME/.config/pip/pip.conf ```
+```bash
+pip install -i https://pypi.douban.com/simple/ pandas
+```
 
-或者 
+## 1. 直接配置
 
-```$HOME/.pip/pip.conf```（推荐）
+```bash
+pip config set global.index-url https://pypi.douban.com/simple/
+# # The output will be like:
+# Writing to C:\Users\user123\AppData\Roaming\pip\pip.ini
+```
 
-**创建~/.pip目录 ，新建 ~/.pip/pip.conf文件，内容如下：**
+使用命令也可以帮助找到pip配置文件的位置。
+
+## 2. 修改配置文件
+
+**Linux：**
+
+`$HOME/.config/pip/pip.conf `
+
+或者
+
+`$HOME/.pip/pip.conf`（推荐）
+
+**Windows：**
+
+`%HOME%\pip\pip.ini`
+
+或者用`pip config set global.index-url https://pypi.douban.com/simple/`查看配置文件的位置
+
+配置文件内容：
 
 ```ini
 [global]
@@ -38,11 +62,11 @@ trusted-host = pypi.douban.com
 index_url = https://pypi.douban.com/simple
 ```
 
-## Windows 10 方法
+### Windows 10 方法
 
-新建 %HOME%\pip\pip.ini 文件，内容同上
+新建  文件，内容同上
 
-## Q&A
+## 3. Q&A
 
 Q: WARNING: The repository located at pypi.douban.com is not a trusted or secure host and is being ignored
 
