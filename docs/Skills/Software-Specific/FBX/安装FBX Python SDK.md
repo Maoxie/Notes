@@ -88,7 +88,7 @@ make && make install
 ```python
 python PythonBindings.py
 # Syntax: PythonBindings.py module module [buildsip] [test] [doc]
-# 
+#
 #         modules = Python2_x86 | Python2_ucs4_x86 | Python2_x64 | Python2_ucs4_x64 | Python3_x86 | Python3_x64 | Python2_ub | Python3_ub
 
 # 对于python2, 如果执行 python -c "import sys; print(sys.maxunicode)" 得到 1114111，则为ucs4，否则为ucs2
@@ -116,6 +116,3 @@ ls
 import FbxCommon
 (lSdkManager, lScene) = FbxCommon.InitializeSdkObjects()
 ```
-
-
-
