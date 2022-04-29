@@ -8,6 +8,18 @@
         - 树
             - [树](ABC/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/%E6%A0%91.md)
 
+    - 图形学
+        - [OpenGL坐标系统](ABC/%E5%9B%BE%E5%BD%A2%E5%AD%A6/OpenGL%E5%9D%90%E6%A0%87%E7%B3%BB%E7%BB%9F.md)
+        - [骨骼动画原理](ABC/%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E9%AA%A8%E9%AA%BC%E5%8A%A8%E7%94%BB%E5%8E%9F%E7%90%86.md)
+        - [变换的分类](ABC/%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E5%8F%98%E6%8D%A2%E7%9A%84%E5%88%86%E7%B1%BB.md)
+        - [坐标系&旋转 Conventions](ABC/%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E5%9D%90%E6%A0%87%E7%B3%BB%26%E6%97%8B%E8%BD%AC%20Conventions.md)
+        - [旋转的不同表示方式](ABC/%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E6%97%8B%E8%BD%AC%E7%9A%84%E4%B8%8D%E5%90%8C%E8%A1%A8%E7%A4%BA%E6%96%B9%E5%BC%8F.md)
+
+        - 游戏引擎技术及架构
+            - [04-游戏所需的三维数学](ABC/%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E%E6%8A%80%E6%9C%AF%E5%8F%8A%E6%9E%B6%E6%9E%84/04-%E6%B8%B8%E6%88%8F%E6%89%80%E9%9C%80%E7%9A%84%E4%B8%89%E7%BB%B4%E6%95%B0%E5%AD%A6.md)
+            - [01-导论](ABC/%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E%E6%8A%80%E6%9C%AF%E5%8F%8A%E6%9E%B6%E6%9E%84/01-%E5%AF%BC%E8%AE%BA.md)
+            - [11-动画系统](ABC/%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E%E6%8A%80%E6%9C%AF%E5%8F%8A%E6%9E%B6%E6%9E%84/11-%E5%8A%A8%E7%94%BB%E7%B3%BB%E7%BB%9F.md)
+
     - Linear Algebra
         - [Linear Algebra](ABC/Linear%20Algebra/Linear%20Algebra.md)
 
@@ -26,11 +38,6 @@
         - Module 3 - Influence Measures and Network Centralization
             - [Influence Measures and Network Centralization](ABC/Applied%20Social%20Network%20Analysis%20in%20Python/Module%203%20-%20Influence%20Measures%20and%20Network%20Centralization/Influence%20Measures%20and%20Network%20Centralization.md)
 
-    - 游戏引擎技术及架构
-        - [04-游戏所需的三维数学](ABC/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E%E6%8A%80%E6%9C%AF%E5%8F%8A%E6%9E%B6%E6%9E%84/04-%E6%B8%B8%E6%88%8F%E6%89%80%E9%9C%80%E7%9A%84%E4%B8%89%E7%BB%B4%E6%95%B0%E5%AD%A6.md)
-        - [01-导论](ABC/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E%E6%8A%80%E6%9C%AF%E5%8F%8A%E6%9E%B6%E6%9E%84/01-%E5%AF%BC%E8%AE%BA.md)
-        - [11-动画系统](ABC/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E%E6%8A%80%E6%9C%AF%E5%8F%8A%E6%9E%B6%E6%9E%84/11-%E5%8A%A8%E7%94%BB%E7%B3%BB%E7%BB%9F.md)
-
     - Deep Learning
         - [如何评价GAN网络的好坏：IS和FID](ABC/Deep%20Learning/%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7GAN%E7%BD%91%E7%BB%9C%E7%9A%84%E5%A5%BD%E5%9D%8F%EF%BC%9AIS%E5%92%8CFID.md)
 
@@ -40,12 +47,6 @@
             - [06-循环神经网络](ABC/Deep%20Learning/%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-pytorch%E7%89%88/06-%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C.md)
             - [03-深度学习基础](ABC/Deep%20Learning/%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-pytorch%E7%89%88/03-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80.md)
             - [04-深度学习计算](ABC/Deep%20Learning/%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-pytorch%E7%89%88/04-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E8%AE%A1%E7%AE%97.md)
-
-    - 图形
-        - [OpenGL坐标系统](ABC/%E5%9B%BE%E5%BD%A2/OpenGL%E5%9D%90%E6%A0%87%E7%B3%BB%E7%BB%9F.md)
-        - [骨骼动画原理](ABC/%E5%9B%BE%E5%BD%A2/%E9%AA%A8%E9%AA%BC%E5%8A%A8%E7%94%BB%E5%8E%9F%E7%90%86.md)
-        - [变换的分类](ABC/%E5%9B%BE%E5%BD%A2/%E5%8F%98%E6%8D%A2%E7%9A%84%E5%88%86%E7%B1%BB.md)
-        - [旋转的不同表示方式](ABC/%E5%9B%BE%E5%BD%A2/%E6%97%8B%E8%BD%AC%E7%9A%84%E4%B8%8D%E5%90%8C%E8%A1%A8%E7%A4%BA%E6%96%B9%E5%BC%8F.md)
 
 - Algorithm
     - [布隆过滤器(Bloom Filter)](Algorithm/%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8%28Bloom%20Filter%29.md)
