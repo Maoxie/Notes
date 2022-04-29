@@ -2,7 +2,7 @@
 
 > - SDK下载地址：
 >
-> [FBX Software Developer Kit 2020.0 | Autodesk Developer Network](https://www.autodesk.com/developer-network/platform-technologies/fbx-sdk-2020-0?us_oa=dotcom-us&us_si=b6c98f47-851c-4638-88da-30cddc6a711f&us_st=fbx sdk)
+> [FBX Software Developer Kit 2020.0 | Autodesk Developer Network](https://www.autodesk.com/developer-network/platform-technologies/fbx-sdk-2020-0?us_oa=dotcom-us&us_si=b6c98f47-851c-4638-88da-30cddc6a711f&us_st=fbx%20sdk)
 >
 > - 文档：
 >
