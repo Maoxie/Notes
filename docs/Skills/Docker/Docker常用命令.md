@@ -182,9 +182,10 @@ docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
 docker run --name mynginx -d nginx:latest
 # -d: 以daemon方式启动
 # --name：指定容器名称
-docker run -p 8080:80 -v /test_data:/data -d nginx:latest
+docker run -p 8080:80 -v /test_data:/data -w /data -d nginx:latest
 # -p: 映射容器80端口到宿主机8080端口
 # -v: 映射宿主机/test_data目录到容器的/data目录(容器内自动创建)
+# -w: 设置工作目录为/data；默认为/
 docker run -it nginx:latest /bin/bash
 # -it 以交互模式启动容器，在容器内开启/bin/bash （alpine类容器应使用/bin/sh）
 ```
