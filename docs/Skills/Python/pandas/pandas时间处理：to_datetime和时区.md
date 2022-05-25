@@ -1,4 +1,4 @@
-# pandas库时间和时区处理
+# pandas时间处理：to_datetime和时区
 
 `pandas.to_datetime`用来将时间数据转为pandas的datetime类型
 

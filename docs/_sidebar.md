@@ -129,12 +129,12 @@
             - [01-Tensor-数据操作](Skills/Python/pytorch/01-Tensor-%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C.md)
 
         - pandas
-            - [pandas数据聚合之Grouper与agg](Skills/Python/pandas/pandas%E6%95%B0%E6%8D%AE%E8%81%9A%E5%90%88%E4%B9%8BGrouper%E4%B8%8Eagg.md)
             - [pandas按指定顺序对MulitIndex的某一级进行排序](Skills/Python/pandas/pandas%E6%8C%89%E6%8C%87%E5%AE%9A%E9%A1%BA%E5%BA%8F%E5%AF%B9MulitIndex%E7%9A%84%E6%9F%90%E4%B8%80%E7%BA%A7%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F.md)
-            - [pandas数据透视之pivot_table与melt，unstack与stack](Skills/Python/pandas/pandas%E6%95%B0%E6%8D%AE%E9%80%8F%E8%A7%86%E4%B9%8Bpivot_table%E4%B8%8Emelt%EF%BC%8Cunstack%E4%B8%8Estack.md)
-            - [pandas的to_datetime和时区处理](Skills/Python/pandas/pandas%E7%9A%84to_datetime%E5%92%8C%E6%97%B6%E5%8C%BA%E5%A4%84%E7%90%86.md)
+            - [pandas时间处理：to_datetime和时区](Skills/Python/pandas/pandas%E6%97%B6%E9%97%B4%E5%A4%84%E7%90%86%EF%BC%9Ato_datetime%E5%92%8C%E6%97%B6%E5%8C%BA.md)
+            - [pandas数据聚合：Grouper与agg](Skills/Python/pandas/pandas%E6%95%B0%E6%8D%AE%E8%81%9A%E5%90%88%EF%BC%9AGrouper%E4%B8%8Eagg.md)
             - [pandas时间处理之offsets](Skills/Python/pandas/pandas%E6%97%B6%E9%97%B4%E5%A4%84%E7%90%86%E4%B9%8Boffsets.md)
             - [pandas时间处理之将时间转为月末日期](Skills/Python/pandas/pandas%E6%97%B6%E9%97%B4%E5%A4%84%E7%90%86%E4%B9%8B%E5%B0%86%E6%97%B6%E9%97%B4%E8%BD%AC%E4%B8%BA%E6%9C%88%E6%9C%AB%E6%97%A5%E6%9C%9F.md)
+            - [pandas数据透视](Skills/Python/pandas/pandas%E6%95%B0%E6%8D%AE%E9%80%8F%E8%A7%86.md)
             - [pandas扩充行](Skills/Python/pandas/pandas%E6%89%A9%E5%85%85%E8%A1%8C.md)
             - [pandas如何将NaN替换为None（DataFrame.where方法）](Skills/Python/pandas/pandas%E5%A6%82%E4%BD%95%E5%B0%86NaN%E6%9B%BF%E6%8D%A2%E4%B8%BANone%EF%BC%88DataFrame.where%E6%96%B9%E6%B3%95%EF%BC%89.md)
             - [pandas按时间聚合数据的resample函数](Skills/Python/pandas/pandas%E6%8C%89%E6%97%B6%E9%97%B4%E8%81%9A%E5%90%88%E6%95%B0%E6%8D%AE%E7%9A%84resample%E5%87%BD%E6%95%B0.md)
