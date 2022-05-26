@@ -185,6 +185,7 @@
 
     - Windows
         - [windows建立软链接](Skills/Windows/windows%E5%BB%BA%E7%AB%8B%E8%BD%AF%E9%93%BE%E6%8E%A5.md)
+        - [powershell 加速启动](Skills/Windows/powershell%20%E5%8A%A0%E9%80%9F%E5%90%AF%E5%8A%A8.md)
 
     - Software-Specific
         - Backtrader
