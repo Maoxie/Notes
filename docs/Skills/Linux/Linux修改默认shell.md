@@ -1,3 +1,5 @@
+# Linux 修改默认shell
+
 ## 修改用户的默认shell
 
 查看所有 shell 

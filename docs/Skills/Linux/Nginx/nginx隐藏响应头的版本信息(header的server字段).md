@@ -1,3 +1,5 @@
+# Nginx 隐藏响应头中的版本信息
+
 ## 1. 将nginx版本号隐藏掉
 
 修改`nginx.conf` (`/etc/nginx/nginx.conf`) 配置文件，在配置文件中http类别下面增加如下配置：

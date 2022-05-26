@@ -156,7 +156,6 @@
         - [Linux修改默认shell](Skills/Linux/Linux%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4shell.md)
         - [Linux搜索所有文件中的内容](Skills/Linux/Linux%E6%90%9C%E7%B4%A2%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6%E4%B8%AD%E7%9A%84%E5%86%85%E5%AE%B9.md)
         - [安装chromedriver](Skills/Linux/%E5%AE%89%E8%A3%85chromedriver.md)
-        - [nginx隐藏响应头的版本信息(header的server字段)](Skills/Linux/nginx%E9%9A%90%E8%97%8F%E5%93%8D%E5%BA%94%E5%A4%B4%E7%9A%84%E7%89%88%E6%9C%AC%E4%BF%A1%E6%81%AF%28header%E7%9A%84server%E5%AD%97%E6%AE%B5%29.md)
         - [Linux批量杀死进程](Skills/Linux/Linux%E6%89%B9%E9%87%8F%E6%9D%80%E6%AD%BB%E8%BF%9B%E7%A8%8B.md)
         - [Linux Shell输出重定向并后台执行](Skills/Linux/Linux%20Shell%E8%BE%93%E5%87%BA%E9%87%8D%E5%AE%9A%E5%90%91%E5%B9%B6%E5%90%8E%E5%8F%B0%E6%89%A7%E8%A1%8C.md)
         - [Linux系统访问NAS的文件服务(samba)](Skills/Linux/Linux%E7%B3%BB%E7%BB%9F%E8%AE%BF%E9%97%AENAS%E7%9A%84%E6%96%87%E4%BB%B6%E6%9C%8D%E5%8A%A1%28samba%29.md)
@@ -166,7 +165,6 @@
         - [打造舒适的Linux终端](Skills/Linux/%E6%89%93%E9%80%A0%E8%88%92%E9%80%82%E7%9A%84Linux%E7%BB%88%E7%AB%AF.md)
         - [Linux 实时内存监控](Skills/Linux/Linux%20%E5%AE%9E%E6%97%B6%E5%86%85%E5%AD%98%E7%9B%91%E6%8E%A7.md)
         - [sshfs命令简易挂载远程目录](Skills/Linux/sshfs%E5%91%BD%E4%BB%A4%E7%AE%80%E6%98%93%E6%8C%82%E8%BD%BD%E8%BF%9C%E7%A8%8B%E7%9B%AE%E5%BD%95.md)
-        - [nginx代理静态页面](Skills/Linux/nginx%E4%BB%A3%E7%90%86%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2.md)
         - [自签名SSL证书](Skills/Linux/%E8%87%AA%E7%AD%BE%E5%90%8DSSL%E8%AF%81%E4%B9%A6.md)
         - [convmv 解决GBK 迁移到 UTF-8 ,中文文件名乱码](Skills/Linux/convmv%20%E8%A7%A3%E5%86%B3GBK%20%E8%BF%81%E7%A7%BB%E5%88%B0%20UTF-8%20%2C%E4%B8%AD%E6%96%87%E6%96%87%E4%BB%B6%E5%90%8D%E4%B9%B1%E7%A0%81.md)
         - [Linux传输超大文件](Skills/Linux/Linux%E4%BC%A0%E8%BE%93%E8%B6%85%E5%A4%A7%E6%96%87%E4%BB%B6.md)
@@ -180,6 +178,10 @@
             - [CentOS 7 开启端口](Skills/Linux/CentOS/CentOS%207%20%E5%BC%80%E5%90%AF%E7%AB%AF%E5%8F%A3.md)
             - [CentOS 7 安装最新版本的Git](Skills/Linux/CentOS/CentOS%207%20%E5%AE%89%E8%A3%85%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC%E7%9A%84Git.md)
             - [CentOS 7 升级Git版本](Skills/Linux/CentOS/CentOS%207%20%E5%8D%87%E7%BA%A7Git%E7%89%88%E6%9C%AC.md)
+
+        - Nginx
+            - [nginx隐藏响应头的版本信息(header的server字段)](Skills/Linux/Nginx/nginx%E9%9A%90%E8%97%8F%E5%93%8D%E5%BA%94%E5%A4%B4%E7%9A%84%E7%89%88%E6%9C%AC%E4%BF%A1%E6%81%AF%28header%E7%9A%84server%E5%AD%97%E6%AE%B5%29.md)
+            - [nginx代理静态页面](Skills/Linux/Nginx/nginx%E4%BB%A3%E7%90%86%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2.md)
 
     - Windows
         - [windows建立软链接](Skills/Windows/windows%E5%BB%BA%E7%AB%8B%E8%BD%AF%E9%93%BE%E6%8E%A5.md)

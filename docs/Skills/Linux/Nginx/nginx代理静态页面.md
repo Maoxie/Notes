@@ -1,4 +1,5 @@
-# 配置Nginx代理静态页面
+# Nginx 代理静态页面
+
 ```nginx
 server {
     listen 8788;
@@ -11,4 +12,3 @@ server {
     }
 }
 ```
-
