@@ -125,7 +125,7 @@
         - [Linux系统访问NAS的文件服务(samba)](Skills/Linux/Linux%E7%B3%BB%E7%BB%9F%E8%AE%BF%E9%97%AENAS%E7%9A%84%E6%96%87%E4%BB%B6%E6%9C%8D%E5%8A%A1%28samba%29.md)
         - [sshfs命令简易挂载远程目录](Skills/Linux/sshfs%E5%91%BD%E4%BB%A4%E7%AE%80%E6%98%93%E6%8C%82%E8%BD%BD%E8%BF%9C%E7%A8%8B%E7%9B%AE%E5%BD%95.md)
         - [TCP&UDP端口连通性测试](Skills/Linux/TCP%26UDP%E7%AB%AF%E5%8F%A3%E8%BF%9E%E9%80%9A%E6%80%A7%E6%B5%8B%E8%AF%95.md)
-        - [vim插件管理](Skills/Linux/vim%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%86.md)
+        - [vim插件管理 - vim-plug](Skills/Linux/vim%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%86%20-%20vim-plug.md)
         - [virtualbox硬盘扩容](Skills/Linux/virtualbox%E7%A1%AC%E7%9B%98%E6%89%A9%E5%AE%B9.md)
         - [zsh常用插件](Skills/Linux/zsh%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6.md)
         - [下载Google Drive共享的文件](Skills/Linux/%E4%B8%8B%E8%BD%BDGoogle%20Drive%E5%85%B1%E4%BA%AB%E7%9A%84%E6%96%87%E4%BB%B6.md)

@@ -1,3 +1,5 @@
+# vim插件管理 - vim-plug
+
 ## vim-plug
 
 ### 安装vim-plug
@@ -102,7 +104,7 @@ set expandtab
 "把当前行的对齐格式应用到下一行
 set autoindent
 " 隐藏滚动条"
-set guioptions-=r 
+set guioptions-=r
 set guioptions-=L
 set guioptions-=b
 "开启语法高亮"
@@ -119,4 +121,3 @@ set showmatch
 set fenc=utf-8
 set encoding=utf-8
 ```
-
