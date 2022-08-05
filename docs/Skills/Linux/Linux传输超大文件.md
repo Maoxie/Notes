@@ -83,4 +83,3 @@ A上：
 ```bash
 nc (B的外网IP) 9999 < google_file.txt
 ```
-

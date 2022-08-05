@@ -1,3 +1,5 @@
+以指定cmake时的CC和CXX为例:
+
 ```bash
-CC=gcc-9 CPP=g++-9 CXX=g++-9 LD=g++-9
+env CC=gcc-9 CPP=g++-9 CXX=g++-9 LD=g++-9 cmake .
 ```

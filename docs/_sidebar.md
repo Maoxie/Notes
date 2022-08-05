@@ -154,6 +154,7 @@
         - [TCP&UDP端口连通性测试](Skills/Linux/TCP%26UDP%E7%AB%AF%E5%8F%A3%E8%BF%9E%E9%80%9A%E6%80%A7%E6%B5%8B%E8%AF%95.md)
         - [linux新建用户](Skills/Linux/linux%E6%96%B0%E5%BB%BA%E7%94%A8%E6%88%B7.md)
         - [Linux修改默认shell](Skills/Linux/Linux%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4shell.md)
+        - [Linux环境变量设置env, set, export](Skills/Linux/Linux%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E8%AE%BE%E7%BD%AEenv%2C%20set%2C%20export.md)
         - [Linux搜索所有文件中的内容](Skills/Linux/Linux%E6%90%9C%E7%B4%A2%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6%E4%B8%AD%E7%9A%84%E5%86%85%E5%AE%B9.md)
         - [安装chromedriver](Skills/Linux/%E5%AE%89%E8%A3%85chromedriver.md)
         - [awscli使用指南](Skills/Linux/awscli%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.md)
@@ -190,6 +191,8 @@
         - [Win10中Neovim的安装与配置](Skills/Windows/Win10%E4%B8%ADNeovim%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE.md)
 
     - Software-Specific
+        - [pyassimp安装](Skills/Software-Specific/pyassimp%E5%AE%89%E8%A3%85.md)
+
         - Backtrader
             - [01-概念术语](Skills/Software-Specific/Backtrader/01-%E6%A6%82%E5%BF%B5%E6%9C%AF%E8%AF%AD.md)
 
