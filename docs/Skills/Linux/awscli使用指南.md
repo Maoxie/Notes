@@ -3,6 +3,7 @@
 ## 1. 安装和配置awscli
 
 检查是否有安装 awscli
+
 ```bash
 aws --version
 ```
@@ -28,7 +29,6 @@ host_bucket = http://10.5.41.12:7480/%(bucket)
 (2) `aws configure`
 
 输入 access_key 和 secret_key
-
 
 ## 2. 操作
 
@@ -90,6 +90,7 @@ aws s3 rb s3://myBucket
 ```bash
 aws s3api put-bucket-policy --bucket <bucket-name> --policy file:///<path-to-file>
 ```
+
 、
 
 ### 查询已有策略
