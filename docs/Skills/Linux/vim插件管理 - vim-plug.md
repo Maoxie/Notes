@@ -105,6 +105,7 @@ set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 set expandtab
+set hlsearch
 "把当前行的对齐格式应用到下一行
 set autoindent
 " 隐藏滚动条"
