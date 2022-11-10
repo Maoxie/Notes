@@ -81,6 +81,7 @@ Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'kien/rainbow_parentheses.vim'
+Plug 'easymotion/vim-easymotion'  "快速跳转"
 "状态栏"
 Plug 'vim-airline/vim-airline'
 Plug 'Yggdroot/indentLine'    "缩进指示线"
@@ -92,6 +93,9 @@ Plug 'davidhalter/jedi-vim'   "python自动补全"
 ```bash
 "关闭vi兼容
 set nocompatible
+
+"map <leader> key
+let mapleader=","
 
 "显示行号
 set number
