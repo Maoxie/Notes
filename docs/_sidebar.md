@@ -203,6 +203,9 @@
         - FBX
             - [安装FBX Python SDK](Skills/Software-Specific/FBX/%E5%AE%89%E8%A3%85FBX%20Python%20SDK.md)
 
+        - zotero
+            - [zotero修改note templates](Skills/Software-Specific/zotero/zotero%E4%BF%AE%E6%94%B9note%20templates.md)
+
         - Blender
             - [blender as python module](Skills/Software-Specific/Blender/blender%20as%20python%20module.md)
             - [blender常用操作](Skills/Software-Specific/Blender/blender%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C.md)
