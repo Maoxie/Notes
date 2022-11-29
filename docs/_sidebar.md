@@ -118,8 +118,8 @@
         - [Redis基本操作](Skills/Python/Redis%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C.md)
 
         - Flask
+            - [Flask app实例化和初始化](Skills/Python/Flask/Flask%20app%E5%AE%9E%E4%BE%8B%E5%8C%96%E5%92%8C%E5%88%9D%E5%A7%8B%E5%8C%96.md)
             - [Flask源码阅读](Skills/Python/Flask/Flask%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB.md)
-            - [newnote_1555297689188](Skills/Python/Flask/newnote_1555297689188.md)
             - [Flask源码](Skills/Python/Flask/Flask%E6%BA%90%E7%A0%81.md)
 
         - tensorflow
