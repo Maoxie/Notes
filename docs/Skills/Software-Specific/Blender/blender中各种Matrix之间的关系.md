@@ -45,7 +45,7 @@
 ```
 
 
-## 1. matrix
+## 1. Matrix
 
 > [How can I manually calculate bpy.types.PoseBone.matrix using Blender's Python API? - Blender Stack Exchange](https://blender.stackexchange.com/questions/44637/how-can-i-manually-calculate-bpy-types-posebone-matrix-using-blenders-python-ap)
 
