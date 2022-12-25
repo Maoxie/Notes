@@ -26,4 +26,34 @@ sudo yum -y install  git2u-all
 ```bash
 git --version
 ```
+## 2. 编译安装
 
+### 2.1 安装依赖
+
+```bash
+yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel gcc perl-ExtUtils-MakeMaker
+```
+
+### 2.2 下载源码
+
+> https://mirrors.edge.kernel.org/pub/software/scm/git/
+
+```bash
+wget https://mirrors.edge.kernel.org/pub/software/scm/git/git-<version>.tar.gz
+tar -zxvf git-<version>.tar.gz
+cd git-<version>
+```
+
+### 2.3 安装
+
+```bash
+./configure prefix=/usr/local/git/
+make -j8
+make install
+```
+
+### 2.4 配置
+
+```bash
+export PATH=$PATH:/usr/local/git/bin
+```

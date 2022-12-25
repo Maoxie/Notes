@@ -191,6 +191,9 @@
         - [创建自启动的Windows Service程序](Skills/Windows/%E5%88%9B%E5%BB%BA%E8%87%AA%E5%90%AF%E5%8A%A8%E7%9A%84Windows%20Service%E7%A8%8B%E5%BA%8F.md)
         - [Win10中Neovim的安装与配置](Skills/Windows/Win10%E4%B8%ADNeovim%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE.md)
 
+    - Kubernetes
+        - [k8s 入门](Skills/Kubernetes/k8s%20%E5%85%A5%E9%97%A8.md)
+
     - Software-Specific
         - [pyassimp安装](Skills/Software-Specific/pyassimp%E5%AE%89%E8%A3%85.md)
 
