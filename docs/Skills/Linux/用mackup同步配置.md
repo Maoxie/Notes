@@ -98,4 +98,30 @@ adium
 
 可以对 HOME 目录之下的任意文件/目录添加同步支持。
 
-创建 `~/.mackup` 目录，在
+创建 `~/.mackup` 目录，在其中添加配置文件
+
+```bash
+mkdir ~/.mackup
+touch ~/.mackup/my-files.cfg
+```
+
+配置文件，内容如下：
+
+```ini
+[application]
+name = My personal synced files and dirs
+
+[configuration_files]
+bin
+.hidden
+```
+
+可以通过 `mackup list` 检查是否已添加成功
+
+```bash
+$ mackup list
+Supported applications:
+[...]
+ - my-files
+[...]
+```
