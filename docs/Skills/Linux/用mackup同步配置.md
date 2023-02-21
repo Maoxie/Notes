@@ -125,3 +125,15 @@ Supported applications:
  - my-files
 [...]
 ```
+
+## 4. Tips
+
+###　(1) `.mackup.cfg` 也可以被同步。
+
+在新平台上初始化时，先手动将 `.mackup.cfg` 复制到 `~/.mackup.cfg` 再执行 `mackup restore`。
+
+### (2) 移除一个已同步应用
+
+1. 先 `mackup uninstall`
+2. 然后修改 `~/mackup.cfg`
+3. 最后 `mackup backup`
