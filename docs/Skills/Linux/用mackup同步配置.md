@@ -19,7 +19,7 @@ brew install mackup
 其他系统(通过pip安装):
 
 ```bash
-pip install --upgrade mackup
+pip3 install --upgrade mackup
 ```
 
 在 Ubuntu 系统中，用 pip 会默认安装到用户的 HOME 目录下。如果希望安装到系统路径中，需要添加 `--system` flag (其他平台则不用)
