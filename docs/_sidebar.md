@@ -125,6 +125,7 @@
         - [linux新建用户](Skills/Linux/linux%E6%96%B0%E5%BB%BA%E7%94%A8%E6%88%B7.md)
         - [Linux环境变量设置env, set, export](Skills/Linux/Linux%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E8%AE%BE%E7%BD%AEenv%2C%20set%2C%20export.md)
         - [Linux系统访问NAS的文件服务(samba)](Skills/Linux/Linux%E7%B3%BB%E7%BB%9F%E8%AE%BF%E9%97%AENAS%E7%9A%84%E6%96%87%E4%BB%B6%E6%9C%8D%E5%8A%A1%28samba%29.md)
+        - [Node.js 安装](Skills/Linux/Node.js%20%E5%AE%89%E8%A3%85.md)
         - [sshfs命令简易挂载远程目录](Skills/Linux/sshfs%E5%91%BD%E4%BB%A4%E7%AE%80%E6%98%93%E6%8C%82%E8%BD%BD%E8%BF%9C%E7%A8%8B%E7%9B%AE%E5%BD%95.md)
         - [TCP&UDP端口连通性测试](Skills/Linux/TCP%26UDP%E7%AB%AF%E5%8F%A3%E8%BF%9E%E9%80%9A%E6%80%A7%E6%B5%8B%E8%AF%95.md)
         - [vim插件管理 - vim-plug](Skills/Linux/vim%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%86%20-%20vim-plug.md)
