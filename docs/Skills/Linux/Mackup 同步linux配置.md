@@ -1,4 +1,4 @@
-# 用 Mackup 同步配置
+# Mackup 同步linux配置
 
 ## 0. 关于mackup
 

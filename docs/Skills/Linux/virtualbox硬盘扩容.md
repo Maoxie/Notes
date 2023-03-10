@@ -17,6 +17,3 @@ VBoxManage clonehd "centos7-disk001.vmdk" "centos7.vdi" --format vdi
 VBoxManage modifyhd "centos7.vdi" --resize 51200    #（单位为M）
 # 可以在克隆的目录下查看文件是否克隆成功。
 ```
-
-
-

@@ -1,3 +1,5 @@
+#
+
 ```bash
 nohup java -jar app.jar >log 2>&1 &
 ```
@@ -27,4 +29,3 @@ shell上:
 ```bash
 nohup java -jar app.jar &>log &
 ```
-
