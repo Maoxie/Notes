@@ -2,7 +2,7 @@
 
 ## 修改用户的默认shell
 
-查看所有 shell 
+查看所有 shell
 
 ```bash
 chsh -l
@@ -42,4 +42,3 @@ zhao.wuz:x:1003:33::/home/zhao.wuz:/bin/sh
 ```bash
 useradd -s /bin/bash {用户名}
 ```
-

@@ -90,7 +90,7 @@ autoload -U compinit && compinit
 **安装**：
 
 ```bash
-git clone git://github.com/joelthelion/autojump.git
+git clone https://github.com/wting/autojump.git
 cd autojump
 python ./install.py
 # 卸载
