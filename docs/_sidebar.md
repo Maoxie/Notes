@@ -191,7 +191,6 @@
         - [windows建立软链接](Skills/Windows/windows%E5%BB%BA%E7%AB%8B%E8%BD%AF%E9%93%BE%E6%8E%A5.md)
         - [powershell 加速启动](Skills/Windows/powershell%20%E5%8A%A0%E9%80%9F%E5%90%AF%E5%8A%A8.md)
         - [创建自启动的Windows Service程序](Skills/Windows/%E5%88%9B%E5%BB%BA%E8%87%AA%E5%90%AF%E5%8A%A8%E7%9A%84Windows%20Service%E7%A8%8B%E5%BA%8F.md)
-        - [Win10中Neovim的安装与配置](Skills/Windows/Win10%E4%B8%ADNeovim%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE.md)
 
     - Kubernetes
         - [k8s 入门](Skills/Kubernetes/k8s%20%E5%85%A5%E9%97%A8.md)
@@ -210,6 +209,10 @@
 
         - zotero
             - [zotero修改note templates](Skills/Software-Specific/zotero/zotero%E4%BF%AE%E6%94%B9note%20templates.md)
+
+        - Neovim
+            - [安装Neovim](Skills/Software-Specific/Neovim/%E5%AE%89%E8%A3%85Neovim.md)
+            - [Win10中Neovim的安装与配置](Skills/Software-Specific/Neovim/Win10%E4%B8%ADNeovim%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE.md)
 
         - Blender
             - [blender as python module](Skills/Software-Specific/Blender/blender%20as%20python%20module.md)
