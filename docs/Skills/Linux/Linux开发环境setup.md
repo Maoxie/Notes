@@ -19,4 +19,4 @@ sudo apt-get install autoconf automake build-essential cmake git libass-dev libb
 - [neofetch](https://github.com/dylanaraps/neofetch): 获取并打印系统信息
 - [thefuck](https://github.com/nvbn/thefuck): 纠正输错的命令
 - neovim
-    - [Instruction](https://github.com/neovim/neovim/wiki/Installing-Neovim#install-from-package)
+    - [Instruction](https://github.com/Maoxie/Notes/blob/master/docs/Skills/Software-Specific/Neovim/%E5%AE%89%E8%A3%85Neovim.md)
