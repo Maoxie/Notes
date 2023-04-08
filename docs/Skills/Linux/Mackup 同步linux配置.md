@@ -31,6 +31,7 @@ pip3 install --upgrade mackup
 mackup backup
 
 # Restore your application settings on a newly installed workstation.
+# * 在新机器上恢复配置
 mackup restore
 
 # Copy back any synced config file to its original place.
@@ -128,9 +129,13 @@ Supported applications:
 
 ## 4. Tips
 
-###　(1) `.mackup.cfg` 也可以被同步。
+### (1) `.mackup.cfg` 也可以被同步。
 
 在新平台上初始化时，先手动将 `.mackup.cfg` 复制到 `~/.mackup.cfg` 再执行 `mackup restore`。
+
+```bash
+cp ~/dotfiles/Mackup/.mackup.cfg ~/
+```
 
 ### (2) 移除一个已同步应用
 
