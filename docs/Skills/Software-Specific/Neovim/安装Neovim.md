@@ -9,6 +9,15 @@ pip2 install --user --upgrade pynvim
 pip3 install --user --upgrade pynvim
 ```
 
+安装 vim-plug 
+
+> [junegunn/vim-plug](https://github.com/junegunn/vim-plug#neovim)
+
+```bash
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+```
+
 安装后自检，执行:
 
 ```
