@@ -289,6 +289,8 @@ kind: JoinConfiguration
 - 要自定义 control-plane 组件，请参阅 [custom arguments](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/control-plane-flags/)。
 - 要重新配置一个已经创建的集群(`kubectl edit`)， 请参见 [Reconfiguring a kubeadm cluster](https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-reconfigure)。
 - 要再次运行 `kubeadm init`，你必须首先卸载集群 [tear down the cluster](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/#tear-down)。
+  - 移除节点
+  - 清理control plane
 
 执行：
 
