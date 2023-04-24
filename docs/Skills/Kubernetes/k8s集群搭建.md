@@ -302,6 +302,32 @@ sudo kubeadm init \
   --image-repository registry.aliyuncs.com/google_containers
 ```
 
+或使用如下 `kubeadm-config.yaml` 文件：
+
+```yaml
+apiVersion: kubelet.config.k8s.io/v1beta1
+kind: KubeletConfiguration
+cgroupDriver: systemd
+---
+apiVersion: kubeadm.k8s.io/v1beta3
+kind: InitConfiguration
+nodeRegistration:
+  criSocket: "unix:///var/run/cri-dockerd.sock"
+  taints: []
+---
+apiVersion: kubeadm.k8s.io/v1beta3
+kind: ClusterConfiguration
+networking:
+  podSubnet: "192.168.0.0/16" # --pod-network-cidr
+imageRepository: "registry.aliyuncs.com/google_containers"
+```
+
+执行:
+
+```bash
+sudo kubeadm init --config=kubeadm-config.yaml
+```
+
 `kubeadm init` 首先运行一系列预检查以确保机器为运行 Kubernetes 准备就绪。 这些预检查会显示警告并在错误时退出。然后 `kubeadm init` 下载并安装集群 control-plane 组件。这可能会需要几分钟。
 
 **记录 `kubeadm init` 输出的 `kubeadm join` 命令**，如下。你需要此命令将节点加入集群。
@@ -425,3 +451,9 @@ kubectl cluster-info
 #
 # To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 ```
+
+## 8. 安装 Dashboard
+
+选择 kuboard
+
+> [安装 Kubernetes 多集群管理工具](https://kuboard.cn/install/v3/install.html)
