@@ -36,7 +36,7 @@ sudo apt-get install autoconf automake build-essential cmake git libass-dev libb
 
 ### neovim
 
-- [Instruction](https://github.com/Maoxie/Notes/blob/master/docs/Skills/Software-Specific/Neovim/%E5%AE%89%E8%A3%85Neovim.md)
+- [Installing-Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim#ubuntu)
 
 ### 配置全局 gitignore
 
