@@ -61,3 +61,5 @@ wget https://github.com/ogham/exa/releases/download/v0.10.0/exa-linux-x86_64-v0.
 unzip exa-linux-x86_64-v0.10.0.zip -d exa
 sudo install -o root -g root -m 0755 exa/bin/exa /usr/local/bin/exa
 ```
+
+[bottom](https://github.com/ClementTsang/bottom?ref=itsfoss.com#debianubuntu): 图形化进程、系统monitor
