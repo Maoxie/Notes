@@ -1,4 +1,4 @@
-# Docker 常用命令
+# docker 常用命令
 
 ## 1. 镜像
 
@@ -427,7 +427,7 @@ Docker 网络不会占用磁盘空间，但是他们创建了 `iptables`规则�
 docker network prune
 ```
 
-### 移除Everytghing
+### 移除Everything
 
 `docker system prune`：用于移除镜像，容器，网络。
 
