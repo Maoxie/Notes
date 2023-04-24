@@ -285,12 +285,12 @@ cgroupDriver: systemd
 
 Kubeadm 有一些命令可以帮助你在没有互联网连接的情况下创建一个集群节点时，预先拉取所需的镜像。请参阅 [Running kubeadm without an internet connection](https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-init#without-internet-connection) 以了解更多细节。
 
+Kubeadm 允许你使用自定义镜像仓库来获取所需的镜像。请参阅 [Using custom images](https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-init#custom-images) 以了解更多细节。
+
 ```bash
 sudo kubeadm config images list
-sudo kubeadm config images pull
+sudo kubeadm config images pull --config kubeadm-config.yaml
 ```
-
-Kubeadm 允许你使用自定义镜像仓库来获取所需的镜像。请参阅 [Using custom images](https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-init#custom-images) 以了解更多细节。
 
 ### 4.3 初始化 control-plane 节点
 
