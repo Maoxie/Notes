@@ -127,57 +127,87 @@ sudo sysctl --system
 
 ### 2.2 Container Runtime Interface (CRI)
 
-由于 Docker Engine 未实现 CRI，因此需要安装 [cri-dockerd](https://github.com/Mirantis/cri-dockerd)
+由于 Docker Engine 未实现 CRI，因此需要安装 containerd
 
-(在 kubelet 1.24 版本之前，cri-dockerd 是内置的)
+> [containerd](https://github.com/containerd/containerd/blob/main/docs/getting-started.md)
 
-在使用 systemd 的且已经安装了 Docker Engine 的Linux系统上编译安装：
-
-#### 2.2.1 安装go
-
-> [Download and install - The Go Programming Language](https://go.dev/doc/install)
->
-> [All Releases - The Go Programming Language](https://golang.org/dl/)
+生成默认配置文件：
 
 ```bash
-wget https://go.dev/dl/go1.20.3.linux-amd64.tar.gz
-sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.20.3.linux-amd64.tar.gz
-echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
-source ~/.bashrc
-
-# 检查安装成功
-go version
+sudo containerd config default > /etc/containerd/config.toml
 ```
 
-#### 2.2.2 编译安装 cri-dockerd
+#### 2.2.1 配置 cgroup driver
 
-> [Build and install](https://github.com/Mirantis/cri-dockerd#build-and-install)
+`/etc/containerd/config.toml`:
+
+```toml
+[plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc]
+  ...
+  [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc.options]
+    SystemdCgroup = true
+```
+
+重启 containerd：
 
 ```bash
-git clone https://github.com/Mirantis/cri-dockerd.git
-
-cd cri-dockerd
-mkdir bin
-go build -o bin/cri-dockerd
-sudo mkdir -p /usr/local/bin
-sudo install -o root -g root -m 0755 bin/cri-dockerd /usr/local/bin/cri-dockerd
-sudo cp -a packaging/systemd/* /etc/systemd/system
-sudo sed -i -e 's,/usr/bin/cri-dockerd,/usr/local/bin/cri-dockerd,' /etc/systemd/system/cri-docker.service
-sudo systemctl daemon-reload
-sudo systemctl enable cri-docker.service
-sudo systemctl enable --now cri-docker.socket
-sudo systemctl start cri-docker
-
-# 检查安装成功
-sudo systemctl status cri-docker
+sudo systemctl restart containerd
 ```
 
-#### 2.2.3 配置 cri-dockerd
+#### 2.2.2 配置使用 GPU
 
-上一步中已经配置了。这里只列出配置文件：
+> [NVIDIA device plugin for Kubernetes](https://github.com/NVIDIA/k8s-device-plugin#quick-start)
 
-- `/etc/systemd/system/cri-docker.service`
-- `/etc/systemd/system/cri-docker.socket`
+**(1) 配置 docker**
+
+`/etc/docker/daemon.json`:
+
+```json
+{
+  "default-runtime": "nvidia",
+  "runtimes": {
+    "nvidia": {
+      "path": "/usr/bin/nvidia-container-runtime",
+      "runtimeArgs": []
+    }
+  }
+}
+```
+
+```bash
+sudo systemctl restart docker
+```
+
+**(2) 配置 containerd**
+
+`/etc/containerd/config.toml`:
+
+```toml
+version = 2
+[plugins]
+  [plugins."io.containerd.grpc.v1.cri"]
+    [plugins."io.containerd.grpc.v1.cri".containerd]
+      default_runtime_name = "nvidia"
+
+      [plugins."io.containerd.grpc.v1.cri".containerd.runtimes]
+        [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.nvidia]
+          privileged_without_host_devices = false
+          runtime_engine = ""
+          runtime_root = ""
+          runtime_type = "io.containerd.runc.v2"
+          [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.nvidia.options]
+            BinaryName = "/usr/bin/nvidia-container-runtime"
+```
+
+```bash
+sudo systemctl restart containerd
+```
+
+**(3) Enabling GPU Support in Kubernetes**
+
+```bash
+kubectl create -f https://raw.githubusercontent.com/NVIDIA/k8s-device-plugin/v0.14.0/nvidia-device-plugin.yml
+```
 
 ## 3 安装 `kubeadm`, `kubelet` 和 `kubectl`
 
@@ -311,9 +341,6 @@ cgroupDriver: systemd
 ---
 apiVersion: kubeadm.k8s.io/v1beta3
 kind: InitConfiguration
-nodeRegistration:
-  criSocket: "unix:///var/run/cri-dockerd.sock"
-  taints: []
 ---
 apiVersion: kubeadm.k8s.io/v1beta3
 kind: ClusterConfiguration
