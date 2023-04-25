@@ -117,6 +117,7 @@
         - [下载golang.org的包](Skills/Go/%E4%B8%8B%E8%BD%BDgolang.org%E7%9A%84%E5%8C%85.md)
 
     - Kubernetes
+        - [k8s runtime endpoints](Skills/Kubernetes/k8s%20runtime%20endpoints.md)
         - [k8s集群搭建](Skills/Kubernetes/k8s%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA.md)
         - [kubectl常用命令](Skills/Kubernetes/kubectl%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.md)
 
