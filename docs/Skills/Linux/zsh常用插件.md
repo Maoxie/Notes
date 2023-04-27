@@ -1,10 +1,22 @@
 # ZSH 常用插件
 
 安装 Oh-My-ZSH
+
+在线安装
+
+> https://ohmyz.sh/#install
+
 ```bash
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
-> https://ohmyz.sh/#install
+
+离线安装：
+
+> https://github.com/ohmyzsh/ohmyzsh/issues/9415
+
+1. 下载最新版本release (https://github.com/ohmyzsh/ohmyzsh)
+2. 上传并解压到 `~/.oh-my-zsh`
+3. `cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc`
 
 ## 1. 启用插件的方法
 
