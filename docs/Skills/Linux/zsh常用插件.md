@@ -27,13 +27,17 @@ plugins = (
 
 命令自动补全
 
+> https://github.com/zsh-users/zsh-autosuggestions
+
 ```bash
-git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
 ```
 
 ### zsh-syntax-highlighting
 
 命令语法高亮插件
+
+> https://github.com/zsh-users/zsh-syntax-highlighting
 
 ```bash
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
@@ -60,10 +64,12 @@ theme 主题名
 
 conda命令补全。
 
+> https://github.com/conda-incubator/conda-zsh-completion
+
 **安装**：
 
 ```bash
-git clone https://github.com/esc/conda-zsh-completion ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/conda-zsh-completion
+git clone https://github.com/conda-incubator/conda-zsh-completion.git ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/conda-zsh-completion
 ```
 
 **启用**：
@@ -86,6 +92,8 @@ autoload -U compinit && compinit
 ### autojump
 
 实现目录间快速跳转，想去哪个目录直接 j + 目录名，不用再频繁的 cd 了！
+
+> https://github.com/wting/autojump
 
 **安装**：
 
