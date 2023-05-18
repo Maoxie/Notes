@@ -2,6 +2,13 @@
 
 ## (1) Recommend
 
+### 配置apt镜像
+
+```bash
+sudo apt install ca-certificates
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.backup
+```
+
 > [配置apt镜像](https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/)
 
 ### Dependencies
