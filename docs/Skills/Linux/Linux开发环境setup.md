@@ -28,7 +28,8 @@ sudo apt-get install autoconf automake build-essential cmake git libass-dev libb
 
 ### Node.js
 
-- [Download | node.js](https://nodejs.org/en/download/)
+- 利用[NVM](https://github.com/nvm-sh/nvm#installing-and-updating)安装
+- 直接安装[Download | node.js](https://nodejs.org/en/download/)
 
 ### Mackup: 配置备份/同步
 
