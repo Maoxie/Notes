@@ -52,6 +52,12 @@ sudo apt-get install autoconf automake build-essential cmake git libass-dev libb
 
 ## (2) CLI tools
 
+[rust](https://www.rust-lang.org/tools/install): 方便编译安装其他工具
+
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
 [neofetch](https://github.com/dylanaraps/neofetch): 获取并打印系统信息
 
 [thefuck](https://github.com/nvbn/thefuck#installation): 纠正输错的命令
