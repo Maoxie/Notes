@@ -184,6 +184,15 @@ z -x 不要的路径
 
 内置插件。`docker` 和 `docker-compose` 命令的自动补全
 
+### atuin: shell 历史记录增强
+
+> [atuin#offline-only-no-sync]https://github.com/ellie/atuin#offline-only-no-sync
+
+```bash
+bash <(curl https://raw.githubusercontent.com/ellie/atuin/main/install.sh)
+
+atuin import auto
+```
 
 ## 3. 推荐主题
 
