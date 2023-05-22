@@ -44,17 +44,7 @@ sudo apt-get install autoconf automake build-essential cmake git libass-dev libb
 
 ## (2) CLI tools
 
-[neofetch](https://github.com/dylanaraps/neofetch): 获取并打印系统信息
-
-[thefuck](https://github.com/nvbn/thefuck#installation): 纠正输错的命令
-
-[tldr](https://github.com/tldr-pages/tldr#how-do-i-use-it):
-
-```bash
-pip3 install tldr
-```
-
-[exa](https://the.exa.website/install/linux): a modern replacement for `ls`
+- [exa](https://the.exa.website/install/linux): a modern replacement for `ls`
 
 ```bash
 wget https://github.com/ogham/exa/releases/download/v0.10.0/exa-linux-x86_64-v0.10.0.zip
@@ -62,4 +52,21 @@ unzip exa-linux-x86_64-v0.10.0.zip -d exa
 sudo install -o root -g root -m 0755 exa/bin/exa /usr/local/bin/exa
 ```
 
-[bottom](https://github.com/ClementTsang/bottom?ref=itsfoss.com#debianubuntu): 图形化进程、系统monitor
+- [bottom](https://github.com/ClementTsang/bottom?ref=itsfoss.com#debianubuntu): 图形化进程、系统monitor
+
+- [neofetch](https://github.com/dylanaraps/neofetch): 获取并打印系统信息
+
+- [thefuck](https://github.com/nvbn/thefuck#installation): 纠正输错的命令
+
+- tldr:
+  - [tealdeer](https://dbrgn.github.io/tealdeer/installing.html)
+
+    ```bash
+    cargo install tealdeer
+    ```
+
+  - [tldr](https://github.com/tldr-pages/tldr#how-do-i-use-it):
+
+     ```bash
+     pip3 install tldr
+     ```
