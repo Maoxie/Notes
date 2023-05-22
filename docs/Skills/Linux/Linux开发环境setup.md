@@ -56,6 +56,8 @@ sudo apt-get install autoconf automake build-essential cmake git libass-dev libb
 
   ```bash
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+  # To update:
+  rustup update stable
   ```
 
 - [exa](https://the.exa.website/install/linux): a modern replacement for `ls`
@@ -80,7 +82,7 @@ sudo apt-get install autoconf automake build-essential cmake git libass-dev libb
     cargo install tealdeer
     ```
 
-  - (无需rust) [tldr](https://github.com/tldr-pages/tldr#how-do-i-use-it):
+  - (无需编译) [tldr](https://github.com/tldr-pages/tldr#how-do-i-use-it):
 
      ```bash
      pip3 install tldr
