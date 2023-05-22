@@ -70,6 +70,15 @@ sudo apt-get install autoconf automake build-essential cmake git libass-dev libb
 
 - [bottom](https://github.com/ClementTsang/bottom?ref=itsfoss.com#debianubuntu): 图形化进程、系统monitor
 
+  ```bash
+  sudo snap install bottom
+  # To allow the program to run as intended
+  sudo snap connect bottom:mount-observe
+  sudo snap connect bottom:hardware-observe
+  sudo snap connect bottom:system-observe
+  sudo snap connect bottom:process-control
+  ```
+
 - [neofetch](https://github.com/dylanaraps/neofetch): 获取并打印系统信息
 
 - [thefuck](https://github.com/nvbn/thefuck#installation): 纠正输错的命令
@@ -80,6 +89,7 @@ sudo apt-get install autoconf automake build-essential cmake git libass-dev libb
 
     ```bash
     cargo install tealdeer
+    # sudo cargo install --root /usr/local/ tealdeer
     ```
 
   - (无需编译) [tldr](https://github.com/tldr-pages/tldr#how-do-i-use-it):
