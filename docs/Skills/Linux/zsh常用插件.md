@@ -186,10 +186,12 @@ z -x 不要的路径
 
 ### atuin: shell 历史记录增强
 
-> [atuin#offline-only-no-sync]https://github.com/ellie/atuin#offline-only-no-sync
+> [atuin#offline-only-no-sync](https://github.com/ellie/atuin#offline-only-no-sync)
 
 ```bash
 bash <(curl https://raw.githubusercontent.com/ellie/atuin/main/install.sh)
+# 或者编译安装
+# cargo install atuin
 
 atuin import auto
 ```

@@ -2,6 +2,13 @@
 
 ## (1) Recommend
 
+### 配置apt镜像
+
+```bash
+sudo apt install ca-certificates
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.backup
+```
+
 > [配置apt镜像](https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/)
 
 ### Dependencies
@@ -28,7 +35,8 @@ sudo apt-get install autoconf automake build-essential cmake git libass-dev libb
 
 ### Node.js
 
-- [Download | node.js](https://nodejs.org/en/download/)
+- 利用[NVM](https://github.com/nvm-sh/nvm#installing-and-updating)安装
+- 直接安装[Download | node.js](https://nodejs.org/en/download/)
 
 ### Mackup: 配置备份/同步
 
@@ -44,13 +52,19 @@ sudo apt-get install autoconf automake build-essential cmake git libass-dev libb
 
 ## (2) CLI tools
 
+- [rust](https://www.rust-lang.org/tools/install): 方便编译安装其他命令行工具
+
+  ```bash
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+  ```
+
 - [exa](https://the.exa.website/install/linux): a modern replacement for `ls`
 
-```bash
-wget https://github.com/ogham/exa/releases/download/v0.10.0/exa-linux-x86_64-v0.10.0.zip
-unzip exa-linux-x86_64-v0.10.0.zip -d exa
-sudo install -o root -g root -m 0755 exa/bin/exa /usr/local/bin/exa
-```
+  ```bash
+  wget https://github.com/ogham/exa/releases/download/v0.10.0/exa-linux-x86_64-v0.10.0.zip
+  unzip exa-linux-x86_64-v0.10.0.zip -d exa
+  sudo install -o root -g root -m 0755 exa/bin/exa /usr/local/bin/exa
+  ```
 
 - [bottom](https://github.com/ClementTsang/bottom?ref=itsfoss.com#debianubuntu): 图形化进程、系统monitor
 
