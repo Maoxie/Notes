@@ -73,13 +73,14 @@ sudo apt-get install autoconf automake build-essential cmake git libass-dev libb
 - [thefuck](https://github.com/nvbn/thefuck#installation): 纠正输错的命令
 
 - tldr:
-  - [tealdeer](https://dbrgn.github.io/tealdeer/installing.html)
+
+  - (推荐) [tealdeer](https://dbrgn.github.io/tealdeer/installing.html)
 
     ```bash
     cargo install tealdeer
     ```
 
-  - [tldr](https://github.com/tldr-pages/tldr#how-do-i-use-it):
+  - (无需rust) [tldr](https://github.com/tldr-pages/tldr#how-do-i-use-it):
 
      ```bash
      pip3 install tldr
