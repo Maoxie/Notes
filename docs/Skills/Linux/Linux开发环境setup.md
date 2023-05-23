@@ -56,6 +56,8 @@ sudo apt-get install autoconf automake build-essential cmake git libass-dev libb
 
 **digest:**
 
+Linux:
+
 ```bash
 if ! [[ command -v rustup &> /dev/null ]]; then
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -66,9 +68,9 @@ export CARGO_INSTALL_ROOT=$HOME/_cargo_install_temp/
 
 cargo install fd-find
 cargo install --locked bat
-cargo install tealdeer
 cargo install ripgrep
 cargo install atuin
+cargo install tealdeer
 cargo install exa
 cargo install bottom
 
@@ -77,6 +79,25 @@ sudo chmod 755 $CARGO_INSTALL_ROOT/bin/*
 sudo mv $CARGO_INSTALL_ROOT/bin/* /usr/local/bin/
 
 export CARGO_INSTALL_ROOT=
+
+atuin import auto
+```
+
+macos
+
+```bash
+if ! [[ command -v rustup &> /dev/null ]]; then
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+fi
+rustup update stable
+
+brew install fd
+brew install bat
+brew install ripgrep
+brew install atuin
+brew install tealdeer
+brew install exa
+brew install bottom
 ```
 
 **list:**
