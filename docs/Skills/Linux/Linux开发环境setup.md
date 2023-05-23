@@ -52,17 +52,47 @@ sudo apt-get install autoconf automake build-essential cmake git libass-dev libb
 
 ## (2) CLI tools
 
-- [rust](https://www.rust-lang.org/tools/install): 方便编译安装其他命令行工具
+### 2.1 Rust CLI tools
 
-  ```bash
+**digest:**
+
+```bash
+if ! [[ command -v rustup &> /dev/null ]]; then
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-  # To update:
-  rustup update stable
-  ```
+fi
+rustup update stable
 
+export CARGO_INSTALL_ROOT=$HOME/_cargo_install_temp/
+
+cargo install fd-find
+cargo install --locked bat
+cargo install tealdeer
+cargo install ripgrep
+cargo install atuin
+cargo install exa
+cargo install bottom
+
+sudo chown root:root $CARGO_INSTALL_ROOT/bin/*
+sudo chmod 755 $CARGO_INSTALL_ROOT/bin/*
+sudo mv $CARGO_INSTALL_ROOT/bin/* /usr/local/bin/
+
+export CARGO_INSTALL_ROOT=
+```
+
+**list:**
+
+- [rust](https://www.rust-lang.org/tools/install): 方便编译安装其他命令行工具
+- [`fd`](https://github.com/sharkdp/fd#on-ubuntu): 替代`find`
+- [`bat`](https://github.com/sharkdp/bat#from-source): 替代`cat`
+- [`rg`](https://github.com/BurntSushi/ripgrep#installation): ripgrep，替代`grep`
+- [atuin](https://github.com/ellie/atuin/blob/main/README.md#install): shell 历史记录增强
+- `tldr`:
+  - (推荐) [tealdeer](https://dbrgn.github.io/tealdeer/installing.html)
+  - (无需编译) [tldr](https://github.com/tldr-pages/tldr#how-do-i-use-it):
 - [`exa`](https://the.exa.website/install/linux): a modern replacement for `ls`
 
   ```bash
+  # linux x64
   wget https://github.com/ogham/exa/releases/download/v0.10.0/exa-linux-x86_64-v0.10.0.zip
   unzip exa-linux-x86_64-v0.10.0.zip -d exa
   sudo install -o root -g root -m 0755 exa/bin/exa /usr/local/bin/exa
@@ -71,6 +101,7 @@ sudo apt-get install autoconf automake build-essential cmake git libass-dev libb
 - [`bottom`](https://github.com/ClementTsang/bottom?ref=itsfoss.com#debianubuntu): 图形化进程、系统monitor
 
   ```bash
+  # via snap
   sudo snap install bottom
   # To allow the program to run as intended
   sudo snap connect bottom:mount-observe
@@ -79,42 +110,8 @@ sudo apt-get install autoconf automake build-essential cmake git libass-dev libb
   sudo snap connect bottom:process-control
   ```
 
+### 2.2 Others
+
 - [`neofetch`](https://github.com/dylanaraps/neofetch): 获取并打印系统信息
 
 - [`fuck`](https://github.com/nvbn/thefuck#installation): thefuck，纠正输错的命令
-
-- `tldr`:
-
-  - (推荐) [tealdeer](https://dbrgn.github.io/tealdeer/installing.html)
-
-    ```bash
-    cargo install tealdeer
-    # sudo cargo install --root /usr/local/ tealdeer
-    ```
-
-  - (无需编译) [tldr](https://github.com/tldr-pages/tldr#how-do-i-use-it):
-
-     ```bash
-     pip3 install tldr
-     ```
-
-- [atuin](https://github.com/ellie/atuin/blob/main/README.md#install): shell 历史记录增强
-
-- [`fd`](https://github.com/sharkdp/fd#on-ubuntu): 替代`find`
-
-  ```bash
-  cargo install fd-find
-  # sudo cargo install --root /usr/local/ fd-find
-  ```
-
-- [`bat`](https://github.com/sharkdp/bat#from-source): 替代`cat`
-
-  ```bash
-  cargo install --locked bat
-  ```
-
-- [`rg`](https://github.com/BurntSushi/ripgrep#installation): ripgrep，替代`grep`
-
-  ```bash
-  cargo install ripgrep
-  ```
