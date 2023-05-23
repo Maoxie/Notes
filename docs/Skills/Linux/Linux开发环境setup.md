@@ -97,3 +97,5 @@ sudo apt-get install autoconf automake build-essential cmake git libass-dev libb
      ```bash
      pip3 install tldr
      ```
+
+- [atuin](https://github.com/ellie/atuin/blob/main/README.md#install): shell 历史记录增强
