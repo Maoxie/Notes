@@ -60,7 +60,7 @@ sudo apt-get install autoconf automake build-essential cmake git libass-dev libb
   rustup update stable
   ```
 
-- [exa](https://the.exa.website/install/linux): a modern replacement for `ls`
+- [`exa`](https://the.exa.website/install/linux): a modern replacement for `ls`
 
   ```bash
   wget https://github.com/ogham/exa/releases/download/v0.10.0/exa-linux-x86_64-v0.10.0.zip
@@ -68,7 +68,7 @@ sudo apt-get install autoconf automake build-essential cmake git libass-dev libb
   sudo install -o root -g root -m 0755 exa/bin/exa /usr/local/bin/exa
   ```
 
-- [bottom](https://github.com/ClementTsang/bottom?ref=itsfoss.com#debianubuntu): 图形化进程、系统monitor
+- [`bottom`](https://github.com/ClementTsang/bottom?ref=itsfoss.com#debianubuntu): 图形化进程、系统monitor
 
   ```bash
   sudo snap install bottom
@@ -79,11 +79,11 @@ sudo apt-get install autoconf automake build-essential cmake git libass-dev libb
   sudo snap connect bottom:process-control
   ```
 
-- [neofetch](https://github.com/dylanaraps/neofetch): 获取并打印系统信息
+- [`neofetch`](https://github.com/dylanaraps/neofetch): 获取并打印系统信息
 
-- [thefuck](https://github.com/nvbn/thefuck#installation): 纠正输错的命令
+- [`fuck`](https://github.com/nvbn/thefuck#installation): thefuck，纠正输错的命令
 
-- tldr:
+- `tldr`:
 
   - (推荐) [tealdeer](https://dbrgn.github.io/tealdeer/installing.html)
 
@@ -99,3 +99,22 @@ sudo apt-get install autoconf automake build-essential cmake git libass-dev libb
      ```
 
 - [atuin](https://github.com/ellie/atuin/blob/main/README.md#install): shell 历史记录增强
+
+- [`fd`](https://github.com/sharkdp/fd#on-ubuntu): 替代`find`
+
+  ```bash
+  cargo install fd-find
+  # sudo cargo install --root /usr/local/ fd-find
+  ```
+
+- [`bat`](https://github.com/sharkdp/bat#from-source): 替代`cat`
+
+  ```bash
+  cargo install --locked bat
+  ```
+
+- [`rg`](https://github.com/BurntSushi/ripgrep#installation): ripgrep，替代`grep`
+
+  ```bash
+  cargo install ripgrep
+  ```
