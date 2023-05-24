@@ -69,6 +69,8 @@ export CARGO_INSTALL_ROOT=$HOME/_cargo_install_temp/
 cargo install fd-find
 cargo install --locked bat
 cargo install ripgrep
+cargo install du-dust
+cargo install procs
 cargo install atuin
 cargo install tealdeer
 cargo install exa
@@ -94,6 +96,8 @@ rustup update stable
 brew install fd
 brew install bat
 brew install ripgrep
+brew install dust
+brew install procs
 brew install atuin
 brew install tealdeer
 brew install exa
@@ -106,6 +110,8 @@ brew install bottom
 - [`fd`](https://github.com/sharkdp/fd#on-ubuntu): 替代`find`
 - [`bat`](https://github.com/sharkdp/bat#from-source): 替代`cat`
 - [`rg`](https://github.com/BurntSushi/ripgrep#installation): ripgrep，替代`grep`
+- [`dust`](https://github.com/bootandy/dust#install): 替代`du`
+- [`procs`](https://github.com/dalance/procs#cargo): 替代`ps`
 - [atuin](https://github.com/ellie/atuin/blob/main/README.md#install): shell 历史记录增强
 - `tldr`:
   - (推荐) [tealdeer](https://dbrgn.github.io/tealdeer/installing.html)
