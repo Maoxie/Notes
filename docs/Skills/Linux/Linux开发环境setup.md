@@ -72,6 +72,7 @@ cargo install ripgrep
 cargo install du-dust
 cargo install procs
 cargo install atuin
+cargo install git-delta
 cargo install tealdeer
 cargo install exa
 cargo install bottom
@@ -99,6 +100,7 @@ brew install ripgrep
 brew install dust
 brew install procs
 brew install atuin
+brew install git-delta
 brew install tealdeer
 brew install exa
 brew install bottom
@@ -113,6 +115,7 @@ brew install bottom
 - [`dust`](https://github.com/bootandy/dust#install): 替代`du`
 - [`procs`](https://github.com/dalance/procs#cargo): 替代`ps`
 - [atuin](https://github.com/ellie/atuin/blob/main/README.md#install): shell 历史记录增强
+- [delta](https://dandavison.github.io/delta/installation.html#installation): syntax-highlighting git diff
 - `tldr`:
   - (推荐) [tealdeer](https://dbrgn.github.io/tealdeer/installing.html)
   - (无需编译) [tldr](https://github.com/tldr-pages/tldr#how-do-i-use-it):
