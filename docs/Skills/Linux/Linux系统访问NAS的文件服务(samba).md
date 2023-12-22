@@ -77,7 +77,7 @@ smbclient //10.4.5.66/share -U username_1
 ### 4. 临时挂载
 
 ```bash
-sudo mount -t cifs -o username=username_1,password=password_1,file_mode=<filemode>,dir_mode=<dirmode>,gid=<ownerGroupID>,uid=<ownerID> //10.4.5.27/share /home/yangzhitao/mnt/nas
+sudo mount -t cifs -o username=username_1,password=password_1,file_mode=<filemode>,dir_mode=<dirmode>,gid=<ownerGroupID>,uid=<ownerID>,soft //10.4.5.27/share /home/yangzhitao/mnt/nas
 ```
 
 **当 SMB version 高于 SMB1 时，需要指定vers（见Q2）**。
@@ -85,6 +85,12 @@ sudo mount -t cifs -o username=username_1,password=password_1,file_mode=<filemod
 filemode, dirmode可指定挂载后的目录和文件权限（默认: 0755）。
 
 gid/uid可指定挂载后的目录所属的组/用户（默认：当前用户(sudo时为root用户)和组）。
+
+soft: soft mount. 默认为 hard mount，连接永不超时，无法中断。
+> If the NFS file system is soft mounted, NFS tries repeatedly to contact the server until either:
+> - A connection is established
+> - The NFS retry threshold is met
+> - The nfstimeout value is reached
 
 ### 5. 开机自动挂载
 
