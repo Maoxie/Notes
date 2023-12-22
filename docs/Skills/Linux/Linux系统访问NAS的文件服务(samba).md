@@ -88,6 +88,8 @@ gid/uid可指定挂载后的目录所属的组/用户（默认：当前用户(su
 
 ### 5. 开机自动挂载
 
+编辑 `/etc/fstab`
+
 ```bash
 //10.4.5.66/share /path/of/mnt/point cifs user=username_1,password=password_1 0 0
 ```
