@@ -231,7 +231,6 @@
             - [maya插件安装方法](Skills/Software-Specific/Maya/maya%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95.md)
 
         - Neovim
-            - [Win10中Neovim的安装与配置](Skills/Software-Specific/Neovim/Win10%E4%B8%ADNeovim%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE.md)
             - [安装Neovim](Skills/Software-Specific/Neovim/%E5%AE%89%E8%A3%85Neovim.md)
 
         - zotero
