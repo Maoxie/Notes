@@ -104,6 +104,13 @@ True
 ... == posebone.matrix
 ```
 
+- `PoseBone.matrix_channel`: （只读）使bone从**REST POSE**变换到**POSE SPACE**的矩阵
+
+```python
+>>> posebone = bpy.data.objects['Armature'].pose.bones["Bone"]
+>>> posebone.matrix_channel @ posebone.bone.matrix_local == posebone.matrix
+```
+
 - `Object.matrix_world`：object在**WORLD SPACE**中的变换矩阵。
 
 ### 矩阵间的变换关系
