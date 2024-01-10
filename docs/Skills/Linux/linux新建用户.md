@@ -1,9 +1,11 @@
 ## 新增用户
 ```bash
+# useradd -d <USERHOME> -m <USERNAME> # 指定用户主目录，如果此目录不存在，则同时使用-m选项，可以创建主目录
 useradd -m user1
 passwd user1  				# 设置密码
 chsh -s /bin/bash user1 	# 登陆后使用bash
 ```
+
 ## 创建密码
 ```bash
 passwd 账号
@@ -26,6 +28,7 @@ huddy  ALL=(ALL)       ALL
 root    ALL=(ALL)       ALL
 huddy  ALL=(ALL)       NOPASSWD:ALL
 ```
+
 ## 赋予用户SSH连接的权限
 linux系统安装好，建立普通用户后，普通用户不一定能通过ssh连接到服务器
 
