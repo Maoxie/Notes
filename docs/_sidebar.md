@@ -206,6 +206,9 @@
         - tensorflow
             - [TensorFlow中关于pad函数的详细理解](Skills/Python/tensorflow/TensorFlow%E4%B8%AD%E5%85%B3%E4%BA%8Epad%E5%87%BD%E6%95%B0%E7%9A%84%E8%AF%A6%E7%BB%86%E7%90%86%E8%A7%A3.md)
 
+    - Rust
+        - [Rust 工具链 & Cargo 国内源](Skills/Rust/Rust%20%E5%B7%A5%E5%85%B7%E9%93%BE%20%26%20Cargo%20%E5%9B%BD%E5%86%85%E6%BA%90.md)
+
     - Software-Specific
         - [pyassimp安装](Skills/Software-Specific/pyassimp%E5%AE%89%E8%A3%85.md)
 
