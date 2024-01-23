@@ -240,7 +240,8 @@
             - [zotero修改note templates](Skills/Software-Specific/zotero/zotero%E4%BF%AE%E6%94%B9note%20templates.md)
 
     - Windows
-        - [powershell 加速启动](Skills/Windows/powershell%20%E5%8A%A0%E9%80%9F%E5%90%AF%E5%8A%A8.md)
+        - [powershell 启动加速](Skills/Windows/powershell%20%E5%90%AF%E5%8A%A8%E5%8A%A0%E9%80%9F.md)
+        - [powershell 开启补全功能](Skills/Windows/powershell%20%E5%BC%80%E5%90%AF%E8%A1%A5%E5%85%A8%E5%8A%9F%E8%83%BD.md)
         - [windows建立软链接](Skills/Windows/windows%E5%BB%BA%E7%AB%8B%E8%BD%AF%E9%93%BE%E6%8E%A5.md)
         - [winget 国内源](Skills/Windows/winget%20%E5%9B%BD%E5%86%85%E6%BA%90.md)
         - [创建自启动的Windows Service程序](Skills/Windows/%E5%88%9B%E5%BB%BA%E8%87%AA%E5%90%AF%E5%8A%A8%E7%9A%84Windows%20Service%E7%A8%8B%E5%BA%8F.md)
