@@ -245,4 +245,5 @@
         - [windows建立软链接](Skills/Windows/windows%E5%BB%BA%E7%AB%8B%E8%BD%AF%E9%93%BE%E6%8E%A5.md)
         - [winget 国内源](Skills/Windows/winget%20%E5%9B%BD%E5%86%85%E6%BA%90.md)
         - [创建自启动的Windows Service程序](Skills/Windows/%E5%88%9B%E5%BB%BA%E8%87%AA%E5%90%AF%E5%8A%A8%E7%9A%84Windows%20Service%E7%A8%8B%E5%BA%8F.md)
+        - [右键用windows terminal打开当前目录](Skills/Windows/%E5%8F%B3%E9%94%AE%E7%94%A8windows%20terminal%E6%89%93%E5%BC%80%E5%BD%93%E5%89%8D%E7%9B%AE%E5%BD%95.md)
         - [右键菜单添加“通过xxx打开”](Skills/Windows/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%B7%BB%E5%8A%A0%E2%80%9C%E9%80%9A%E8%BF%87xxx%E6%89%93%E5%BC%80%E2%80%9D.md)
