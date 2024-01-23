@@ -176,6 +176,7 @@
         - [Redis基本操作](Skills/Python/Redis%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C.md)
         - [SQLAlchemy操作数据的方法](Skills/Python/SQLAlchemy%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E7%9A%84%E6%96%B9%E6%B3%95.md)
         - [win10系统下安装pycrypto包的方法](Skills/Python/win10%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%AE%89%E8%A3%85pycrypto%E5%8C%85%E7%9A%84%E6%96%B9%E6%B3%95.md)
+        - [win环境下print时的UnicodeEncodingError](Skills/Python/win%E7%8E%AF%E5%A2%83%E4%B8%8Bprint%E6%97%B6%E7%9A%84UnicodeEncodingError.md)
         - [xlrd读取excel文件](Skills/Python/xlrd%E8%AF%BB%E5%8F%96excel%E6%96%87%E4%BB%B6.md)
         - [用gbd调试python core dump](Skills/Python/%E7%94%A8gbd%E8%B0%83%E8%AF%95python%20core%20dump.md)
         - [运行jupyter notebook远程服务](Skills/Python/%E8%BF%90%E8%A1%8Cjupyter%20notebook%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1.md)
