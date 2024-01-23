@@ -8,7 +8,11 @@
 
 win +R，输入 `regedit`。
 
-定位到 `HKEY_CLASSES_ROOT\*\shell`
+定位到
+
+- `HKEY_CLASSES_ROOT\*\shell`: options to the right-click menu for files
+- `HKEY_CLASSES_ROOT\Folder\shell`: options to the right-click menu for folders
+- `HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\background\shell`: options to the right-click menu for desktop
 
 ### 2. 新建菜单项
 
