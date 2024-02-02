@@ -21,8 +21,8 @@ registry = "sparse+https://mirrors.ustc.edu.cn/crates.io-index/"
 registry = "sparse+https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index/"
 
 [source.tuna]
-registry = "sparse+https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git"
+registry = "sparse+https://mirrors.tuna.tsinghua.edu.cn/crates.io-index/"
 
 [source.rustcc]
-registry = "sparse+https://code.aliyun.com/rustcc/crates.io-index.git"
+registry = "sparse+https://code.aliyun.com/rustcc/crates.io-index/"
 ```
