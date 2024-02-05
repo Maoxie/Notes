@@ -7,11 +7,13 @@ rustup:
 
 > https://rust-guide.niqin.com/en-us/4-cargo/4.1-source-replacement.html
 
-修改配置文件，如下：
+> Cargo 配置文件：`$CARGO_HOME/config.toml`
+> - Windows:
+>   - `%USERPROFILE%\.cargo\config.toml`
+> - Unix:
+>   - `$HOME/.cargo/config.toml`
 
-> 配置文件路径：`$CARGO_HOME/config.toml`
-> - Windows: %USERPROFILE%\.cargo\config.toml
-> - Unix: $HOME/.cargo/config.toml
+修改配置文件，如下：
 
 ```config
 [source.crates-io]
