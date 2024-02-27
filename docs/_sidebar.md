@@ -71,6 +71,7 @@
 
 - Skills
     - Database
+        - [CouchDB安装](Skills/Database/CouchDB%E5%AE%89%E8%A3%85.md)
         - [MySQL备份与恢复](Skills/Database/MySQL%E5%A4%87%E4%BB%BD%E4%B8%8E%E6%81%A2%E5%A4%8D.md)
         - [MySQL开启远程访问权限](Skills/Database/MySQL%E5%BC%80%E5%90%AF%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90.md)
         - [PG - INSERT ON CONFLICT 语法(upsert)](Skills/Database/PG%20-%20INSERT%20ON%20CONFLICT%20%E8%AF%AD%E6%B3%95%28upsert%29.md)
@@ -236,6 +237,9 @@
 
         - Neovim
             - [安装Neovim](Skills/Software-Specific/Neovim/%E5%AE%89%E8%A3%85Neovim.md)
+
+        - Obsidian
+            - [obsidian-livesync](Skills/Software-Specific/Obsidian/obsidian-livesync.md)
 
         - zotero
             - [zotero修改note templates](Skills/Software-Specific/zotero/zotero%E4%BF%AE%E6%94%B9note%20templates.md)
