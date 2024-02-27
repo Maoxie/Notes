@@ -4,7 +4,9 @@
 
 ## 1. 安装 CouchDB 服务端
 
-[CouchDB 安装](../../Database/CouchDB%E5%AE%89%E8%A3%85.md)
+使用该工程的 `docker-compose.yml` 文件，启动 CouchDB 服务端。
+
+> [vrtmrz/self-hosted-livesync-server](https://github.com/vrtmrz/self-hosted-livesync-server/tree/main)
 
 ## 2. 初始化
 
@@ -20,3 +22,12 @@ curl -s https://raw.githubusercontent.com/vrtmrz/obsidian-livesync/main/utils/co
 ## 3. 暴露服务端口
 
 ## 4. 配置客户端
+
+```bash
+# Prepare environment variables.
+export hostname=localhost:5984
+export username=admin
+export password=password
+
+curl -s https://raw.githubusercontent.com/vrtmrz/obsidian-livesync/main/utils/couchdb/couchdb-init.sh | bash
+```
