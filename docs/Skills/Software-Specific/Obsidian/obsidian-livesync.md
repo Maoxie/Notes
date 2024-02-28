@@ -37,7 +37,7 @@ git clone --depth=1 https://github.com/vrtmrz/self-hosted-livesync-server.git
 
 修改 `docker-compose.yml` 和 `config/init.ini` 文件
 
-配置环境变量
+配置环境变量(.env)
 
 ```properties
 COUCHDB_SERVER=http://localhost:5984
