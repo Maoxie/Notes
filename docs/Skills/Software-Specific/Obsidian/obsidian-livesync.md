@@ -60,11 +60,18 @@ curl -s https://raw.githubusercontent.com/vrtmrz/obsidian-livesync/main/utils/co
 
 ## 4. 配置客户端
 
+执行以下命令，获取配置信息:
+
 ```bash
 # Prepare environment variables.
-export hostname=localhost:5984
-export username=admin
-export password=password
-
-curl -s https://raw.githubusercontent.com/vrtmrz/obsidian-livesync/main/utils/couchdb/couchdb-init.sh | bash
+export hostname=https://www.your-hostname.com #Point to your vault
+export database=obsidiannotes #Please change as you like
+export passphrase=dfsapkdjaskdjasdas #Please change as you like
+deno run -A https://raw.githubusercontent.com/vrtmrz/obsidian-livesync/main/utils/flyio/generate_setupuri.ts
+# ------ output: ------
+# obsidian://setuplivesync?settings=%5B%22tm2DpsOE74nJAryprZO2M93wF%2Fvg.......4b26ed33230729%22%5D
 ```
+
+复制输出的 Setup URI： `obsidian://setuplivesync?settings=...`
+
+打开 Obsidian 进行插件配置，粘贴 Setup URI 到 `obsidian-livesync` 插件的设置中。
