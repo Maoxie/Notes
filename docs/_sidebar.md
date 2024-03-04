@@ -233,6 +233,7 @@
             - [安装FBX Python SDK](Skills/Software-Specific/FBX/%E5%AE%89%E8%A3%85FBX%20Python%20SDK.md)
 
         - Maya
+            - [maya安装numpy&scipy](Skills/Software-Specific/Maya/maya%E5%AE%89%E8%A3%85numpy%26scipy.md)
             - [maya插件安装方法](Skills/Software-Specific/Maya/maya%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95.md)
 
         - Neovim
