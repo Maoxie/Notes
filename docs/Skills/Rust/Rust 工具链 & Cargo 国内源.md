@@ -39,6 +39,8 @@ replace-with = 'aliyun'
 registry = "sparse+https://mirrors.aliyun.com/crates.io-index/"
 ```
 
+---
+
 PS:
 
 其他可用源：
