@@ -9,7 +9,7 @@
 ```bash
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 # 国内镜像
-# sh -c "$(curl -fsSL https://gitee.com/mirrors/ohmyzsh/raw/master/tools/install.sh)"
+# REMOTE=https://gitee.com/mirrors/oh-my-zsh sh -c "$(curl -fsSL https://gitee.com/mirrors/oh-my-zsh/raw/master/tools/install.sh)"
 ```
 
 离线安装：
@@ -184,7 +184,6 @@ z -x 不要的路径
 ### sudo
 
 内置插件。连按两下 Esc 键在命令的开头加上或去掉 sudo 关键字。
-
 
 ### docker / docker-compose
 
