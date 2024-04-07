@@ -203,9 +203,52 @@ atuin import auto
 
 ## 3. 推荐主题
 
-**Powerlevel10k**
+### 3.1 字体
 
-### (1) 安装
+建议使用 Nerd Fonts 系列字体，否则无法显示大部分icon。
+
+> [ryanoasis/nerd-fonts: Iconic font aggregator, collection, & patcher. 3,600+ icons, 50+ patched fonts: Hack, Source Code Pro, more. Glyph collections: Font Awesome, Material Design Icons, Octicons, & more (github.com)](https://github.com/ryanoasis/nerd-fonts)
+
+### 3.2 主题：starship
+
+> https://starship.rs/guide/#%F0%9F%9A%80-installation
+
+#### (1) 安装
+
+> https://starship.rs/guide/#%F0%9F%9A%80-installation
+
+建议直接用 cargo 安装
+
+```bash
+cargo install starship --locked
+```
+
+#### (2) 配置
+
+在 `.zshrc` 文件**末尾**加入如下内容
+
+```bash
+# starship
+# !!! Keep this line at the end of file
+if command -v starship &> /dev/null; then
+    eval "$(starship init zsh)"
+    # Use preset
+    if [ ! -f "$HOME/.config/starship.toml" ]; then
+        starship preset bracketed-segments -o "$HOME/.config/starship.toml"
+    fi
+fi
+# === Don't add any new lines
+```
+
+主题预设推荐：[bracketed-segments](https://starship.rs/presets/#bracketed-segments)
+
+```bash
+starship preset bracketed-segments -o ~/.config/starship.toml
+```
+
+### 3.3 主题：Powerlevel10k
+
+#### (1) 安装
 
 > https://github.com/romkatv/powerlevel10k
 
@@ -221,13 +264,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 ZSH_THEME="powerlevel10k/powerlevel10k"
 ```
 
-### (2) 字体
-
-建议使用 Nerd Fonts 系列字体，否则无法显示大部分icon。
-
-> [ryanoasis/nerd-fonts: Iconic font aggregator, collection, & patcher. 3,600+ icons, 50+ patched fonts: Hack, Source Code Pro, more. Glyph collections: Font Awesome, Material Design Icons, Octicons, & more (github.com)](https://github.com/ryanoasis/nerd-fonts)
-
-### (3) 配置
+#### (3) 配置
 
 配置向导（configuration wizard）
 
