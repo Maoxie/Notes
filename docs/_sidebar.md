@@ -117,6 +117,9 @@
         - [Linux下Go环境安装](Skills/Go/Linux%E4%B8%8BGo%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85.md)
         - [下载golang.org的包](Skills/Go/%E4%B8%8B%E8%BD%BDgolang.org%E7%9A%84%E5%8C%85.md)
 
+    - JS-TS
+        - [箭头函数与普通函数的区别](Skills/JS-TS/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E4%B8%8E%E6%99%AE%E9%80%9A%E5%87%BD%E6%95%B0%E7%9A%84%E5%8C%BA%E5%88%AB.md)
+
     - Kubernetes
         - [k8s runtime endpoints](Skills/Kubernetes/k8s%20runtime%20endpoints.md)
         - [k8s集群搭建](Skills/Kubernetes/k8s%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA.md)
