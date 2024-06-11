@@ -76,6 +76,7 @@ cargo install git-delta
 cargo install tealdeer
 cargo install exa
 cargo install bottom
+cargo install xh --locked
 
 sudo chown root:root $CARGO_INSTALL_ROOT/bin/*
 sudo chmod 755 $CARGO_INSTALL_ROOT/bin/*
@@ -104,6 +105,7 @@ brew install git-delta
 brew install tealdeer
 brew install exa
 brew install bottom
+brew install xh
 ```
 
 **list:**
