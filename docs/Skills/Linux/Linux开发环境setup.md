@@ -122,6 +122,8 @@ brew install xh
   - (推荐) [tealdeer](https://dbrgn.github.io/tealdeer/installing.html)
   - (无需编译) [tldr](https://github.com/tldr-pages/tldr#how-do-i-use-it):
 - [`exa`](https://the.exa.website/install/linux): a modern replacement for `ls`
+- [`bottom`](https://github.com/ClementTsang/bottom): 图形化进程、系统monitor
+- [`xh`](https://github.com/ducaale/xh): 替代 `httpie`
 
   ```bash
   # linux x64
