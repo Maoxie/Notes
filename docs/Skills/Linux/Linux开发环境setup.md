@@ -4,6 +4,12 @@
 
 ### 配置apt镜像
 
+#### 全平台换源工具 `chsrc`
+
+> [chsrc](https://github.com/RubyMetric/chsrc)
+
+#### 手动换源
+
 ```bash
 sudo apt install ca-certificates
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.backup
