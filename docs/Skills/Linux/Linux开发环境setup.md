@@ -159,5 +159,13 @@ brew install xh
 ### 2.2 Others
 
 - [`fastfetch`](https://github.com/fastfetch-cli/fastfetch): Fastfetch is a neofetch-like tool for fetching system information and displaying it prettily.
+
+```bash
+# for Ubuntu only
+sudo add-apt-repository ppa:zhangsongcui3371/fastfetch
+sudo apt-get update
+sudo apt-get install fastfetch
+```
+
 - ~~[`neofetch`](https://github.com/dylanaraps/neofetch)~~: 获取并打印系统信息
 - [`fuck`](https://github.com/nvbn/thefuck#installation): thefuck，纠正输错的命令
