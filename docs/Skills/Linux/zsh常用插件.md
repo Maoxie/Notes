@@ -191,7 +191,8 @@ z -x 不要的路径
 
 ### atuin: shell 历史记录增强
 
-> [atuin#offline-only-no-sync](https://github.com/ellie/atuin#offline-only-no-sync)
+> [atuin](https://github.com/ellie/atuin)
+> [Installation | Atuin Docs](https://docs.atuin.sh/guide/installation/)
 
 ```bash
 bash <(curl https://raw.githubusercontent.com/ellie/atuin/main/install.sh)

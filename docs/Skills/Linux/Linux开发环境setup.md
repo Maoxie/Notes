@@ -8,6 +8,12 @@
 
 > [chsrc](https://github.com/RubyMetric/chsrc?tab=readme-ov-file#-%E5%AE%89%E8%A3%85)
 
+```bash
+# 使用维护团队测试的最快镜像站
+# target: ubuntu, debian, rocky ...
+./chsrc set <target> first
+```
+
 #### 手动换源
 
 ```bash
