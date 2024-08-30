@@ -158,6 +158,6 @@ brew install xh
 
 ### 2.2 Others
 
-- [`neofetch`](https://github.com/dylanaraps/neofetch): 获取并打印系统信息
-
+- [`fastfetch`](https://github.com/fastfetch-cli/fastfetch): Fastfetch is a neofetch-like tool for fetching system information and displaying it prettily.
+- ~~[`neofetch`](https://github.com/dylanaraps/neofetch)~~: 获取并打印系统信息
 - [`fuck`](https://github.com/nvbn/thefuck#installation): thefuck，纠正输错的命令
