@@ -6,7 +6,7 @@
 
 #### 全平台换源工具 `chsrc`
 
-> [chsrc](https://github.com/RubyMetric/chsrc)
+> [chsrc](https://github.com/RubyMetric/chsrc?tab=readme-ov-file#-%E5%AE%89%E8%A3%85)
 
 #### 手动换源
 
