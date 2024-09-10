@@ -13,6 +13,7 @@ ROOT = Path(__file__).resolve().parent / "docs"
 IGNORES = (
     "index.md",
     "readme.md",
+    "toc.md",
 )
 
 
@@ -72,6 +73,18 @@ def build_page(p: Path, root: Path) -> Optional[Page]:
     return Page(text=text, link=link)
 
 
+def make_toc(group: Group, level: int = 0) -> List[str]:
+    lines = []
+    indent = INDENT * level
+    for item in group.items:
+        if isinstance(item, Page):
+            lines.append(f"{indent}* [{item.text}]({item.link})")
+        elif isinstance(item, Group):
+            lines.append(f"{indent}* {item.text}")
+            lines.extend(make_toc(item, level=level + 1))
+    return lines
+
+
 def main():
     root = Path(ROOT).resolve()
     assert root.exists()
@@ -86,6 +99,10 @@ def main():
 
     # with (root / "_sidebar.md").open("w+", encoding="utf8") as f:
     #     f.write("\n".join(side_bars_list))
+
+    toc_lines = make_toc(structure)
+    with (root / "toc.md").open("w+", encoding="utf8") as f:
+        f.write("\n".join(toc_lines))
 
     print("Done")
 

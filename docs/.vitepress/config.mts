@@ -18,7 +18,18 @@ export default defineConfig({
     sidebar: structure,
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Maoxie/Notes' }
-    ]
+    ],
+    search: {
+      provider: 'local',
+      options: {
+        _render(src, env, md) {
+          const html = md.render(src, env)
+          if (env.frontmatter?.title)
+            return md.render(`# ${env.frontmatter.title}`) + html
+          return html
+        }
+      },
+    },
   },
   base: '/Notes/',
   srcDir: '.',
