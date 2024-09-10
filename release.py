@@ -81,7 +81,7 @@ def main():
 
     # print(json.dumps(build_structure(root), indent=2, cls=MyJSONEncoder))
     structure = build_structure(root)
-    with (root / "structure.json").open("w+", encoding="utf8") as f:
+    with (root / "structure.json").open("w+", encoding="utf8", newline='\n') as f:
         json.dump(structure.items, f, indent=2, cls=MyJSONEncoder, ensure_ascii=False)
 
     # file_paths = find_markdowns(root)
