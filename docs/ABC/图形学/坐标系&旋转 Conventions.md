@@ -4,9 +4,9 @@
 
 $$
 \begin{aligned}
-	&y \\
-	&\uparrow \\
-	&\odot \longrightarrow x \\
+ &y \\
+ &\uparrow \\
+ &\odot \longrightarrow x \\
 z \swarrow\ & \\
 \end{aligned}
 $$
@@ -43,9 +43,9 @@ $$
 
 $$
 \begin{aligned}
-	&y \\
-	&\uparrow \\
-	&\odot \longrightarrow x \\
+ &y \\
+ &\uparrow \\
+ &\odot \longrightarrow x \\
 z \swarrow\ & \\
 \end{aligned}
 $$
@@ -68,9 +68,9 @@ $$
 
 $$
 \begin{aligned}
-	&z \\
-	&\uparrow \\
-	&\odot \longrightarrow x \\
+ &z \\
+ &\uparrow \\
+ &\odot \longrightarrow x \\
 y \swarrow\ & \\
 \end{aligned}
 $$
@@ -100,6 +100,7 @@ $$
 | Roll  | X   |
 
 ***!!! 注意***
+
 - **z轴**用**左手**螺旋确定欧拉角正方向（**与右手系的方向相反**）
 - **x、y轴**用**右手**螺旋确定欧拉角正方向
 
@@ -108,8 +109,8 @@ $$
 *（左手系）*
 $$
 \begin{aligned}
-	&z\\
-	&\uparrow \nearrow y\\
+ &z\\
+ &\uparrow \nearrow y\\
 x \longleftarrow &\otimes \\
 \end{aligned}
 $$
@@ -117,10 +118,10 @@ $$
 *（右手系）*
 $$
 \begin{aligned}
-	&\odot \longrightarrow x \\
+ &\odot \longrightarrow x \\
 y \swarrow\ &\downarrow \\
    &z \\
-	
+
 \end{aligned}
 $$
 
@@ -130,9 +131,9 @@ $$
 
 $$
 \begin{aligned}
-	&y \\
-	&\uparrow \\
-	&\odot \longrightarrow x \\
+ &y \\
+ &\uparrow \\
+ &\odot \longrightarrow x \\
 z \swarrow\ & \\
 \end{aligned}
 $$
@@ -147,20 +148,22 @@ $$
 
 $$
 \begin{aligned}
-	&y \\
-	&\uparrow \\
-	&\odot \longrightarrow x \\
+ &y \\
+ &\uparrow \\
+ &\odot \longrightarrow x \\
 z \swarrow\ & \\
 \end{aligned}
 $$
 同Maya
 
 ### (2) 旋转
+
 同Maya
 
 ## 6. Pytorch3D
 
 ### (1) 世界坐标系
+
 $$
 \begin{aligned}
 &y \\
@@ -181,10 +184,10 @@ $$
 
 $$
 \begin{aligned}
-	&\ \ \nearrow z \\
-	&\otimes \longrightarrow x \\
-	&\downarrow \\
-	&y
+ &\ \ \nearrow z \\
+ &\otimes \longrightarrow x \\
+ &\downarrow \\
+ &y
 \end{aligned}
 $$
 
@@ -195,11 +198,12 @@ $$
 ## 8. OpenGL
 
 ### (1) 世界坐标系
+
 $$
 \begin{aligned}
-	&y \\
-	&\uparrow \\
-	&\odot \longrightarrow x \\
+ &y \\
+ &\uparrow \\
+ &\odot \longrightarrow x \\
 z \swarrow\ & \\
 \end{aligned}
 $$

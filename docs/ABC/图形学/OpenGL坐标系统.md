@@ -1,6 +1,6 @@
-> 完整教程：[坐标系统 - LearnOpenGL CN (learnopengl-cn.github.io)](https://learnopengl-cn.github.io/01 Getting started/08 Coordinate Systems/)
-
 # 坐标系统
+
+> 完整教程：[坐标系统 - LearnOpenGL CN (learnopengl-cn.github.io)](<https://learnopengl-cn.github.io/01> Getting started/08 Coordinate Systems/)
 
 物体顶点坐标在最终转化为屏幕坐标前，会依次被变换到多个坐标系统（Coordinate System）。其中比较重要的有以下5个坐标系统：
 
