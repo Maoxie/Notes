@@ -4,11 +4,16 @@
 import json
 from dataclasses import dataclass
 from pathlib import Path
-from typing import List
+from typing import List, Optional
 from urllib.parse import quote
 
 INDENT = " " * 4
 ROOT = Path(__file__).resolve().parent / "docs"
+
+IGNORES = (
+    "index.md",
+    "readme.md",
+)
 
 
 class BasicItem:
@@ -36,40 +41,32 @@ class MyJSONEncoder(json.JSONEncoder):
 
 
 def build_structure(root: Path) -> Group:
-    root_group = Group(text="root", collapsed=False, items=[])
-    for p in root.iterdir():
-        if p.name.startswith("."):
-            # skip hidden files and directories
-            continue
-        if p.is_dir():
-            item = build_group(p, root)
-            if item.items:
-                root_group.items.append(item)
-        elif p.is_file():
-            if p.suffix.lower() != ".md":
-                continue
-            item = build_page(p, root)
-            root_group.items.append(item)
+    root_group = build_group(root, root, depth=0)
+    root_group.text = "root"
     return root_group
 
 
 def build_group(d: Path, root: Path, depth: int = 0) -> Group:
-    collapsed = depth >= 1
+    collapsed = depth > 1
     group = Group(text=d.name, collapsed=collapsed, items=[])
-    for p in d.iterdir():
+    for p in sorted(d.iterdir()):
+        if p.name.startswith("."):
+            # skip hidden files and directories
+            continue
         if p.is_dir():
             item = build_group(p, root, depth=depth + 1)
             if item.items:
                 group.items.append(item)
         elif p.is_file():
-            if p.suffix.lower() != ".md":
-                continue
             item = build_page(p, root)
-            group.items.append(item)
+            if item:
+                group.items.append(item)
     return group
 
 
-def build_page(p: Path, root: Path) -> Page:
+def build_page(p: Path, root: Path) -> Optional[Page]:
+    if p.suffix.lower() != ".md" or p.name in IGNORES:
+        return None
     text = p.stem
     link = "/" + quote(str(p.relative_to(root)).replace("\\", "/"))
     return Page(text=text, link=link)
