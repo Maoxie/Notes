@@ -212,10 +212,6 @@
     ]
   },
   {
-    "text": "api-examples",
-    "link": "/api-examples.md"
-  },
-  {
     "text": "Engineering",
     "collapsed": false,
     "items": [
@@ -234,10 +230,6 @@
   {
     "text": "index",
     "link": "/index.md"
-  },
-  {
-    "text": "markdown-examples",
-    "link": "/markdown-examples.md"
   },
   {
     "text": "router",
@@ -954,9 +946,5 @@
         ]
       }
     ]
-  },
-  {
-    "text": "_sidebar",
-    "link": "/_sidebar.md"
   }
 ]
