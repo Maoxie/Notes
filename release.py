@@ -7,6 +7,8 @@ from pathlib import Path
 from typing import List, Optional
 from urllib.parse import quote
 
+from pypinyin import Style, lazy_pinyin
+
 INDENT = " " * 4
 ROOT = Path(__file__).resolve().parent / "docs"
 
@@ -47,10 +49,18 @@ def build_structure(root: Path) -> Group:
     return root_group
 
 
+def _get_sort_key(p: Path) -> str:
+    text = p.name
+    return ''.join(lazy_pinyin(text, style=Style.TONE3)).lower()
+
+
 def build_group(d: Path, root: Path, depth: int = 0) -> Group:
     collapsed = depth > 1
     group = Group(text=d.name, collapsed=collapsed, items=[])
-    for p in sorted(d.iterdir()):
+    for p in sorted(
+        d.iterdir(),
+        key=_get_sort_key,
+    ):
         if p.name.startswith("."):
             # skip hidden files and directories
             continue
