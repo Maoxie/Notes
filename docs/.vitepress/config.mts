@@ -7,13 +7,13 @@ const customElements = ['mjx-container'];
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Y's Notes",
+  title: "YANG's Notes",
   description: "My notes collections.",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: 'Table of Contents', link: '/toc' }
     ],
     sidebar: structure,
     socialLinks: [

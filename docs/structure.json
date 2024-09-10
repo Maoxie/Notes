@@ -232,16 +232,6 @@
     "link": "/index.md"
   },
   {
-    "text": "router",
-    "collapsed": false,
-    "items": [
-      {
-        "text": "AX86U",
-        "link": "/router/AX86U.md"
-      }
-    ]
-  },
-  {
     "text": "Skills",
     "collapsed": false,
     "items": [
@@ -778,6 +768,16 @@
           {
             "text": "运行jupyter notebook远程服务",
             "link": "/Skills/Python/%E8%BF%90%E8%A1%8Cjupyter%20notebook%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1.md"
+          }
+        ]
+      },
+      {
+        "text": "router",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "AX86U",
+            "link": "/Skills/router/AX86U.md"
           }
         ]
       },
