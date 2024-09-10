@@ -1,6 +1,8 @@
 import { defineConfig } from 'vitepress'
 import mathjax3 from 'markdown-it-mathjax3';
 
+import structure from '../structure.json';
+
 const customElements = ['mjx-container'];
 
 // https://vitepress.dev/reference/site-config
@@ -13,18 +15,9 @@ export default defineConfig({
       { text: 'Home', link: '/' },
       { text: 'Examples', link: '/markdown-examples' }
     ],
-
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
-    ],
+    sidebar: structure,
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/Maoxie/Notes' }
     ]
   },
   base: '/Notes/',
