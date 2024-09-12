@@ -33,8 +33,13 @@ export default defineConfig({
     editLink: {
       pattern: 'https://github.com/Maoxie/Notes/blob/master/docs/:path',
       text: 'View this page on GitHub'
-    }
+    },
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: 'Copyright © 2019-present YANG',
+    },
   },
+  lastUpdated: true,  // show the last Updated time
   base: '/Notes/',
   srcDir: '.',
   markdown: {
