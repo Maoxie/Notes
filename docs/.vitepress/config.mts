@@ -30,6 +30,10 @@ export default defineConfig({
         }
       },
     },
+    editLink: {
+      pattern: 'https://github.com/Maoxie/Notes/blob/master/docs/:path',
+      text: 'View this page on GitHub'
+    }
   },
   base: '/Notes/',
   srcDir: '.',
