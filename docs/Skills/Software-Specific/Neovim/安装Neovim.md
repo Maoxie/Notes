@@ -14,13 +14,6 @@
 
 > [install-from-package](https://github.com/neovim/neovim/wiki/Installing-Neovim#install-from-package)
 
-### 安装 `python2-provider` & `python3-provider`
-
-```bash
-pip2 install --user --upgrade pynvim
-pip3 install --user --upgrade pynvim
-```
-
 ### 安装 `vim-plug`
 
 > [junegunn/vim-plug](https://github.com/junegunn/vim-plug#neovim)
@@ -30,10 +23,17 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ```
 
+### 安装 `python3-provider` 和 `nodejs-provider`
+
+```bash
+pip3 install --user --upgrade neovim
+npm install -g neovim
+```
+
 安装后自检，执行:
 
 ```
-:health
+:checkhealth
 ```
 
 ## 配置
@@ -44,89 +44,126 @@ Neovim 使用了和 Vim 不同的配置文件名称以及配置文件存放位�
 具体环境中，打开 Neovim，使用 `:echo stdpath('config')` 可以查看该目录的具体位置。
 
 参考配置文件:
+
 ```vim
-call plug#begin('~/AppData/Local/nvim/plugged')
-  " dashboard
-  Plug 'glepnir/dashboard-nvim'
-  " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
-  Plug 'junegunn/vim-easy-align'
-  Plug 'tpope/vim-vinegar'
-  " file navigation
-  Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
-  Plug 'Xuyuanp/nerdtree-git-plugin'
-  Plug 'vim-airline/vim-airline'
-  " comment
-  Plug 'scrooloose/nerdcommenter'
-  " fuzzy file finder
-  Plug 'kien/ctrlp.vim'
-  Plug 'atweiden/vim-dragvisuals'
-  Plug 'gavocanov/foldsearches.vim'
-  " fuzzy search
-  Plug 'nvim-lua/plenary.nvim'
-  Plug 'nvim-treesitter/nvim-treesitter'
-  Plug 'nvim-telescope/telescope.nvim'
-  " coc.nvim
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  " git tool
-  Plug 'tpope/vim-fugitive'
-  " Visual content can move
-  Plug 'atweiden/vim-dragvisuals'
-  " Vim global plugin for persistent Visual seletions
-  Plug 'galli-a/persistentvisuals'
-  " syntax check/linter
-  Plug 'vim-syntastic/syntastic'
+call plug#begin('~/.config/nvim/plugged')
   " surround
   Plug 'tpope/vim-surround'
-  " vim-commentary
-  Plug 'tpope/vim-commentary'
-  " emmet
-  Plug 'mattn/emmet-vim'
   " easymotion
   Plug 'easymotion/vim-easymotion'
-  Plug 'jiangmiao/auto-pairs'
+
+  if !exists('g:vscode')
+    " * ordinary Neovim *
+    " dashboard
+    Plug 'glepnir/dashboard-nvim'
+    " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+    Plug 'junegunn/vim-easy-align'
+    Plug 'tpope/vim-vinegar'
+    " file navigation
+    Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
+    Plug 'Xuyuanp/nerdtree-git-plugin'
+    Plug 'vim-airline/vim-airline'
+    " fuzzy file finder
+    Plug 'kien/ctrlp.vim'
+    Plug 'atweiden/vim-dragvisuals'
+    Plug 'gavocanov/foldsearches.vim'
+    " fuzzy search
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    Plug 'nvim-telescope/telescope.nvim'
+    " coc.nvim
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    " git tool
+    Plug 'tpope/vim-fugitive'
+    " Visual content can move
+    Plug 'atweiden/vim-dragvisuals'
+    " Vim global plugin for persistent Visual seletions
+    "Plug 'galli-a/persistentvisuals'
+    " syntax check/linter
+    Plug 'vim-syntastic/syntastic'
+    " vim-commentary
+    Plug 'scrooloose/nerdcommenter'
+    " surround
+    Plug 'tpope/vim-surround'
+    " easymotion
+    Plug 'easymotion/vim-easymotion'
+    " emmet
+    "Plug 'mattn/emmet-vim'
+    Plug 'jiangmiao/auto-pairs'
+  endif
 call plug#end()
 
 let mapleader = ","
-let g:python_host_prog = 'C:\python2\python.exe'
-let g:python3_host_prog = 'C:\python3\python.exe'
-let g:dashboard_default_executive = 'telescope'
 
-set nocompatible
-
-"显示行号
-set number
-"将换行自动缩进设置成4个空格；
-set shiftwidth=4
-"表示一个tab键相当于4个空格键
-set tabstop=4
-set softtabstop=4
-set expandtab
-"把当前行的对齐格式应用到下一行
-set autoindent
-set shiftwidth=4            " width for autoindents
-" 隐藏滚动条"
-set guioptions-=r
-set guioptions-=L
-set guioptions-=b
-"开启语法高亮"
-syntax on
-syntax enable
-"设置不折行"
-set nowrap
-"显示匹配的括号"
-set showmatch
-"文件编码"
+" 文件编码
 set fenc=utf-8
 set encoding=utf-8
 
-set ignorecase              " case insensitive
-set mouse=v                 " middle-click paste with
-set hlsearch                " highlight search
-set incsearch               " incremental search
-set wildmode=longest,list   " get bash-like tab completions
-set cc=120                  " set an 80 column border for good coding style
-set cursorline              " highlight current cursorline
-set ttyfast                 " Speed up scrolling in Vim
+let g:python_host_prog = 0
+let g:python3_host_prog = '/usr/bin/python3'
+let g:loaded_perl_provider = 0
+let g:loaded_ruby_provider = 0
+
+if !exists('g:vscode')
+  let g:dashboard_default_executive = 'telescope'
+  let g:NERDSpaceDelims = 1
+
+  " 开启语法高亮
+  syntax on
+  syntax enable
+
+  " 显示行号
+  set number
+  " set relativenumber
+  " 将换行自动缩进设置成4个空格；
+  set shiftwidth=4
+  " 表示一个tab键相当于4个空格键
+  set tabstop=4
+  set softtabstop=4
+  set expandtab
+  " 把当前行的对齐格式应用到下一行
+  set autoindent
+  set shiftwidth=4            " width for autoindents
+  " 隐藏滚动条
+  set guioptions-=r
+  set guioptions-=L
+  set guioptions-=b
+  set scrolloff=1
+  set sidescrolloff=2
+  " 显示匹配的括号
+  set showmatch
+
+  " 设置不折行
+  set nowrap
+  set ignorecase              " case insensitive
+  set smartcase
+  set hlsearch                " highlight search
+  set incsearch               " incremental search
+  set wildmode=longest,list   " get bash-like tab completions
+  " set cc=120                  " set an 80 column border for good coding style
+  set cursorline              " highlight current cursorline
+  " set lazyredraw
+
+  " coc.nvim
+  let g:coc_global_extensions = [
+    \ 'coc-diagnostic',
+    \ 'coc-explorer',
+    \ 'coc-gitignore',
+    \ 'coc-html',
+    \ 'coc-json',
+    \ 'coc-lists',
+    \ 'coc-snippets',
+    \ 'coc-syntax',
+    \ 'coc-tasks',
+    \ 'coc-translator',
+    \ 'coc-vimlsp',
+    \ 'coc-yaml',
+    \ 'coc-yank']
+endif
+
+" tab complete
+inoremap <expr> <TAB> pumvisible() ? "<C-y>" : "<TAB>"
+
 
 " Neovide only
 if exists("g:neovide")
