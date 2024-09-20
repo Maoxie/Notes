@@ -209,9 +209,6 @@
     * [xlrd读取excel文件](/Skills/Python/xlrd%E8%AF%BB%E5%8F%96excel%E6%96%87%E4%BB%B6.md)
     * [用gbd调试python core dump](/Skills/Python/%E7%94%A8gbd%E8%B0%83%E8%AF%95python%20core%20dump.md)
     * [运行jupyter notebook远程服务](/Skills/Python/%E8%BF%90%E8%A1%8Cjupyter%20notebook%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1.md)
-* router
-# Table of Contents
-    * [AX86U](/Skills/router/AX86U.md)
 * Rust
 # Table of Contents
     * [Rust 工具链 & Cargo 国内源](/Skills/Rust/Rust%20%E5%B7%A5%E5%85%B7%E9%93%BE%20%26%20Cargo%20%E5%9B%BD%E5%86%85%E6%BA%90.md)

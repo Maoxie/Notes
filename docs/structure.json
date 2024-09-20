@@ -768,16 +768,6 @@
         ]
       },
       {
-        "text": "router",
-        "collapsed": true,
-        "items": [
-          {
-            "text": "AX86U",
-            "link": "/Skills/router/AX86U.md"
-          }
-        ]
-      },
-      {
         "text": "Rust",
         "collapsed": true,
         "items": [
