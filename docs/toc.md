@@ -150,10 +150,11 @@
     * [linux新建用户](/Skills/Linux/linux%E6%96%B0%E5%BB%BA%E7%94%A8%E6%88%B7.md)
     * [Linux修改默认shell](/Skills/Linux/Linux%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4shell.md)
     * [Mackup 同步linux配置](/Skills/Linux/Mackup%20%E5%90%8C%E6%AD%A5linux%E9%85%8D%E7%BD%AE.md)
-    * Nginx
+    * nginx
 # Table of Contents
-        * [nginx代理静态页面](/Skills/Linux/Nginx/nginx%E4%BB%A3%E7%90%86%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2.md)
-        * [nginx隐藏响应头的版本信息(header的server字段)](/Skills/Linux/Nginx/nginx%E9%9A%90%E8%97%8F%E5%93%8D%E5%BA%94%E5%A4%B4%E7%9A%84%E7%89%88%E6%9C%AC%E4%BF%A1%E6%81%AF%28header%E7%9A%84server%E5%AD%97%E6%AE%B5%29.md)
+        * [nginx 配置常见问题](/Skills/Linux/nginx/nginx%20%E9%85%8D%E7%BD%AE%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98.md)
+        * [nginx 隐藏响应头的版本信息(header的server字段)](/Skills/Linux/nginx/nginx%20%E9%9A%90%E8%97%8F%E5%93%8D%E5%BA%94%E5%A4%B4%E7%9A%84%E7%89%88%E6%9C%AC%E4%BF%A1%E6%81%AF%28header%E7%9A%84server%E5%AD%97%E6%AE%B5%29.md)
+        * [nginx 用于部署静态页面](/Skills/Linux/nginx/nginx%20%E7%94%A8%E4%BA%8E%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2.md)
     * [Node.js 安装](/Skills/Linux/Node.js%20%E5%AE%89%E8%A3%85.md)
     * [sshfs命令简易挂载远程目录](/Skills/Linux/sshfs%E5%91%BD%E4%BB%A4%E7%AE%80%E6%98%93%E6%8C%82%E8%BD%BD%E8%BF%9C%E7%A8%8B%E7%9B%AE%E5%BD%95.md)
     * [TCP&UDP端口连通性测试](/Skills/Linux/TCP%26UDP%E7%AB%AF%E5%8F%A3%E8%BF%9E%E9%80%9A%E6%80%A7%E6%B5%8B%E8%AF%95.md)
@@ -173,7 +174,6 @@
         * [Flask app实例化和初始化](/Skills/Python/Flask/Flask%20app%E5%AE%9E%E4%BE%8B%E5%8C%96%E5%92%8C%E5%88%9D%E5%A7%8B%E5%8C%96.md)
         * [Flask源码](/Skills/Python/Flask/Flask%E6%BA%90%E7%A0%81.md)
         * [Flask源码阅读](/Skills/Python/Flask/Flask%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB.md)
-    * [MF2谷歌两步验证自动获取验证码](/Skills/Python/MF2%E8%B0%B7%E6%AD%8C%E4%B8%A4%E6%AD%A5%E9%AA%8C%E8%AF%81%E8%87%AA%E5%8A%A8%E8%8E%B7%E5%8F%96%E9%AA%8C%E8%AF%81%E7%A0%81.md)
     * pandas
 # Table of Contents
         * [pandas按时间聚合数据的resample函数](/Skills/Python/pandas/pandas%E6%8C%89%E6%97%B6%E9%97%B4%E8%81%9A%E5%90%88%E6%95%B0%E6%8D%AE%E7%9A%84resample%E5%87%BD%E6%95%B0.md)
@@ -209,6 +209,7 @@
     * [xlrd读取excel文件](/Skills/Python/xlrd%E8%AF%BB%E5%8F%96excel%E6%96%87%E4%BB%B6.md)
     * [用gbd调试python core dump](/Skills/Python/%E7%94%A8gbd%E8%B0%83%E8%AF%95python%20core%20dump.md)
     * [运行jupyter notebook远程服务](/Skills/Python/%E8%BF%90%E8%A1%8Cjupyter%20notebook%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1.md)
+    * [自动获取双因子登录验证码——OTP, HOTP, TOTP 基本原理](/Skills/Python/%E8%87%AA%E5%8A%A8%E8%8E%B7%E5%8F%96%E5%8F%8C%E5%9B%A0%E5%AD%90%E7%99%BB%E5%BD%95%E9%AA%8C%E8%AF%81%E7%A0%81%E2%80%94%E2%80%94OTP%2C%20HOTP%2C%20TOTP%20%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86.md)
 * Rust
 # Table of Contents
     * [Rust 工具链 & Cargo 国内源](/Skills/Rust/Rust%20%E5%B7%A5%E5%85%B7%E9%93%BE%20%26%20Cargo%20%E5%9B%BD%E5%86%85%E6%BA%90.md)
