@@ -548,6 +548,10 @@
             "collapsed": true,
             "items": [
               {
+                "text": "nginx 代理json文件作为API response",
+                "link": "/Skills/Linux/nginx/nginx%20%E4%BB%A3%E7%90%86json%E6%96%87%E4%BB%B6%E4%BD%9C%E4%B8%BAAPI%20response.md"
+              },
+              {
                 "text": "nginx 配置常见问题",
                 "link": "/Skills/Linux/nginx/nginx%20%E9%85%8D%E7%BD%AE%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98.md"
               },
