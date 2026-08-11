@@ -5,6 +5,11 @@
 ## 最近更新
 
 <!-- RECENT_UPDATES -->
+- [Zellij Web Client 配置](./Linux/Zellij%20Web%20Client%20配置.md) · 2026-07-27 23:52
+  > Zellij 0.43.0 起内置 Web Client，可以在浏览器中创建、连接和恢复 Zellij session。本文介绍如何配置登录 Token、局域网访问和 HTTPS。
+  > 确认 Zellij 版本不低于 0.43.0：
+  > Zellij 的默认配置文件是 `~/.config/zellij/config.kdl`。如果文件不存在，先创建配置目录并生成默认配置：
+  > ...
 - [自建 Tailscale DERP 中继服务](./领域知识-DomainKnowledge/个人服务搭建/PVE%20All-in-One%20实践/自建%20Tailscale%20DERP%20中继服务.md) · 2026-07-16 03:07
   > 当两台 Tailscale 设备无法建立直连时，DERP 会中继已经由 WireGuard 加密的流量。这里将 DERP 部署在有公网 IP 的 ECS 上，并启用 `verify-clients`，只允许当前 tailnet 的节点使用。
   > 先在 Access controls 中声明 tag：
@@ -49,11 +54,6 @@
   > crates.io 是 Rust 官方的包注册中心 (registry)，是 Rust 生态中绝大多数三方库的分发渠道。
   > 本文记录将一个 Rust 项目 (lib crate) 发布到 crates.io 的完整流程。
   > 发布 crate 前需要一个 crates.io 账号:
-  > ...
-- [ezbookkeeping自托管记账服务部署](./领域知识-DomainKnowledge/个人服务搭建/NAS/ezbookkeeping自托管记账服务部署.md) · 2026-05-17 12:26
-  > 本文通过 Docker Compose 方式部署 ezBookkeeping 服务到绿联的 NAS 上。同时也提供了通用的部署方法，可供在其他 Linux 服务器上部署时参考。
-  > ezBookkeeping 是一款轻量级、自托管的个人财务 APP。
-  > 其前端支持桌面浏览器和移动端浏览器访问，并支持 PWA 技术，可添加到桌面使用。
   > ...
 <!-- /RECENT_UPDATES -->
 
@@ -356,6 +356,7 @@
 * [Linux/MacOS 配置同步: Mackup](./Linux/Mackup%20同步linux%2Cmacos配置.md)
 * [TCP & UDP 端口连通性测试](./Linux/TCP%26UDP端口连通性测试.md)
 * [wget 下载 Google Drive 共享的文件](./Linux/wget下载Google%20Drive共享的文件.md)
+* [Zellij Web Client 配置](./Linux/Zellij%20Web%20Client%20配置.md)
 * [ZSH 常用插件](./Linux/zsh常用插件.md)
 * [安装 chromedriver](./Linux/安装chromedriver.md)
 * [运行命令时，指定 GCC 版本](./Linux/指定命令的gcc版本.md)
